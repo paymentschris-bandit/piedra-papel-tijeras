@@ -20,7 +20,9 @@ El juego es **100% estático** (HTML + JS). **Vercel** da HTTPS gratis → la c�
    vercel
    ```
 4. Sigue las preguntas (proyecto nuevo, carpeta actual).
-5. Te dará una URL tipo: `https://piedra-papel-tijeras.vercel.app`
+5. Te dará una URL tipo: `https://tu-proyecto.vercel.app`
+
+> Si cambias de cuenta Vercel: borra la carpeta `.vercel` local y ejecuta `vercel logout` + `vercel login` antes de volver a desplegar.
 
 ## Probar webcam
 

@@ -6,3 +6,4 @@ tunnel-url.txt
 enlace-movil.html
 __pycache__/
 *.pyc
+.vercel
