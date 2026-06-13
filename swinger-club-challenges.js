@@ -1,5 +1,5 @@
-// Retos Swinger Club — interacción con parejas, chicos solas y chicas solas
-// Generado por generate-swinger-club.mjs (40 retos por categoría)
+// Retos Swinger Club — parejas hetero, intercambio, tríos mixtos
+// Generado por generate-swinger-club.mjs (conserva retos anteriores + nuevos)
 
 const SWINGER_CLUB_CHALLENGES = {
   "suave": {
@@ -44,7 +44,30 @@ const SWINGER_CLUB_CHALLENGES = {
         "Dejad que otra pareja os observe bailar lento pegados en el pasillo de cabinas 1 minuto.",
         "En la piscina interior, deja que un chico solo te abra la puerta de la cabina y os mire entrar — voyeur acordado.",
         "En la zona de sofás, las tres contáis fantasía sin censura sentadas en sofá.",
-        "Organizad con {ganador} mini-círculo en la sala de juegos: cada uno dice un límite y un deseo."
+        "Organizad con {ganador} mini-círculo en la sala de juegos: cada uno dice un límite y un deseo.",
+        "En la zona de parejas, elegid otra pareja del club. Presentaos y contad qué límites tenéis — los cuatro.",
+        "En el jacuzzi, sentaos en sofá cruzado con otra pareja: vosotros aquí, ellos enfrente. Coqueteo visual 2 minutos.",
+        "Brindad con otra pareja en el bar: cada uno dice una fantasía de intercambio suave sin ejecutarla aún.",
+        "En el bar del club, bailad lento pegados mientras otra pareja os mira desde el sofá — voyeur acordado.",
+        "Susurrale a {ganador} qué pareja os gustaría invitar a el pasillo de cabinas — intercambio de parejas o trío con chica sola.",
+        "En la piscina interior, dejad que otra pareja os vea besaros 30 segundos. Ellos deciden si se acercan.",
+        "Juego de parejas en la zona de sofás: cada pareja elige un reto suave para la otra — {ganador} veta si hace falta.",
+        "En la sala de juegos, caminad de la mano con otra pareja: chicos delante, chicas detrás, coqueteo cruzado.",
+        "En el jacuzzi con otra pareja: piernas rozándose bajo el agua 1 minuto — solo muslos sin más sin permiso.",
+        "En el jacuzzi, contad a otra pareja vuestro primer intercambio real o imaginado.",
+        "En la sala privada, {ganador} te presenta a la otra chica y tú presentas al otro chico — estilo swinger clásico.",
+        "Mirad juntos en el bar del club a otra pareja tocándose levemente. Comentad qué os excita.",
+        "En el pasillo de cabinas, las dos chicas hablan solas 2 minutos mientras los chicos escuchan — sin celos, solo juego.",
+        "En la piscina interior, los dos chicos brindan y hablan de límites mientras las chicas os observáis.",
+        "En la zona de sofás, elegid pareja para soft swap futuro: solo besos cruzados acordados esta ronda.",
+        "En la sala de juegos, quedaos con otras dos parejas hetero: cada una cuenta su fantasía de intercambio.",
+        "En la zona de parejas, ruleta de parejas: {ganador} elige pareja con la que coquetear 1 minuto — sin tocar aún.",
+        "En el jacuzzi, mirad cómo otra pareja se besa — vosotros imitáis su intensidad.",
+        "En la sala privada, presentación grupal: tres parejas, cada chica elige con qué chico hablar primero.",
+        "En el bar, señala con {ganador} a un chico solo. Coqueteo los tres — él sabe que sois pareja.",
+        "En el pasillo de cabinas, baila con un chico solo mientras {ganador} sostiene tu copa y mira.",
+        "Invitad en la piscina interior a una chica sola: trío de conversación morbosa — ¿MFF esta noche?",
+        "En la zona de sofás, un chico solo os mira besaros. Dejadle acercarse solo a hablar si queréis."
       ],
       "chico": [
         "En la zona de parejas, elegid una pareja del club y presentaos. Besad a {ganador} 20 segundos delante de ellos mientras os miran.",
@@ -86,7 +109,30 @@ const SWINGER_CLUB_CHALLENGES = {
         "Dejad que otra pareja os observe bailar lento pegados en el pasillo de cabinas 1 minuto.",
         "En la piscina interior, besad a {ganador} delante de un chico solo invitado mientras él elige si mirar o unirse después.",
         "En la zona de sofás, deja que chica sola os abra la cabina y os mire entrar — voyeur acordado.",
-        "Organizad con {ganador} mini-círculo en la sala de juegos: cada uno dice un límite y un deseo."
+        "Organizad con {ganador} mini-círculo en la sala de juegos: cada uno dice un límite y un deseo.",
+        "En la zona de parejas, elegid otra pareja del club. Presentaos y contad qué límites tenéis — los cuatro.",
+        "En el jacuzzi, sentaos en sofá cruzado con otra pareja: vosotros aquí, ellos enfrente. Coqueteo visual 2 minutos.",
+        "Brindad con otra pareja en el bar: cada uno dice una fantasía de intercambio suave sin ejecutarla aún.",
+        "En el bar del club, bailad lento pegados mientras otra pareja os mira desde el sofá — voyeur acordado.",
+        "Susurrale a {ganador} qué pareja os gustaría invitar a el pasillo de cabinas — intercambio de parejas o trío con chica sola.",
+        "En la piscina interior, dejad que otra pareja os vea besaros 30 segundos. Ellos deciden si se acercan.",
+        "Juego de parejas en la zona de sofás: cada pareja elige un reto suave para la otra — {ganador} veta si hace falta.",
+        "En la sala de juegos, caminad de la mano con otra pareja: chicos delante, chicas detrás, coqueteo cruzado.",
+        "En el jacuzzi con otra pareja: piernas rozándose bajo el agua 1 minuto — solo muslos sin más sin permiso.",
+        "En el jacuzzi, contad a otra pareja vuestro primer intercambio real o imaginado.",
+        "En la sala privada, {ganador} te presenta a la otra chica y tú presentas al otro chico — estilo swinger clásico.",
+        "Mirad juntos en el bar del club a otra pareja tocándose levemente. Comentad qué os excita.",
+        "En el pasillo de cabinas, las dos chicas hablan solas 2 minutos mientras los chicos escuchan — sin celos, solo juego.",
+        "En la piscina interior, los dos chicos brindan y hablan de límites mientras las chicas os observáis.",
+        "En la zona de sofás, elegid pareja para soft swap futuro: solo besos cruzados acordados esta ronda.",
+        "En la sala de juegos, quedaos con otras dos parejas hetero: cada una cuenta su fantasía de intercambio.",
+        "En la zona de parejas, ruleta de parejas: {ganador} elige pareja con la que coquetear 1 minuto — sin tocar aún.",
+        "En el jacuzzi, mirad cómo otra pareja se besa — vosotros imitáis su intensidad.",
+        "En la sala privada, presentación grupal: tres parejas, cada chica elige con qué chico hablar primero.",
+        "En el bar, señala con {ganador} a una chica sola. Coqueteo los tres — ella sabe que sois pareja.",
+        "En el pasillo de cabinas, baila con una chica sola mientras {ganador} mira desde la barra.",
+        "Invitad en la piscina interior a un chico solo para trío MMF — solo conversación y miradas al principio.",
+        "En la zona de sofás, una chica sola os mira abrazados. Coqueteo a tres bandas."
       ]
     },
     "chico_chico": [
@@ -129,7 +175,9 @@ const SWINGER_CLUB_CHALLENGES = {
       "Dejad que otra pareja os observe bailar lento pegados en el pasillo de cabinas 1 minuto.",
       "En la piscina interior, besad a {ganador} delante de un chico solo invitado mientras él elige si mirar o unirse después.",
       "En la zona de sofás, deja que chico solo os abra la cabina y os mire entrar — voyeur acordado.",
-      "Organizad con {ganador} mini-círculo en la sala de juegos: cada uno dice un límite y un deseo."
+      "Organizad con {ganador} mini-círculo en la sala de juegos: cada uno dice un límite y un deseo.",
+      "En la zona de parejas, presentaos como pareja gay ante otra pareja o un chico solo del club.",
+      "En el jacuzzi, coqueteo con otro chico solo mientras {ganador} mira."
     ],
     "chica_chica": [
       "En la zona de parejas, elegid una pareja del club y presentaos. Besad a {ganador} 20 segundos delante de ellos mientras os miran.",
@@ -171,7 +219,9 @@ const SWINGER_CLUB_CHALLENGES = {
       "Dejad que otra pareja os observe bailar lento pegados en el pasillo de cabinas 1 minuto.",
       "En la piscina interior, deja que un chica sola te abra la puerta de la cabina y os mire entrar — voyeur acordado.",
       "En la zona de sofás, las tres contáis fantasía sin censura sentadas en sofá.",
-      "Organizad con {ganador} mini-círculo en la sala de juegos: cada uno dice un límite y un deseo."
+      "Organizad con {ganador} mini-círculo en la sala de juegos: cada uno dice un límite y un deseo.",
+      "En la zona de parejas, presentaos como pareja lésbica ante otra pareja o chica sola.",
+      "En el jacuzzi, coqueteo con otra chica sola mientras {ganador} mira."
     ]
   },
   "picante": {
@@ -216,7 +266,30 @@ const SWINGER_CLUB_CHALLENGES = {
         "Soft swap en el pasillo de cabinas: 69 o paja entre parejas cruzadas mirando al otro 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
         "En la piscina interior, correrte en la mano del chico solo mientras {ganador} susurra órdenes. Solo con consentimiento explícito de todos y palabra de seguridad.",
         "Soft swap: besad y tocad a la chica sola por turnos 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
-        "Grabación grupal consensuada — solo cuerpos en la sala de juegos 45 segundos. Solo con consentimiento explícito de todos y palabra de seguridad."
+        "Grabación grupal consensuada — solo cuerpos en la sala de juegos 45 segundos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "Soft swap en la zona de parejas: tú besas al otro chico 20 segundos, {ganador} besa a la otra chica — a la vez. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, intercambio de manos: {ganador} toca a la otra chica, tú al otro chico — pecho y muslo — 90 segundos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala privada, la otra pareja os mira mientras os desnudáis parcialmente — 30 segundos cada pareja. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En cabina de el bar del club: parejas cruzadas en el mismo sofá — besos y manos bajo ropa 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el pasillo de cabinas, tú y la otra chica os tocáis mutuamente mientras {ganador} y el otro chico miran — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la piscina interior, {ganador} recibe un beso de la otra chica mientras tú abrazas al otro chico — ropa puesta — 45 segundos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, intercambio bajo el agua: manos en muslos cruzados entre parejas 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala de juegos, intercambiad parejas para paja o dedos — cada uno con la pareja ajena — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de parejas, oral cruzado suave: tú entre las piernas de la otra chica, {ganador} con la otra — 90 segundos sobre bragas. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, trío MFF suave: otra chica se une — besos y manos — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala privada, trío MMF suave: otro chico se une — toques cruzados — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el bar del club, las chicas hacen tribbing o se besan mientras los chicos se masturban mirando — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el pasillo de cabinas, {ganador} masturba al otro chico mientras tú besas a la otra chica — bisex suave — 90 segundos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la piscina interior, tú follas a la otra chica mientras {ganador} la besa — o al revés — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de sofás, otro chico te hace una paja mientras tú besas a {ganador} — trío mixto — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala de juegos, tres parejas: intercambio de pareja una ronda — besos y manos — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de parejas, las chicas en el centro — vosotras os tocáis, los chicos en círculo mirando — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, los chicos reciben paja de la pareja ajena mientras las chicas se besan — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala privada, chica sola se une al intercambio de parejas — cinco personas, reglas claras — 3 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el bar del club, chupa la polla de un chico solo invitado mientras {ganador} te agarra del pelo — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "Trío en el pasillo de cabinas: otro chico te folla mientras besas a {ganador} — o al revés — 3 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la piscina interior, tú y otra chica sola os tozáis mientras vuestros chicos miran — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de sofás, un chico solo te hace una paja mientras {ganador} mira y comenta. Solo con consentimiento explícito de todos y palabra de seguridad."
       ],
       "chico": [
         "Intercambio suave en la zona de parejas: besad a la pareja invitada — un beso cada uno — mientras {ganador} mira. Solo con consentimiento explícito de todos y palabra de seguridad.",
@@ -258,7 +331,30 @@ const SWINGER_CLUB_CHALLENGES = {
         "Soft swap en el pasillo de cabinas: 69 o paja entre parejas cruzadas mirando al otro 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
         "En la piscina interior, acaba en boca del chico solo o de {ganador} — ellos eligen. Solo con consentimiento explícito de todos y palabra de seguridad.",
         "En la zona de sofás, acaba en mano de chica sola o {ganador} — ellas eligen. Solo con consentimiento explícito de todos y palabra de seguridad.",
-        "Grabación grupal consensuada — solo cuerpos en la sala de juegos 45 segundos. Solo con consentimiento explícito de todos y palabra de seguridad."
+        "Grabación grupal consensuada — solo cuerpos en la sala de juegos 45 segundos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "Soft swap en la zona de parejas: tú besas al otro chico 20 segundos, {ganador} besa a la otra chica — a la vez. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, intercambio de manos: {ganador} toca a la otra chica, tú al otro chico — pecho y muslo — 90 segundos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala privada, la otra pareja os mira mientras os desnudáis parcialmente — 30 segundos cada pareja. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En cabina de el bar del club: parejas cruzadas en el mismo sofá — besos y manos bajo ropa 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el pasillo de cabinas, tú y la otra chica os tocáis mutuamente mientras {ganador} y el otro chico miran — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la piscina interior, {ganador} recibe un beso de la otra chica mientras tú abrazas al otro chico — ropa puesta — 45 segundos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, intercambio bajo el agua: manos en muslos cruzados entre parejas 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala de juegos, intercambiad parejas para paja o dedos — cada uno con la pareja ajena — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de parejas, oral cruzado suave: tú entre las piernas de la otra chica, {ganador} con la otra — 90 segundos sobre bragas. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, trío MFF suave: otra chica se une — besos y manos — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala privada, trío MMF suave: otro chico se une — toques cruzados — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el bar del club, las chicas hacen tribbing o se besan mientras los chicos se masturban mirando — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el pasillo de cabinas, {ganador} masturba al otro chico mientras tú besas a la otra chica — bisex suave — 90 segundos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la piscina interior, tú follas a la otra chica mientras {ganador} la besa — o al revés — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de sofás, otro chico te hace una paja mientras tú besas a {ganador} — trío mixto — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala de juegos, tres parejas: intercambio de pareja una ronda — besos y manos — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de parejas, las chicas en el centro — vosotras os tocáis, los chicos en círculo mirando — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, los chicos reciben paja de la pareja ajena mientras las chicas se besan — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala privada, chica sola se une al intercambio de parejas — cinco personas, reglas claras — 3 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el bar del club, folla a una chica sola mientras {ganador} la besa o mira — 3 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el pasillo de cabinas, otra chica te hace una paja mientras {ganador} te besa — trío mixto — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la piscina interior, tú y otro chico tocais a la misma chica invitada — manos alternadas — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de sofás, bisex suave: otro chico te roza la polla mientras tú besas a su pareja o a {ganador} — 90 segundos. Solo con consentimiento explícito de todos y palabra de seguridad."
       ]
     },
     "chico_chico": [
@@ -301,7 +397,9 @@ const SWINGER_CLUB_CHALLENGES = {
       "Soft swap en el pasillo de cabinas: 69 o paja entre parejas cruzadas mirando al otro 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
       "En la piscina interior, acaba en boca del chico solo o de {ganador} — ellos eligen. Solo con consentimiento explícito de todos y palabra de seguridad.",
       "En la zona de sofás, acaba en mano de chico solo o {ganador} — ellas eligen. Solo con consentimiento explícito de todos y palabra de seguridad.",
-      "Grabación grupal consensuada — solo cuerpos en la sala de juegos 45 segundos. Solo con consentimiento explícito de todos y palabra de seguridad."
+      "Grabación grupal consensuada — solo cuerpos en la sala de juegos 45 segundos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+      "En la zona de parejas, trío gay: otro chico solo se une — oral y manos — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+      "En el jacuzzi, pareja gay + chico solo: paja cruzada 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad."
     ],
     "chica_chica": [
       "Intercambio suave en la zona de parejas: besad a la pareja invitada — un beso cada uno — mientras {ganador} mira. Solo con consentimiento explícito de todos y palabra de seguridad.",
@@ -343,7 +441,9 @@ const SWINGER_CLUB_CHALLENGES = {
       "Soft swap en el pasillo de cabinas: 69 o dedos entre parejas cruzadas mirando al otro 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
       "En la piscina interior, correrte en la mano del chica sola mientras {ganador} susurra órdenes. Solo con consentimiento explícito de todos y palabra de seguridad.",
       "Soft swap: besad y tocad a la chica sola por turnos 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
-      "Grabación grupal consensuada — solo cuerpos en la sala de juegos 45 segundos. Solo con consentimiento explícito de todos y palabra de seguridad."
+      "Grabación grupal consensuada — solo cuerpos en la sala de juegos 45 segundos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+      "En la zona de parejas, trío lésbico: otra chica se une — besos y dedos — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+      "En el jacuzzi, pareja + chica sola: tribbing alternado 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad."
     ]
   },
   "extremo": {
@@ -388,7 +488,27 @@ const SWINGER_CLUB_CHALLENGES = {
         "En el pasillo de cabinas, intercambio completo hasta orgasmo — los cuatro — sin parar hasta que {ganador} diga basta. Solo con consentimiento explícito de todos y palabra de seguridad.",
         "En la piscina interior, noche entera con chico solo invitado — primer acto ahora, 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
         "En la zona de sofás, noche con chica sola invitada — primer acto 4 minutos ahora. Solo con consentimiento explícito de todos y palabra de seguridad.",
-        "En la sala de juegos, noche de club: tres actos con terceros distintos — empieza ahora 4 min. Solo con consentimiento explícito de todos y palabra de seguridad."
+        "En la sala de juegos, noche de club: tres actos con terceros distintos — empieza ahora 4 min. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "Full swap en la zona de parejas: {ganador} folla o es follada por la pareja ajena, tú con el otro miembro — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, las dos chicas juntas mientras los dos chicos miran y se masturban — luego cambio 3 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En sala privada de la sala privada, sexo en parejas cruzadas en la misma cama — 5 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el bar del club, trío MFF: tú, {ganador} y otra chica — actos acordados — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el pasillo de cabinas, trío MMF: otro chico se une a vosotros — roles que acordéis — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la piscina interior, {ganador} te mira mientras el otro chico te folla — o al revés si pierde él — 3 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de sofás, orgasmo en parejas cruzadas: acabad casi a la vez los cuatro — 5 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala de juegos, doble pareja: una habitación, dos camas, intercambio libre acordado 5 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de parejas, {ganador} elige si esta ronda es soft o full swap — cumple lo acordado 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, grabación consensuada de parejas cruzadas — solo cuerpos — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "Si pierdes otra ronda, {ganador} elige pareja del club para full swap en la sala privada. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el bar del club, noche swinger: segundo acto con la pareja que elijáis — sexo completo 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el pasillo de cabinas, tres parejas — intercambio total en sala privada 5 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la piscina interior, orgía mixta hetero: solo parejas y solos que consentís — chico con chica siempre — 5 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de sofás, gangbang hetero para ti: varios chicos, {ganador} organiza turnos — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala de juegos, las chicas en tribbing mientras los chicos se masturban mirando — luego swap — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de parejas, el otro chico te folla mientras {ganador} mira — full hotwife roleplay — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, dos chicos — {ganador} y un invitado — te comparten por turnos 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala privada, MFF con chica sola: oral y dedos entre las tres — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el bar del club, acaba el chico solo en tu cuerpo mientras {ganador} observa — si todos quieren. Solo con consentimiento explícito de todos y palabra de seguridad."
       ],
       "chico": [
         "Full swap acordado en la zona de parejas: folla o deja que te folle el otro chico 3 minutos mientras {ganador} está con la otra chica. Solo con consentimiento explícito de todos y palabra de seguridad.",
@@ -430,7 +550,27 @@ const SWINGER_CLUB_CHALLENGES = {
         "En el pasillo de cabinas, intercambio completo hasta orgasmo — los cuatro — sin parar hasta que {ganador} diga basta. Solo con consentimiento explícito de todos y palabra de seguridad.",
         "En la piscina interior, sexo crudo con chico solo en espejo para voyeur del club. Solo con consentimiento explícito de todos y palabra de seguridad.",
         "En la zona de sofás, gangbang suave con chicas solas — solo oral — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
-        "En la sala de juegos, noche de club: tres actos con terceros distintos — empieza ahora 4 min. Solo con consentimiento explícito de todos y palabra de seguridad."
+        "En la sala de juegos, noche de club: tres actos con terceros distintos — empieza ahora 4 min. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "Full swap en la zona de parejas: {ganador} folla o es follada por la pareja ajena, tú con el otro miembro — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, las dos chicas juntas mientras los dos chicos miran y se masturban — luego cambio 3 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En sala privada de la sala privada, sexo en parejas cruzadas en la misma cama — 5 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el bar del club, trío MFF: tú, {ganador} y otra chica — actos acordados — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el pasillo de cabinas, trío MMF: otro chico se une a vosotros — roles que acordéis — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la piscina interior, {ganador} te mira mientras el otro chico te folla — o al revés si pierde él — 3 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de sofás, orgasmo en parejas cruzadas: acabad casi a la vez los cuatro — 5 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala de juegos, doble pareja: una habitación, dos camas, intercambio libre acordado 5 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de parejas, {ganador} elige si esta ronda es soft o full swap — cumple lo acordado 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, grabación consensuada de parejas cruzadas — solo cuerpos — 2 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "Si pierdes otra ronda, {ganador} elige pareja del club para full swap en la sala privada. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el bar del club, noche swinger: segundo acto con la pareja que elijáis — sexo completo 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el pasillo de cabinas, tres parejas — intercambio total en sala privada 5 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la piscina interior, orgía mixta hetero: solo parejas y solos que consentís — chico con chica siempre — 5 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de sofás, gangbang hetero para ti: varios chicos, {ganador} organiza turnos — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala de juegos, las chicas en tribbing mientras los chicos se masturban mirando — luego swap — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la zona de parejas, folla a la chica sola mientras {ganador} recibe atención del otro chico — swap cruzado — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el jacuzzi, MMF: tú y otro chico con {ganador} o con chica invitada — roles acordados — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En la sala privada, {ganador} te mira mientras follas a otra chica — luego ella te chupa — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+        "En el bar del club, bisex en pareja: otro chico te masturba mientras tú follas — solo si {ganador} está de acuerdo — 3 minutos. Solo con consentimiento explícito de todos y palabra de seguridad."
       ]
     },
     "chico_chico": [
@@ -473,7 +613,9 @@ const SWINGER_CLUB_CHALLENGES = {
       "En el pasillo de cabinas, intercambio completo hasta orgasmo — los cuatro — sin parar hasta que {ganador} diga basta. Solo con consentimiento explícito de todos y palabra de seguridad.",
       "En la piscina interior, sexo crudo con chico solo en espejo para voyeur del club. Solo con consentimiento explícito de todos y palabra de seguridad.",
       "En la zona de sofás, gangbang suave con chicas solas — solo oral — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
-      "En la sala de juegos, noche de club: tres actos con terceros distintos — empieza ahora 4 min. Solo con consentimiento explícito de todos y palabra de seguridad."
+      "En la sala de juegos, noche de club: tres actos con terceros distintos — empieza ahora 4 min. Solo con consentimiento explícito de todos y palabra de seguridad.",
+      "En la zona de parejas, orgía gay acordada con chicos solos del club — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+      "En el jacuzzi, {ganador} te comparte con chico solo — sexo completo 3 minutos. Solo con consentimiento explícito de todos y palabra de seguridad."
     ],
     "chica_chica": [
       "Full swap acordado en la zona de parejas: folla o deja que te folle el otro chico 3 minutos mientras {ganador} está con la otra chica. Solo con consentimiento explícito de todos y palabra de seguridad.",
@@ -515,7 +657,9 @@ const SWINGER_CLUB_CHALLENGES = {
       "En el pasillo de cabinas, intercambio completo hasta orgasmo — los cuatro — sin parar hasta que {ganador} diga basta. Solo con consentimiento explícito de todos y palabra de seguridad.",
       "En la piscina interior, noche entera con chica sola invitado — primer acto ahora, 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
       "En la zona de sofás, noche con chica sola invitada — primer acto 4 minutos ahora. Solo con consentimiento explícito de todos y palabra de seguridad.",
-      "En la sala de juegos, noche de club: tres actos con terceros distintos — empieza ahora 4 min. Solo con consentimiento explícito de todos y palabra de seguridad."
+      "En la sala de juegos, noche de club: tres actos con terceros distintos — empieza ahora 4 min. Solo con consentimiento explícito de todos y palabra de seguridad.",
+      "En la zona de parejas, orgía lésbica acordada con chicas solas — 4 minutos. Solo con consentimiento explícito de todos y palabra de seguridad.",
+      "En el jacuzzi, {ganador} te comparte con chica sola — sexo completo 3 minutos. Solo con consentimiento explícito de todos y palabra de seguridad."
     ]
   }
 };
@@ -524,6 +668,6 @@ const SWINGER_CLUB_CHALLENGES = {
   if (typeof OUTDOOR_LOCATION_CHALLENGES === "undefined") return;
   OUTDOOR_LOCATION_CHALLENGES.swinger = SWINGER_CLUB_CHALLENGES;
   if (typeof OUTDOOR_LOCATION_META !== "undefined" && OUTDOOR_LOCATION_META.swinger) {
-    OUTDOOR_LOCATION_META.swinger.desc = "Parejas, solos, intercambio y voyeur";
+    OUTDOOR_LOCATION_META.swinger.desc = "Parejas, intercambio, tríos mixtos";
   }
 })();
