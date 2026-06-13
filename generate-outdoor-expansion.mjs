@@ -428,7 +428,7 @@ function buildExpansion() {
     if (Object.keys(bucket).length) locationExtra[loc] = bucket;
   }
 
-  for (const loc of ["discoteca", "swinger"]) {
+  for (const loc of ["discoteca"]) {
     newLocations[loc] = {};
     for (const intensity of ["suave", "picante", "extremo"]) {
       newLocations[loc][intensity] = {
