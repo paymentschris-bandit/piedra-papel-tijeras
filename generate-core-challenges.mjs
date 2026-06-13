@@ -4,8 +4,10 @@
  */
 import fs from "fs";
 import vm from "vm";
+import { expandChallengeBank } from "./expand-challenge-bank.mjs";
+import { getHomeExtraBatch, getRemoteExtraBatch } from "./core-challenge-banks-v2.mjs";
 
-const TARGET = 40;
+const TARGET = 80;
 const ROOT = import.meta.dirname;
 
 function loadCounts() {
@@ -133,7 +135,7 @@ function getHomeExtras(intensity, orient, role) {
         `Ella te azota el culo 6 veces. Empuja hacia atrás pidiendo más.`,
         `Quítate el pantalón y quédate en ropa interior. ${g} te ordena cómo tocarte 2 minutos.`,
         `Lame su coño por encima y debajo de la braga hasta empaparla ${p(3)}.`,
-        `Pide que te haga una paja — guía su mano 2 minutos — sin correrte aún.`,
+        `Pide que te masturbe — guía su mano 2 minutos — sin correrte aún.`,
         `Roleplay: ${g} es tu jefa. Pide permiso para cada movimiento 2 minutos.`,
         `Chupa sus dedos y guíalos hacia tu polla ${p(4)}.`,
         `Descríbele en voz alta cómo te masturbas mientras lo demuestras 45 segundos.`,
@@ -151,7 +153,7 @@ function getHomeExtras(intensity, orient, role) {
         `Roleplay: eres su juguete 3 minutos. Obedece sin negociar.`,
         `Follad en la ducha ${p(2)} 3 minutos si tenéis.`,
         `Penetración anal solo si lo acordáis — ${g} marca ritmo 2 minutos.`,
-        `Grabación de audio mientras ${g} te hace una paja.`,
+        `Grabación de audio mientras ${g} te masturba.`,
         `Si pierdes otra ronda, ${g} elige posición y lugar del orgasmo.`,
         `Maratón: ${g} te hace acabar y sigues duro — segunda ronda cuando ella diga.`,
       ],
@@ -172,7 +174,7 @@ function getHomeExtras(intensity, orient, role) {
         `Confiesa cómo te masturbas pensando en ${g}.`,
         `Abrazad empujando erecciones ${p(4)} 45 segundos.`,
         `Lame su ombligo bajando hacia la polla — sin chupar aún — 30 segundos.`,
-        `Paja mutua por encima del pantalón ${p(5)} 45 segundos.`,
+        `Masturbación mutua por encima del pantalón ${p(5)} 45 segundos.`,
         `Mordisquea su oreja mientras le aprietas la polla.`,
         `Juego: mirada fija 30 segundos sin reír mientras os tocáis.`,
         `Describe cómo quieres que ${g} te folle el culo.`,
@@ -188,7 +190,7 @@ function getHomeExtras(intensity, orient, role) {
         `Simula follarte a ${g} agarrando tu polla ${p(3)} 90 segundos.`,
         `Confiesa fantasía de correrte en su boca.`,
         `Quítate el pantalón. ${g} te ordena cómo masturbarte 2 minutos.`,
-        `Lame sus huevos mientras le haces paja ${p(4)}.`,
+        `Lame sus huevos mientras le masturbas ${p(4)}.`,
         `Roleplay: sumiso y amo 2 minutos. ${g} manda.`,
         `Polla con polla ${p(5)} 1 minuto.`,
         `Pide que te folle con los dedos mientras le chupas.`,
@@ -205,11 +207,11 @@ function getHomeExtras(intensity, orient, role) {
         `Correrte en boca o culo de ${g}.`,
         `69 hasta que uno se corra ${p(2)}.`,
         `Roleplay extremo: sumiso 3 minutos sin negociar.`,
-        `Doble paja: una mano tuya y una suya en tu polla.`,
+        `Masturbación doble: una mano tuya y una suya en tu polla.`,
         `Si pierdes otra ronda, ${g} elige cómo acabas.`,
         `Grabación de audio de gemidos mientras os folláis.`,
         `Maratón: dos orgasmos seguidos cuando ${g} mande.`,
-        `Atadura suave y paja de ${g} 3 minutos.`,
+        `Atadura suave y masturbación de ${g} 3 minutos.`,
         `Follad en ${p(3)} hasta que ambos estéis al borde.`,
       ],
     };
@@ -374,7 +376,7 @@ function getRemoteExtras(intensity, orient, role) {
         `Saca polla y masturbate 2 minutos — ${g} guía.`,
         `Enseña culo a webcam 30 segundos.`,
         `Simula chupar a ${g} 90 segundos.`,
-        `Paja mutua en videollamada 2 minutos al unísono.`,
+        `Masturbación mutua en videollamada 2 minutos al unísono.`,
         `Roleplay sumiso 2 minutos.`,
         `Frota polla contra almohada mirando a ${g}.`,
         `Quítate ropa entera. ${g} elige qué enseñar.`,
@@ -437,32 +439,6 @@ function getRemoteExtras(intensity, orient, role) {
   return banks[intensity];
 }
 
-function expandBank(bank, needed) {
-  const items = [];
-  let round = 0;
-  while (items.length < needed) {
-    for (const line of bank) {
-      if (items.length >= needed) break;
-      const extra =
-        round === 0
-          ? ""
-          : round === 1
-            ? " Hazlo más despacio."
-            : round === 2
-              ? " Esta vez sin hablar."
-              : ` — intento ${round + 1}.`;
-      const t = line.endsWith(".") ? line.slice(0, -1) + extra + "." : line + extra;
-      if (!items.includes(t)) items.push(t);
-    }
-    round++;
-    if (round > 20) break;
-  }
-  while (items.length < needed) {
-    items.push(bank[items.length % bank.length]);
-  }
-  return items.slice(0, needed);
-}
-
 function buildExtras(source, mode) {
   const extra = { suave: {}, picante: {}, extremo: {} };
   const roles = [
@@ -480,11 +456,16 @@ function buildExtras(source, mode) {
       if (current >= TARGET) continue;
 
       const needed = TARGET - current;
-      const bank =
+      const base =
         mode === "home"
-          ? getHomeExtras(intensity, orient, role)
-          : getRemoteExtras(intensity, orient, role);
-      const items = expandBank(bank, needed);
+          ? getHomeExtras(intensity, orient, role) || []
+          : getRemoteExtras(intensity, orient, role) || [];
+      const batch =
+        mode === "home"
+          ? getHomeExtraBatch(intensity, orient, role)
+          : getRemoteExtraBatch(intensity, orient, role);
+      const bank = [...base, ...batch];
+      const items = expandChallengeBank(bank, needed);
       const key = role ? `${orient}.${role}` : orient;
       appendToPath(extra[intensity], key.split("."), items.slice(0, needed));
     }

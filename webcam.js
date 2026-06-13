@@ -36,6 +36,11 @@ function setWebcamFullscreen(on) {
 
 function toggleWebcamFullscreen() {
   setWebcamFullscreen(!WC.fullscreen);
+  if (!WC.fullscreen && document.getElementById("result-screen")?.classList.contains("active")) {
+    requestAnimationFrame(() => {
+      document.querySelector("#result-screen .result-actions")?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    });
+  }
 }
 
 function setWebcamChallengeLive(on) {

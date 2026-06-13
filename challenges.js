@@ -538,7 +538,7 @@ const OUTDOOR_CHALLENGES = {
         "En el bosque, {ganador} se inclina contra un árbol: levanta su falda y frota tu polla entre sus nalgas 1 minuto sin penetrar — o con, si os atrevís.",
         "En el coche, mete dos dedos en el coño de {ganador} mientras ella mira si pasa alguien. 2 minutos al ritmo que marque.",
         "Flash: en un callejón, enséñale tu polla dura 5 segundos. Ella decide si repites.",
-        "En un banco apartado de noche, ella te hace una paja por debajo de la chaqueta 2 minutos.",
+        "En un banco apartado de noche, ella te masturba por debajo de la chaqueta 2 minutos.",
         "Confiesa en voz alta en el coche el sitio más morboso donde os habéis masturbado o follado al aire libre — o donde queréis hacerlo.",
         "En un parking con gente lejos, baja el pantalón hasta las rodillas 15 segundos de espaldas a la calle — que {ganador} vea tu polla y tu culo. Tapate si alguien se acerca.",
         "En el coche con ventanilla bajada, deja que {ganador} te masturbe 90 segundos mientras alguien pasa caminando fuera — parar si se detiene.",
@@ -566,7 +566,7 @@ const OUTDOOR_CHALLENGES = {
       "En la playa o parque, sentaos en un banco con las pollas fuera bajo una toalla o chaqueta — quitadla 15 segundos cuando {ganador} diga, mirando si viene gente.",
       "Exhibicionista: caminad cogidos de la cintura con el bulto visible 30 segundos por una zona con gente. Parar si alguien os señala.",
       "En un mirador, enseñad las pollas 12 segundos cada uno mirando hacia abajo. {ganador} elige el momento.",
-      "Riesgo acordado: paja mutua 60 segundos en un balcón visible desde la calle — parar si alguien os mira fijo.",
+      "Riesgo acordado: Masturbación mutua 60 segundos en un balcón visible desde la calle — parar si alguien os mira fijo.",
     ],
     chica_chica: [
       "En el coche aparcado, bajaos las bragas y frota vuestros coños — dedos o muslos — 2 minutos mirando el retrovisor.",
@@ -615,14 +615,14 @@ const OUTDOOR_CHALLENGES = {
         "En el bosque apartado: cómele el coño hasta que se corra o 4 minutos. Uno vigila.",
         "En la playa de noche: polla fuera, mastúrbate hasta correrte mientras {ganador} mira desde la duna.",
         "En el baño público: folla a {ganador} contra la pared del cubículo — o dedos hasta orgasmo — 2 minutos en silencio.",
-        "En un parking: ella te hace una paja hasta que acabes en su mano o en la boca — dentro del coche.",
+        "En un parking: ella te masturba hasta que acabes en su mano o en la boca — dentro del coche.",
         "Riesgo acordado: en un sitio semi-visible, mete la polla en {ganador} — o frota hasta casi correrte — 90 segundos. Parar si hay gente.",
         "En el coche en marcha — autopista tranquila de noche — ella te masturba hasta el borde. No te corras hasta que diga.",
         "Desnúdate completo en el bosque 1 minuto mientras {ganador} te toca. Ropa a mano.",
         "En un campo o playa: folla a {ganador} a perrito 2 minutos. Palabra de seguridad siempre.",
         "Si pierdes otra ronda, {ganador} elige dónde acabas al aire libre — su boca, tus huevos, en el suelo del coche.",
         "Exhibicionismo acordado: en un parking o mirador, quédate desnudo de cintura para abajo 45 segundos mirando hacia donde puede haber gente lejos. {ganador} vigila.",
-        "En el coche con ventanas abiertas, deja que {ganador} te haga una paja o te chupe 2 minutos mientras alguien pase cerca — parar si se detiene.",
+        "En el coche con ventanas abiertas, deja que {ganador} te masturbe o te chupe 2 minutos mientras alguien pase cerca — parar si se detiene.",
         "En un balcón, ventana o escalera visible: folla a {ganador} o frota tu polla contra ella 90 segundos sabiendo que podéis ser vistos. Palabra de seguridad.",
         "En la playa o campo: camina desnudo 1 minuto con {ganador} mirando desde la ropa. Vuelve al instante si hay gente cerca.",
         "Exhibicionista extremo: quédate desnudo de cintura para abajo 45 segundos en un mirador. {ganador} vigila.",
@@ -635,7 +635,7 @@ const OUTDOOR_CHALLENGES = {
       "En el bosque apartado: chúpale la polla a {ganador} hasta que acabe o 4 minutos. Vigilad el sendero.",
       "En el baño público: sexo oral o anal rápido en el cubículo 2 minutos. Silencio.",
       "En la playa de noche: masturbad mutuamente hasta correros uno tras otro tras una duna.",
-      "En un parking: uno folla al otro contra el coche 2 minutos — o paja hasta correros.",
+      "En un parking: uno folla al otro contra el coche 2 minutos — o masturbación hasta correros.",
       "Riesgo acordado: enseñad las pollas erectas 10 segundos en un sitio semi-público. Parar al instante si hay gente cerca.",
       "En el coche: 69 hasta que uno se corra o 3 minutos.",
       "Desnúdate en el bosque y deja que {ganador} te folle o te chupe 3 minutos.",
@@ -685,7 +685,7 @@ const OUTDOOR_FINAL_REWARDS = {
       chica: "Premio al aire libre: escapada de 1 hora — coche, playa o bosque — {ganador} manda tres actos: oral, tocar, casi o del todo en público. Tú obedeces.",
       chico: "Premio al aire libre: 1 hora fuera — {ganador} elige tres sitios (coche, baño, dunas) y qué haces en cada uno. Sin negociar.",
     },
-    chico_chico: "Premio al aire libre: 1 hora — tres lugares al aire libre elegidos por {ganador}. Oral, paja o más en cada parada.",
+    chico_chico: "Premio al aire libre: 1 hora — tres lugares al aire libre elegidos por {ganador}. Oral, masturbación o más en cada parada.",
     chica_chica: "Premio al aire libre: 1 hora de ruta — {ganador} elige tres sitios para tocaros, lameros o más en público oculto.",
   },
   extremo: {
@@ -726,10 +726,8 @@ function isSwingerGroupChallenge(text) {
 function adaptChallengeForLoser(text, loserGender) {
   if (loserGender !== "chica") return text;
   return text
-    .replace(/\bte hace una paja\b/gi, "te masturba con la mano")
-    .replace(/\bte hace paja\b/gi, "te masturba")
-    .replace(/\brecibes dedos o paja\b/gi, "recibes dedos o masturbación")
-    .replace(/\brecibes paja\b/gi, "recibes masturbación con la mano")
+    .replace(/\bte masturba\b/gi, "te masturba con la mano")
+    .replace(/\brecibes masturbación\b/gi, "recibes masturbación con la mano")
     .replace(/\bmientras vuestros chicos miran\b/gi, "mientras {ganador} mira");
 }
 
@@ -793,7 +791,7 @@ function applyNames(text, loserName, winnerName) {
 }
 
 const TEASE_HIGH_AROUSAL =
-  /correrte|masturb|edging|orgasmo|acabar|acabes|borde|prohibido|gime|gemid|folla|chup|empap|clítor|coño|polla|paja|traga|desnud|facesitting|vaquera|perrito|69|edging/i;
+  /correrte|masturb|edging|orgasmo|acabar|acabes|borde|prohibido|gime|gemid|folla|chup|empap|clítor|coño|polla|masturbación|traga|desnud|facesitting|vaquera|perrito|69|edging/i;
 
 const TEASE_MESSAGES = {
   hold: [

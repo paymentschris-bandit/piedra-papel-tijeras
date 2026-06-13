@@ -1825,24 +1825,53 @@ body.webcam-reto-mode #choices-buttons {
 
 body.webcam-fullscreen.webcam-reto-mode #result-screen.active,
 body.webcam-fullscreen.webcam-reto-mode #end-screen.active {
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-top: max(0.5rem, env(safe-area-inset-top));
-  padding-left: calc(min(42vw, 150px) + 1rem);
-  padding-right: calc(min(32vw, 120px) + 0.85rem);
-  padding-bottom: calc(max(0.65rem, env(safe-area-inset-bottom)) + 4.5rem);
+  justify-content: flex-end;
+  align-items: center;
+  padding: max(0.5rem, env(safe-area-inset-top)) max(0.5rem, env(safe-area-inset-right))
+    calc(max(0.65rem, env(safe-area-inset-bottom)) + 0.5rem) max(0.5rem, env(safe-area-inset-left));
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  pointer-events: auto;
 }
 
 body.webcam-fullscreen.webcam-reto-mode .result-card,
 body.webcam-fullscreen.webcam-reto-mode .end-card {
-  width: 100%;
-  max-width: min(100%, 420px);
-  max-height: min(46dvh, 360px);
+  width: min(100%, 420px);
+  max-width: calc(100vw - 1rem);
+  max-height: min(58dvh, 520px);
   overflow-y: auto;
-  background: rgba(18, 10, 22, 0.88);
+  background: rgba(18, 10, 22, 0.92);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(224, 86, 122, 0.35);
-  margin: 0;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+body.webcam-fullscreen.webcam-reto-mode .webcam-local-wrap {
+  z-index: 18;
+  bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+body.webcam-fullscreen.webcam-reto-mode .challenge-box {
+  max-height: none;
+}
+
+@media (max-width: 768px) {
+  body.webcam-fullscreen.webcam-reto-mode .result-card,
+  body.webcam-fullscreen.webcam-reto-mode .end-card {
+    width: 100%;
+    max-width: calc(100vw - 1rem);
+    max-height: min(68dvh, 580px);
+  }
+
+  body.webcam-fullscreen.webcam-reto-mode #result-title {
+    font-size: 1.45rem;
+  }
+
+  body.webcam-fullscreen.webcam-reto-mode #challenge-text {
+    font-size: 1rem;
+  }
 }
 
 body.webcam-fullscreen.webcam-reto-mode .result-card.wc-result-hidden {
@@ -1905,6 +1934,40 @@ body.webcam-challenge-live .webcam-local-wrap {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
 }
 
+body.webcam-active.webcam-pip .screen.active {
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100dvh;
+  height: auto;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: calc(min(88vw, 300px) * 0.95 + 5.5rem + env(safe-area-inset-bottom));
+}
+
+body.webcam-active.webcam-pip #result-screen.active .result-card,
+body.webcam-active.webcam-pip #end-screen.active .end-card {
+  width: min(100%, 520px);
+  max-width: calc(100vw - 1.5rem);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  body.webcam-active.webcam-pip.webcam-reto-mode .webcam-panel {
+    top: max(0.5rem, env(safe-area-inset-top));
+    right: max(0.5rem, env(safe-area-inset-right));
+    bottom: auto;
+    left: auto;
+    transform: none;
+    width: min(38vw, 155px);
+  }
+
+  body.webcam-active.webcam-pip.webcam-reto-mode .screen.active {
+    padding-top: calc(min(38vw, 155px) * 0.85 + 2.5rem + env(safe-area-inset-top));
+    padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
+  }
+}
+
 @media (max-width: 480px) {
   .webcam-panel {
     top: auto;
@@ -1931,7 +1994,11 @@ body.webcam-challenge-live .webcam-local-wrap {
   }
 
   body.webcam-active.webcam-pip .screen.active {
-    padding-bottom: 11rem;
+    padding-bottom: calc(min(88vw, 300px) * 1.05 + 6rem + env(safe-area-inset-bottom));
+  }
+
+  body.webcam-active.webcam-pip.webcam-reto-mode .screen.active {
+    padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
   }
 
   body.webcam-active.webcam-fullscreen .screen.active {

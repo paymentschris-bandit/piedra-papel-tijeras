@@ -1,7 +1,9 @@
 import fs from "fs";
 import vm from "vm";
+import { expandChallengeBank } from "./expand-challenge-bank.mjs";
+import { getOutdoorPoolExtra } from "./outdoor-pool-extra.mjs";
 
-const MIN = 40;
+const MIN = 80;
 const ROOT = import.meta.dirname;
 
 function loadOutdoorData() {
@@ -68,8 +70,6 @@ function extraFor(path, loc, n) {
   const [, intensity, orient, role] = path.match(/^(suave|picante|extremo)\.(.+)$/) || [];
   const place = loc === "general" ? "al aire libre" : LOC_LABELS[loc] || loc;
   const isExhib = intensity !== "suave";
-  const out = [];
-  const who = role === "chica" ? "ella" : role === "chico" ? "él" : "vosotros";
 
   const pools = {
     suave: {
@@ -82,6 +82,8 @@ function extraFor(path, loc, n) {
         `Confiesa dónde te excitaría que {ganador} te tocara en ${place}.`,
         `Quítate una prenda interior en el baño y entrégasela a {ganador}. Vuelve sin ella.`,
         `En ${place}, abre las piernas un poco más de lo normal mientras {ganador} vigila si alguien mira.`,
+        `En ${place}, susurrale a {ganador} qué parte de tu cuerpo enseñarías si os pillaran.`,
+        `En ${place}, deja que {ganador} te pase la mano por la espalda bajo la chaqueta 30 segundos.`,
       ],
       hetero_chico: [
         `En ${place}, pon la mano de {ganador} sobre tu polla — ropa puesta — 20 segundos.`,
@@ -92,6 +94,8 @@ function extraFor(path, loc, n) {
         `Guía su mano sobre tu pecho o muslo en ${place} 30 segundos.`,
         `En ${place}, deja visible el bulto de tu polla 15 segundos mientras {ganador} vigila.`,
         `Camina delante de {ganador} en ${place} rozándole la mano cuando pase alguien.`,
+        `En ${place}, susurrale dónde te gustaría correrte si os pillaran.`,
+        `En ${place}, pide permiso para bajar su braga un centímetro — 30 segundos.`,
       ],
       chico_chico: [
         `En ${place}, besad 25 segundos y frota pollas — ropa puesta — 30 segundos.`,
@@ -131,7 +135,7 @@ function extraFor(path, loc, n) {
         `En ${place}, arrodíllate y saca la polla 15 segundos. Sube rápido si hay gente.`,
         `Flash: enseña tu polla dura 5 segundos en ${place}. {ganador} vigila.`,
         `Frota tu polla contra su coño — braga apartada — 1 minuto en ${place}.`,
-        `En ${place}, ella te hace paja bajo la chaqueta 2 minutos.`,
+        `En ${place}, ella te masturba bajo la chaqueta 2 minutos.`,
         `Lame su coño en un rincón de ${place} 90 segundos en silencio.`,
         `En ${place}, confiesa en voz baja la fantasía más morbosa mientras te toca.`,
       ],
@@ -140,10 +144,10 @@ function extraFor(path, loc, n) {
         `En el baño de ${place}, chúpale la polla 90 segundos en silencio.`,
         `Frota tu polla contra el culo de {ganador} en ${place} 1 minuto.`,
         `Flash mutuo en ${place}: enseñad las pollas 5 segundos cada uno.`,
-        `Paja mutua en ${place} 2 minutos bajo chaquetas.`,
+        `Masturbación mutua en ${place} 2 minutos bajo chaquetas.`,
         `En ${place}, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila.`,
         `Confesad fantasía de follaros en ${place} sin que os vean.`,
-        `69 o paja mutua 90 segundos cuando pase alguien lejos en ${place}.`,
+        `69 o Masturbación mutua 90 segundos cuando pase alguien lejos en ${place}.`,
       ],
       chica_chica: [
         `En ${place}, bajaos bragas y tocaos mutuamente 2 minutos mirando si viene alguien.`,
@@ -202,21 +206,15 @@ function extraFor(path, loc, n) {
 
   let key = orient;
   if (orient === "hetero") key = `hetero_${role}`;
-  const pool = pools[intensity]?.[key] || pools[intensity]?.chico_chico || [];
-  let i = 0;
-  while (out.length < n) {
-    out.push(pool[i % pool.length]);
-    i++;
-  }
+  const base = pools[intensity]?.[key] || pools[intensity]?.chico_chico || [];
+  const extra = getOutdoorPoolExtra(intensity, key, place);
+  let merged = [...base, ...extra];
   if (isExhib && loc !== "general") {
-    for (let j = 0; j < Math.min(3, n) && out.length < n; j++) {
-      out.push(EXHIB[j % EXHIB.length].replace("un rincón semi-público", `un rincón de ${place}`));
+    for (let j = 0; j < EXHIB.length; j++) {
+      merged.push(EXHIB[j].replace("un rincón semi-público", `un rincón de ${place}`));
     }
   }
-  while (out.length < n) {
-    out.push(`${place}: reto extra ${out.length + 1} con {ganador} — intensidad ${intensity}. Palabra de seguridad.`);
-  }
-  return out.slice(0, n);
+  return expandChallengeBank(merged, n).slice(0, n);
 }
 
 function adaptRole(text, role) {
@@ -226,7 +224,7 @@ function adaptRole(text, role) {
       .replace(/saca la polla de \{ganador\}/gi, "saca tu polla y guía la mano de {ganador}")
       .replace(/Simula chupar la polla de \{ganador\}/gi, "Simula que {ganador} te chupa la polla")
       .replace(/Arrodíllate en el baño y chúpale/gi, "Arrodíllate en el baño y deja que te chupe o chúpele el coño")
-      .replace(/ella te hace paja/gi, "{ganador} te hace paja")
+      .replace(/ella te masturba/gi, "{ganador} te masturba")
       .replace(/lamé o deja que te laman/gi, "lamé a {ganador} o deja que te lame");
   }
   if (role === "chico_chico") {
@@ -236,7 +234,8 @@ function adaptRole(text, role) {
     return text
       .replace(/chupla la polla/gi, "lamé el coño")
       .replace(/polla/gi, "coño")
-      .replace(/paja/gi, "dedos");
+      .replace(/masturbación mutua/gi, "dedos mutuos")
+      .replace(/\bmasturbación\b/gi, "dedos");
   }
   return text;
 }
@@ -251,11 +250,10 @@ function getVenueChallenges(venue, path, n) {
     ? ["la pista", "la barra", "el baño VIP", "la terraza del local", "junto al DJ", "la zona de sofás"]
     : ["la zona de parejas", "el jacuzzi", "la sala privada", "el bar del club", "el pasillo de cabinas", "la piscina interior"];
   const pick = (arr) => {
-    const out = [];
-    for (let i = 0; i < n; i++) {
-      out.push(adaptRole(arr[i % arr.length].replace(/\{z\}/g, zone[i % zone.length]), role));
-    }
-    return out;
+    const expanded = expandChallengeBank(arr, n);
+    return expanded.map((text, i) =>
+      adaptRole(text.replace(/\{z\}/g, zone[i % zone.length]), role)
+    );
   };
 
   if (isDisco) {
@@ -296,7 +294,7 @@ function getVenueChallenges(venue, path, n) {
         "En el baño de la discoteca, mano bajo su falda 1 minuto. Salid con intervalo.",
         "En {z}, frota tu coño contra su muslo — braga apartada lo justo — 1 minuto.",
         "Bailad en {z} con su dedo en tu braga 60 segundos. Para si alguien os mira fijo.",
-        "En {z}, ella te hace paja bajo la chaqueta 2 minutos en penumbra.",
+        "En {z}, ella te masturba bajo la chaqueta 2 minutos en penumbra.",
         "En el reservado o {z}, chúpale la polla 90 segundos con la puerta entornada si hay.",
         "Flash: enseña tu polla 3 segundos en el baño de la discoteca si está vacío.",
         "En {z}, confiesa en voz alta la fantasía más morbosa de la noche mientras te toca.",
@@ -368,7 +366,7 @@ function getVenueChallenges(venue, path, n) {
       "Exhibicionismo en {z}: quedad en ropa interior 30 segundos si el club lo permite.",
       "En {z}, deja que otra pareja os mire besaros mientras os tocáis por encima de la ropa 1 minuto — solo si todos consentís.",
       "En el baño del club, sexo oral 90 segundos en silencio.",
-      "En {z}, paja o dedos mutuos 2 minutos sabiendo que alguien puede entrar.",
+      "En {z}, masturbación o dedos mutuos 2 minutos sabiendo que alguien puede entrar.",
       "En {z}, quitad bragas o bajad pantalones lo justo — 15 segundos — para {ganador}.",
       "En la zona de glory hole acordada, guía a {ganador} o participa 90 segundos según reglas del club.",
       "En {z}, confiesa en voz alta la fantasía swinger más morbosa mientras te toca.",
@@ -376,7 +374,7 @@ function getVenueChallenges(venue, path, n) {
       "En el jacuzzi, besad y meted mano bajo el agua 90 segundos.",
       "Exhibicionismo: en {z}, desnudo parcial 20 segundos ante parejas que miren con consentimiento.",
       "En {z}, lamé el cuello o pecho de {ganador} mientras otra pareja observa — solo si todos quieren.",
-      "En la sala de parejas, dedos en coño o paja 2 minutos con luz tenue.",
+      "En la sala de parejas, dedos en coño o masturbación 2 minutos con luz tenue.",
       "En {z}, intercambiad bragas o ropa interior como trofeo hasta final de partida.",
     ]);
   }
@@ -404,6 +402,23 @@ function getVenueChallenges(venue, path, n) {
   ]);
 }
 
+function uniqueExtras(baseArr, path, loc, targetCount) {
+  const seen = new Set(baseArr);
+  const out = [];
+  let pass = 0;
+  while (out.length < targetCount && pass < 10) {
+    const chunk = extraFor(path, loc, Math.max(targetCount - out.length + 16, 24));
+    for (const item of chunk) {
+      if (seen.has(item)) continue;
+      seen.add(item);
+      out.push(item);
+      if (out.length >= targetCount) break;
+    }
+    pass++;
+  }
+  return out.slice(0, targetCount);
+}
+
 function buildExpansion() {
   const data = loadOutdoorData();
   const generalExtra = {};
@@ -414,7 +429,7 @@ function buildExpansion() {
   for (const { path, arr } of generalLeaves) {
     if (arr.length >= MIN) continue;
     const parts = path.split(".");
-    appendToPath(generalExtra, parts, extraFor(path, "general", MIN - arr.length));
+    appendToPath(generalExtra, parts, uniqueExtras(arr, path, "general", MIN - arr.length));
   }
 
   for (const loc of Object.keys(data.OUTDOOR_LOCATION_CHALLENGES)) {
@@ -423,7 +438,7 @@ function buildExpansion() {
     for (const { path, arr } of leaves) {
       if (arr.length >= MIN) continue;
       const parts = path.split(".");
-      appendToPath(bucket, parts, extraFor(path, loc, MIN - arr.length));
+      appendToPath(bucket, parts, uniqueExtras(arr, path, loc, MIN - arr.length));
     }
     if (Object.keys(bucket).length) locationExtra[loc] = bucket;
   }

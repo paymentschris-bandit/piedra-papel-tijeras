@@ -101,7 +101,7 @@ Listado completo de órdenes del modo **Aire libre**.
 6. En el bosque, {ganador} se inclina contra un árbol: levanta su falda y frota tu polla entre sus nalgas 1 minuto sin penetrar — o con, si os atrevís.
 7. En el coche, mete dos dedos en el coño de {ganador} mientras ella mira si pasa alguien. 2 minutos al ritmo que marque.
 8. Flash: en un callejón, enséñale tu polla dura 5 segundos. Ella decide si repites.
-9. En un banco apartado de noche, ella te hace una paja por debajo de la chaqueta 2 minutos.
+9. En un banco apartado de noche, ella te masturba por debajo de la chaqueta 2 minutos.
 10. Confiesa en voz alta en el coche el sitio más morboso donde os habéis masturbado o follado al aire libre — o donde queréis hacerlo.
 11. En un parking con gente lejos, baja el pantalón hasta las rodillas 15 segundos de espaldas a la calle — que {ganador} vea tu polla y tu culo. Tapate si alguien se acerca.
 12. En el coche con ventanilla bajada, deja que {ganador} te masturbe 90 segundos mientras alguien pasa caminando fuera — parar si se detiene.
@@ -169,14 +169,14 @@ Listado completo de órdenes del modo **Aire libre**.
 2. En el bosque apartado: cómele el coño hasta que se corra o 4 minutos. Uno vigila.
 3. En la playa de noche: polla fuera, mastúrbate hasta correrte mientras {ganador} mira desde la duna.
 4. En el baño público: folla a {ganador} contra la pared del cubículo — o dedos hasta orgasmo — 2 minutos en silencio.
-5. En un parking: ella te hace una paja hasta que acabes en su mano o en la boca — dentro del coche.
+5. En un parking: ella te masturba hasta que acabes en su mano o en la boca — dentro del coche.
 6. Riesgo acordado: en un sitio semi-visible, mete la polla en {ganador} — o frota hasta casi correrte — 90 segundos. Parar si hay gente.
 7. En el coche en marcha — autopista tranquila de noche — ella te masturba hasta el borde. No te corras hasta que diga.
 8. Desnúdate completo en el bosque 1 minuto mientras {ganador} te toca. Ropa a mano.
 9. En un campo o playa: folla a {ganador} a perrito 2 minutos. Palabra de seguridad siempre.
 10. Si pierdes otra ronda, {ganador} elige dónde acabas al aire libre — su boca, tus huevos, en el suelo del coche.
 11. Exhibicionismo acordado: en un parking o mirador, quédate desnudo de cintura para abajo 45 segundos mirando hacia donde puede haber gente lejos. {ganador} vigila.
-12. En el coche con ventanas abiertas, deja que {ganador} te haga una paja o te chupe 2 minutos mientras alguien pase cerca — parar si se detiene.
+12. En el coche con ventanas abiertas, deja que {ganador} te masturbe o te chupe 2 minutos mientras alguien pase cerca — parar si se detiene.
 13. En un balcón, ventana o escalera visible: folla a {ganador} o frota tu polla contra ella 90 segundos sabiendo que podéis ser vistos. Palabra de seguridad.
 14. En la playa o campo: camina desnudo 1 minuto con {ganador} mirando desde la ropa. Vuelve al instante si hay gente cerca.
 
@@ -186,7 +186,7 @@ Listado completo de órdenes del modo **Aire libre**.
 2. En el bosque apartado: chúpale la polla a {ganador} hasta que acabe o 4 minutos. Vigilad el sendero.
 3. En el baño público: sexo oral o anal rápido en el cubículo 2 minutos. Silencio.
 4. En la playa de noche: masturbad mutuamente hasta correros uno tras otro tras una duna.
-5. En un parking: uno folla al otro contra el coche 2 minutos — o paja hasta correros.
+5. En un parking: uno folla al otro contra el coche 2 minutos — o masturbación hasta correros.
 6. Riesgo acordado: enseñad las pollas erectas 10 segundos en un sitio semi-público. Parar al instante si hay gente cerca.
 7. En el coche: 69 hasta que uno se corra o 3 minutos.
 8. Desnúdate en el bosque y deja que {ganador} te folle o te chupe 3 minutos.

@@ -9,10 +9,8 @@ export function isSwingerGroupChallenge(text) {
 
 export function fixChicaGender(text) {
   return text
-    .replace(/\bte hace una paja\b/gi, "te masturba con la mano")
-    .replace(/\bte hace paja\b/gi, "te masturba")
-    .replace(/\brecibes dedos o paja\b/gi, "recibes dedos o masturbación")
-    .replace(/\brecibes paja\b/gi, "recibes masturbación con la mano")
+    .replace(/\bte masturba\b/gi, "te masturba con la mano")
+    .replace(/\brecibes masturbación\b/gi, "recibes masturbación con la mano")
     .replace(/\bmientras vuestros chicos miran\b/gi, "mientras {ganador} mira");
 }
 
