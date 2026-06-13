@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piedra · Papel · Tijeras — Juego para Parejas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="decorations.css">
+  <style>
+    #age-gate.active { display: flex !important; }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <div class="bg-silhouette" aria-hidden="true">
+    <svg viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="silGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#c44569" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="#c44569" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="200" cy="280" rx="120" ry="180" fill="url(#silGrad)" opacity="0.6"/>
+      <path d="M120 420 Q200 320 280 420 Q200 520 120 420" fill="none" stroke="#c44569" stroke-width="1.5" opacity="0.08"/>
+      <path d="M80 200 Q200 100 320 200" fill="none" stroke="#e0567a" stroke-width="1" opacity="0.06"/>
+    </svg>
+  </div>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+  <div class="bg-noise"></div>
+  <canvas id="particles-canvas" class="particles-canvas" aria-hidden="true"></canvas>
+  <div id="floating-decor" class="floating-decor" aria-hidden="true"></div>
+  <div id="emoji-rain" class="emoji-rain" aria-hidden="true"></div>
+  <div id="vignette-pulse" class="vignette-pulse" aria-hidden="true"></div>
+  <div id="flash-overlay" class="flash-overlay" aria-hidden="true"></div>
+
+  <!-- Panel webcam (modo a distancia) -->
+  <div id="webcam-panel" class="webcam-panel hidden" aria-label="Videollamada">
+    <div class="webcam-remote-wrap">
+      <video id="remote-video" class="webcam-video" autoplay playsinline></video>
+      <span id="remote-video-label" class="webcam-label">Pareja</span>
+    </div>
+    <div class="webcam-local-wrap">
+      <video id="local-video" class="webcam-video" autoplay playsinline muted></video>
+      <span class="webcam-label webcam-label-local">Tú</span>
+    </div>
+    <div class="webcam-toolbar">
+      <button type="button" id="wc-toggle-cam" class="webcam-ctrl">Cámara ON</button>
+      <button type="button" id="wc-toggle-mic" class="webcam-ctrl">Mic ON</button>
+      <button type="button" id="wc-minimize-btn" class="webcam-ctrl webcam-ctrl-ghost" title="Minimizar">—</button>
+    </div>
+  </div>
+
+  <!-- Pantalla de verificación de edad -->
+  <div id="age-gate" class="screen active">
+    <div class="card age-card">
+      <div class="age-badge">18+</div>
+      <div class="logo logo-pulse sex-icon sex-icon-logo"></div>
+      <h1>Contenido para adultos</h1>
+      <p>Este juego contiene retos eróticos explícitos destinados exclusivamente a parejas adultas que juegan con consentimiento mutuo.</p>
+      <p class="small">Debes tener 18 años o más para continuar.</p>
+      <label class="checkbox-row">
+        <input type="checkbox" id="age-confirm">
+        <span>Confirmo que soy mayor de 18 años y juego con consentimiento</span>
+      </label>
+      <button id="enter-btn" class="btn btn-primary" disabled>Entrar al juego</button>
+    </div>
+  </div>
+
+  <!-- Configuración -->
+  <div id="setup-screen" class="screen">
+    <header class="header">
+      <span class="logo-small header-icons"></span>
+      <h1>Piedra · Papel · Tijeras</h1>
+      <p class="subtitle">El perdedor obedece. El ganador manda.</p>
+    </header>
+
+    <div class="card setup-card">
+      <div class="field player-field">
+        <label for="player1">Jugador 1</label>
+        <input type="text" id="player1" placeholder="Nombre" maxlength="20">
+        <div class="gender-row">
+          <span class="gender-label">Soy:</span>
+          <button type="button" class="gender-btn selected" data-player="1" data-gender="chico">♂ Chico</button>
+          <button type="button" class="gender-btn" data-player="1" data-gender="chica">♀ Chica</button>
+        </div>
+      </div>
+      <div class="field player-field">
+        <label for="player2">Jugador 2</label>
+        <input type="text" id="player2" placeholder="Nombre" maxlength="20">
+        <div class="gender-row">
+          <span class="gender-label">Soy:</span>
+          <button type="button" class="gender-btn" data-player="2" data-gender="chico">♂ Chico</button>
+          <button type="button" class="gender-btn selected" data-player="2" data-gender="chica">♀ Chica</button>
+        </div>
+      </div>
+
+      <p id="pair-label" class="pair-label">Pareja: chico + chica</p>
+
+      <div class="field">
+        <label>Modo de juego</label>
+        <div class="mode-grid play-mode-grid">
+          <button type="button" class="mode-btn selected" data-play-mode="local">
+            <span class="mode-icon">📱</span>
+            <span class="mode-name">Un móvil</span>
+            <span class="mode-desc">Pasáis el mismo teléfono</span>
+          </button>
+          <button type="button" class="mode-btn" data-play-mode="online">
+            <span class="mode-icon">📲</span>
+            <span class="mode-name">Dos móviles</span>
+            <span class="mode-desc">Cada uno en su dispositivo</span>
+          </button>
+          <button type="button" class="mode-btn" data-play-mode="webcam">
+            <span class="mode-icon">📹</span>
+            <span class="mode-name">Webcam</span>
+            <span class="mode-desc">A distancia con cámara</span>
+          </button>
+          <button type="button" class="mode-btn" data-play-mode="outdoor">
+            <span class="mode-icon">🌲</span>
+            <span class="mode-name">Aire libre</span>
+            <span class="mode-desc">Retos fuera de casa</span>
+          </button>
+        </div>
+        <p id="outdoor-hint" class="outdoor-hint hidden">Modo atrevido: jugáis juntos fuera. Solo donde sea legal, sin molestar a nadie y con palabra de seguridad.</p>
+      </div>
+
+      <div class="field">
+        <label>Forma de elegir</label>
+        <div class="mode-grid">
+          <button type="button" class="mode-btn selected" data-choice-mode="buttons">
+            <span class="mode-icon">🎯</span>
+            <span class="mode-name">Botones</span>
+            <span class="mode-desc">Tocáis la opción</span>
+          </button>
+          <button type="button" class="mode-btn" data-choice-mode="roulette">
+            <span class="mode-icon">🎡</span>
+            <span class="mode-name">Ruleta</span>
+            <span class="mode-desc">Elegid mientras gira</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="online-join-block" class="online-join-block hidden">
+        <label for="room-code">¿Te unes a una sala?</label>
+        <div class="join-row">
+          <input type="text" id="room-code" placeholder="Código de 6 dígitos" maxlength="6" inputmode="numeric" pattern="[0-9]*">
+          <button type="button" id="join-room-btn" class="btn btn-ghost join-btn">Unirse</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Intensidad de los retos</label>
+        <div class="intensity-grid">
+          <button type="button" class="intensity-btn" data-level="suave">
+            <span class="intensity-icon"></span>
+            <span class="intensity-name">Suave</span>
+            <span class="intensity-desc">Coqueteo y caricias</span>
+          </button>
+          <button type="button" class="intensity-btn selected" data-level="picante">
+            <span class="intensity-icon"></span>
+            <span class="intensity-name">Picante</span>
+            <span class="intensity-desc">Explícito y morboso</span>
+          </button>
+          <button type="button" class="intensity-btn" data-level="extremo">
+            <span class="intensity-icon"></span>
+            <span class="intensity-name">Extremo</span>
+            <span class="intensity-desc">Sin límites (consensuado)</span>
+          </button>
+          <button type="button" class="intensity-btn" data-level="progresivo">
+            <span class="intensity-icon"></span>
+            <span class="intensity-name">Escalada</span>
+            <span class="intensity-desc">Suave → picante → extremo</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rounds">Rondas a jugar</label>
+        <select id="rounds">
+          <option value="5">5 rondas</option>
+          <option value="10" selected>10 rondas</option>
+          <option value="15">15 rondas</option>
+          <option value="999">Sin límite</option>
+        </select>
+      </div>
+
+      <button id="start-btn" class="btn btn-primary">Comenzar partida</button>
+      <p id="online-hint" class="online-hint hidden">Modo dos móviles: crea la sala y comparte el código con tu pareja.</p>
+    </div>
+  </div>
+
+  <!-- Lobby online -->
+  <div id="lobby-screen" class="screen">
+    <div class="card lobby-card">
+      <div class="logo">📲</div>
+      <h2 id="lobby-title">Sala creada</h2>
+      <p id="lobby-subtitle" class="lobby-subtitle">Comparte este código con tu pareja</p>
+      <div id="room-code-display" class="room-code-display">------</div>
+      <button type="button" id="copy-code-btn" class="btn btn-ghost">Copiar código</button>
+      <div id="lobby-status" class="lobby-status">
+        <span class="lobby-spinner"></span>
+        <span>Esperando al jugador 2…</span>
+      </div>
+      <p id="lobby-webcam-note" class="lobby-note lobby-webcam-note hidden">Modo webcam: al conectar os pedirá permiso de cámara y micrófono. Usad HTTPS o localhost.</p>
+      <p class="lobby-note">Ambos dispositivos necesitan internet. Si no conecta, abrid el juego con un servidor local (ver README).</p>
+      <button type="button" id="cancel-lobby-btn" class="btn btn-ghost">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- Juego -->
+  <div id="game-screen" class="screen">
+    <header class="game-header">
+      <div class="scoreboard">
+        <div class="player-score" id="score-p1">
+          <span class="player-name"></span>
+          <span class="score">0</span>
+          <span class="active-dot" aria-hidden="true"></span>
+        </div>
+        <div class="round-info">
+          <span id="round-label">Ronda 1</span>
+          <div id="escalada-bar" class="escalada-bar hidden">
+            <div id="escalada-fill" class="escalada-fill"></div>
+          </div>
+          <span id="progress-level" class="progress-level hidden"></span>
+        </div>
+        <div class="player-score" id="score-p2">
+          <span class="player-name"></span>
+          <span class="score">0</span>
+          <span class="active-dot" aria-hidden="true"></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="game-main">
+      <p id="turn-label" class="turn-label">Turno de <strong></strong></p>
+
+      <div id="choices-buttons" class="choices">
+        <button class="choice-btn" data-choice="piedra" aria-label="Piedra">
+          <span class="choice-glow" aria-hidden="true"></span>
+          <span class="choice-emoji">✊</span>
+          <span class="choice-name">Piedra</span>
+        </button>
+        <button class="choice-btn" data-choice="papel" aria-label="Papel">
+          <span class="choice-glow" aria-hidden="true"></span>
+          <span class="choice-emoji">✋</span>
+          <span class="choice-name">Papel</span>
+        </button>
+        <button class="choice-btn" data-choice="tijeras" aria-label="Tijeras">
+          <span class="choice-glow" aria-hidden="true"></span>
+          <span class="choice-emoji">✌️</span>
+          <span class="choice-name">Tijeras</span>
+        </button>
+      </div>
+
+      <div id="choices-roulette" class="roulette-container hidden">
+        <div class="roulette-pointer" aria-hidden="true">▼</div>
+        <div class="roulette-wheel-wrap">
+          <div id="roulette-wheel" class="roulette-wheel">
+            <div class="roulette-segment seg-piedra" data-choice="piedra">
+              <span>✊</span>
+              <small>Piedra</small>
+            </div>
+            <div class="roulette-segment seg-papel" data-choice="papel">
+              <span>✋</span>
+              <small>Papel</small>
+            </div>
+            <div class="roulette-segment seg-tijeras" data-choice="tijeras">
+              <span>✌️</span>
+              <small>Tijeras</small>
+            </div>
+          </div>
+          <div class="roulette-center">?</div>
+        </div>
+        <p id="roulette-hint" class="roulette-hint">¡Pulsa <strong>ELEGIR</strong> mientras gira!</p>
+        <button type="button" id="roulette-lock-btn" class="btn btn-primary roulette-lock-btn">ELEGIR</button>
+        <p id="roulette-locked" class="roulette-locked hidden">✓ Elección registrada</p>
+      </div>
+
+      <p id="waiting-msg" class="waiting-msg hidden">Esperando la elección del otro jugador…</p>
+      <p id="p1-choice-hidden" class="hidden-choice hidden">✓ Elección registrada</p>
+    </main>
+  </div>
+
+  <!-- Resultado de ronda -->
+  <div id="result-screen" class="screen">
+    <div class="card result-card animate-in">
+      <div class="result-mood-strip" id="result-mood-strip" aria-hidden="true"></div>
+      <div id="result-choices" class="result-choices"></div>
+      <h2 id="result-title"></h2>
+      <p id="result-subtitle" class="result-subtitle"></p>
+
+      <div id="challenge-box" class="challenge-box">
+        <div class="challenge-corner tl"></div>
+        <div class="challenge-corner br"></div>
+        <span id="challenge-label" class="challenge-label">Reto para el perdedor</span>
+        <div class="challenge-icon-row" id="challenge-icons" aria-hidden="true"></div>
+        <p id="challenge-text"></p>
+      </div>
+
+      <div class="result-actions">
+        <button id="next-round-btn" class="btn btn-primary">Siguiente ronda</button>
+        <button id="new-challenge-btn" class="btn btn-ghost">Otro reto</button>
+        <p id="host-wait-msg" class="host-wait-msg hidden">Esperando a que el anfitrión continúe…</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fin de partida -->
+  <div id="end-screen" class="screen">
+    <div class="card end-card animate-in">
+      <div class="trophy"></div>
+      <h2 id="winner-title"></h2>
+      <p id="final-scores"></p>
+
+      <div id="final-challenge-box" class="challenge-box final-challenge">
+        <span class="challenge-label">Premio final del ganador</span>
+        <p id="final-challenge-text"></p>
+      </div>
+
+      <div class="result-actions">
+        <button id="play-again-btn" class="btn btn-primary">Jugar de nuevo</button>
+        <button id="back-setup-btn" class="btn btn-ghost">Cambiar configuración</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/peerjs.min.js"></script>
+  <script>
+    if (location.protocol === "file:") {
+      document.addEventListener("DOMContentLoaded", function () {
+        var banner = document.createElement("div");
+        banner.style.cssText = "position:fixed;top:0;left:0;right:0;z-index:9999;background:#8b2d4a;color:#fff;padding:12px 16px;text-align:center;font-family:sans-serif;font-size:14px;line-height:1.4;";
+        banner.innerHTML = "⚠️ Abre el juego con un servidor, no como archivo. En el PC: <strong>python -m http.server 8080</strong> y entra en <strong>http://localhost:8080</strong> o <strong>http://IP-de-tu-PC:8080</strong> desde el móvil.";
+        document.body.prepend(banner);
+      });
+    }
+  </script>
+  <script src="challenges.js"></script>
+  <script src="effects.js"></script>
+  <script src="icons.js"></script>
+  <script src="decorations.js"></script>
+  <script src="roulette.js"></script>
+  <script src="multiplayer.js"></script>
+  <script src="webcam.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

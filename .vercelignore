@@ -1,0 +1,10 @@
+_backup/
+*.bat
+*.py
+*.pem
+.cert-ip
+tunnel-url.txt
+enlace-movil.html
+local-cert.pem
+local-key.pem
+README.md

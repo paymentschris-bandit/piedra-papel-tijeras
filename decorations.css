@@ -1,0 +1,500 @@
+/* Capa silueta de fondo */
+.bg-silhouette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.7;
+  animation: silBreathe 10s ease-in-out infinite;
+}
+
+.bg-silhouette svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes silBreathe {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.04); }
+}
+
+/* Iconos flotantes */
+.floating-decor {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.float-icon {
+  position: absolute;
+  font-size: 1.25rem;
+  opacity: 0;
+  filter: blur(0);
+  animation: floatDrift linear forwards;
+  text-shadow: 0 0 12px rgba(224, 86, 122, 0.5);
+}
+
+@keyframes floatDrift {
+  0% {
+    opacity: 0;
+    transform: translateY(110vh) rotate(0deg) scale(0.6);
+  }
+  10% { opacity: var(--fi-opacity, 0.35); }
+  90% { opacity: var(--fi-opacity, 0.35); }
+  100% {
+    opacity: 0;
+    transform: translateY(-10vh) rotate(360deg) scale(1.1);
+  }
+}
+
+/* Lluvia de emojis en retos */
+.emoji-rain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.rain-emoji {
+  position: absolute;
+  top: -40px;
+  font-size: 1.5rem;
+  animation: emojiFall linear forwards;
+  text-shadow: 0 0 8px rgba(224, 86, 122, 0.6);
+}
+
+@keyframes emojiFall {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg) scale(0.5);
+  }
+  10% { opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translateY(110vh) rotate(720deg) scale(1.2);
+  }
+}
+
+/* Viñeta pulsante en momentos intensos */
+.vignette-pulse {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 49;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(120, 20, 50, 0.45) 100%);
+  transition: opacity 0.4s;
+}
+
+.vignette-pulse.active {
+  opacity: 1;
+  animation: vignetteBeat 1.2s ease-in-out infinite;
+}
+
+@keyframes vignetteBeat {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Intensidad global en body */
+body[data-mood="suave"] .bg-glow {
+  animation-duration: 10s;
+}
+
+body[data-mood="picante"] .bg-glow {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(196, 69, 105, 0.32), transparent),
+    radial-gradient(ellipse 60% 50% at 90% 80%, rgba(180, 40, 60, 0.2), transparent),
+    radial-gradient(ellipse 50% 40% at 10% 90%, rgba(120, 30, 60, 0.15), transparent);
+  animation: bgPulseHot 5s ease-in-out infinite alternate;
+}
+
+body[data-mood="extremo"] .bg-glow {
+  background:
+    radial-gradient(ellipse 90% 70% at 50% -10%, rgba(220, 50, 80, 0.38), transparent),
+    radial-gradient(ellipse 70% 60% at 90% 80%, rgba(80, 10, 40, 0.25), transparent),
+    radial-gradient(ellipse 60% 50% at 10% 90%, rgba(180, 30, 50, 0.2), transparent);
+  animation: bgPulseExtreme 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes bgPulseHot {
+  0% { opacity: 0.9; filter: hue-rotate(0deg); }
+  100% { opacity: 1; filter: hue-rotate(8deg); }
+}
+
+@keyframes bgPulseExtreme {
+  0% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.9; transform: scale(1.02); }
+}
+
+/* Age gate */
+.age-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--accent-glow);
+  border-radius: 999px;
+  color: var(--accent-glow);
+  margin-bottom: 0.75rem;
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(224, 86, 122, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(224, 86, 122, 0.6); }
+}
+
+.logo-pulse {
+  font-size: 3rem !important;
+  animation: kissPulse 1.5s ease-in-out infinite !important;
+}
+
+@keyframes kissPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); filter: drop-shadow(0 0 16px rgba(224, 86, 122, 0.8)); }
+}
+
+.header-icons {
+  display: block;
+  letter-spacing: 0.5em;
+  animation: headerFlicker 3s ease-in-out infinite;
+}
+
+@keyframes headerFlicker {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; text-shadow: 0 0 20px rgba(224, 86, 122, 0.5); }
+}
+
+/* Tira de mood en resultado */
+.result-mood-strip {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.35rem;
+  overflow: hidden;
+}
+
+.result-mood-strip span {
+  display: inline-block;
+  animation: moodBounce 1.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(224, 86, 122, 0.4));
+}
+
+.result-mood-strip span:nth-child(1) { animation-delay: 0s; }
+.result-mood-strip span:nth-child(2) { animation-delay: 0.1s; }
+.result-mood-strip span:nth-child(3) { animation-delay: 0.2s; }
+.result-mood-strip span:nth-child(4) { animation-delay: 0.3s; }
+.result-mood-strip span:nth-child(5) { animation-delay: 0.4s; }
+.result-mood-strip span:nth-child(6) { animation-delay: 0.5s; }
+.result-mood-strip span:nth-child(7) { animation-delay: 0.6s; }
+
+@keyframes moodBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-6px) scale(1.15); }
+}
+
+/* Challenge box decorado */
+.challenge-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.challenge-box::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent-glow), transparent, var(--gold));
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.4s;
+}
+
+.challenge-box.challenge-glow::before {
+  opacity: 0.35;
+  animation: borderSpin 3s linear infinite;
+}
+
+@keyframes borderSpin {
+  to { filter: hue-rotate(360deg); }
+}
+
+.challenge-box > * {
+  position: relative;
+  z-index: 1;
+}
+
+.challenge-corner {
+  position: absolute;
+  font-size: 1.1rem;
+  opacity: 0.5;
+  z-index: 2;
+  animation: cornerPulse 2s ease-in-out infinite;
+}
+
+.challenge-corner.tl { top: 0.5rem; left: 0.6rem; }
+.challenge-corner.br { bottom: 0.5rem; right: 0.6rem; animation-delay: 0.5s; }
+
+@keyframes cornerPulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.2); }
+}
+
+.challenge-icon-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+  font-size: 1.15rem;
+}
+
+.challenge-icon-row span {
+  animation: iconWiggle 0.8s ease-in-out infinite;
+}
+
+.challenge-icon-row span:nth-child(2) { animation-delay: 0.1s; }
+.challenge-icon-row span:nth-child(3) { animation-delay: 0.2s; }
+.challenge-icon-row span:nth-child(4) { animation-delay: 0.3s; }
+.challenge-icon-row span:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(8deg) scale(1.1); }
+}
+
+/* Intensidad del reto */
+.challenge-box.mood-suave {
+  background: rgba(168, 85, 247, 0.08);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.challenge-box.mood-picante {
+  background: rgba(196, 69, 105, 0.18);
+  border-color: rgba(224, 86, 122, 0.45);
+  box-shadow: 0 0 30px rgba(196, 69, 105, 0.2);
+}
+
+.challenge-box.mood-extremo {
+  background: rgba(80, 10, 30, 0.45);
+  border-color: rgba(224, 86, 122, 0.6);
+  box-shadow: 0 0 40px rgba(196, 69, 105, 0.35);
+  animation: extremeBoxPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes extremeBoxPulse {
+  0%, 100% { box-shadow: 0 0 30px rgba(196, 69, 105, 0.25); }
+  50% { box-shadow: 0 0 50px rgba(224, 86, 122, 0.5); }
+}
+
+.challenge-box.mood-extremo .challenge-corner {
+  opacity: 0.9;
+}
+
+.challenge-box.mood-extremo #challenge-text {
+  text-shadow: 0 0 20px rgba(224, 86, 122, 0.15);
+}
+
+/* Result card shake en victoria */
+.result-card.win-shake {
+  animation: cardPop 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+             winTremble 0.4s ease 0.5s;
+}
+
+@keyframes winTremble {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+
+/* Subtitle latido */
+.result-subtitle.pulse-text {
+  animation: textHeartbeat 1.5s ease-in-out infinite;
+  color: var(--accent-glow) !important;
+}
+
+@keyframes textHeartbeat {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; text-shadow: 0 0 12px rgba(224, 86, 122, 0.4); }
+}
+
+/* Botones con latido en picante+ */
+body[data-mood="picante"] .btn-primary,
+body[data-mood="extremo"] .btn-primary {
+  animation: btnThrob 2s ease-in-out infinite;
+}
+
+@keyframes btnThrob {
+  0%, 100% { box-shadow: 0 4px 24px rgba(196, 69, 105, 0.35); }
+  50% { box-shadow: 0 4px 40px rgba(224, 86, 122, 0.55); }
+}
+
+/* Ruleta más hot */
+body[data-mood="picante"] .roulette-wheel,
+body[data-mood="extremo"] .roulette-wheel {
+  box-shadow: 0 0 50px rgba(224, 86, 122, 0.4);
+}
+
+body[data-mood="extremo"] .roulette-wheel {
+  animation: rouletteGlow 1s ease-in-out infinite alternate;
+}
+
+@keyframes rouletteGlow {
+  from { box-shadow: 0 0 40px rgba(224, 86, 122, 0.35); }
+  to { box-shadow: 0 0 70px rgba(212, 165, 116, 0.5); }
+}
+
+/* End screen */
+.end-card .trophy {
+  animation: trophyBounce 1s ease-in-out infinite, trophyGlow 2s ease-in-out infinite;
+}
+
+@keyframes trophyGlow {
+  0%, 100% { filter: drop-shadow(0 0 20px rgba(212, 165, 116, 0.5)); }
+  50% { filter: drop-shadow(0 0 40px rgba(224, 86, 122, 0.7)); }
+}
+
+.final-challenge.mood-extremo {
+  animation: extremeBoxPulse 1.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-icon,
+  .rain-emoji,
+  .result-mood-strip .sex-icon,
+  .challenge-icon-row .sex-icon {
+    animation: none !important;
+  }
+}
+
+/* Iconos SVG sensuales */
+.sex-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size, 28px);
+  height: var(--icon-size, 28px);
+  flex-shrink: 0;
+}
+
+.sex-icon svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 6px rgba(224, 86, 122, 0.45));
+}
+
+.sex-icon-logo {
+  --icon-size: 52px;
+  margin: 0 auto 1rem;
+}
+
+.sex-icon-header {
+  --icon-size: 22px;
+  gap: 0.75rem;
+}
+
+.header-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.sex-icon-intensity {
+  --icon-size: 32px;
+}
+
+.sex-icon-intensity svg {
+  filter: drop-shadow(0 0 8px rgba(224, 86, 122, 0.5));
+}
+
+.sex-icon-sm {
+  --icon-size: 18px;
+}
+
+.sex-icon-strip {
+  --icon-size: 26px;
+}
+
+.sex-icon-float {
+  --icon-size: 32px;
+  position: absolute;
+}
+
+.sex-icon-float svg {
+  filter: drop-shadow(0 0 10px rgba(224, 86, 122, 0.55));
+}
+
+.sex-icon-rain {
+  --icon-size: 24px;
+  position: absolute;
+}
+
+.float-icon {
+  font-size: unset;
+}
+
+.rain-emoji {
+  font-size: unset;
+}
+
+.challenge-corner {
+  font-size: unset;
+  width: 28px;
+  height: 28px;
+}
+
+.challenge-corner svg {
+  width: 100%;
+  height: 100%;
+}
+
+.result-mood-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.result-mood-strip .sex-icon {
+  animation: moodBounce 1.2s ease-in-out infinite;
+}
+
+.challenge-icon-row {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.challenge-icon-row .sex-icon {
+  animation: iconWiggle 0.8s ease-in-out infinite;
+}
+
+.intensity-icon.sex-icon {
+  display: flex;
+  margin-bottom: 0.15rem;
+}
+
+.sex-icon-trophy {
+  --icon-size: 64px;
+  margin: 0 auto 1rem;
+}
+
+.sex-icon-trophy svg {
+  filter: drop-shadow(0 0 12px rgba(240, 200, 150, 0.55));
+}
+
+#winner-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
