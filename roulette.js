@@ -7,6 +7,7 @@ const Roulette = {
   animId: null,
   speed: 0,
   onLock: null,
+  lastLockedChoice: null,
 };
 
 function initRoulette(onLockCallback) {
@@ -35,7 +36,7 @@ function startRouletteSpin() {
 
   stopRouletteSpin(false);
   Roulette.locked = false;
-  Roulette.rotation = Roulette.rotation || 0;
+  Roulette.lastLockedChoice = null;
   Roulette.speed = 6 + Math.random() * 4;
   Roulette.spinning = true;
 
@@ -59,10 +60,26 @@ function startRouletteSpin() {
 
 function stopRouletteSpin(keepPosition = true) {
   Roulette.spinning = false;
+  Roulette.speed = 0;
   if (Roulette.animId) {
     cancelAnimationFrame(Roulette.animId);
     Roulette.animId = null;
   }
+  if (!keepPosition) {
+    zeroRouletteMotion();
+  }
+}
+
+function zeroRouletteMotion() {
+  Roulette.rotation = 0;
+  Roulette.speed = 0;
+  Roulette.spinning = false;
+  if (Roulette.animId) {
+    cancelAnimationFrame(Roulette.animId);
+    Roulette.animId = null;
+  }
+  const wheel = document.getElementById("roulette-wheel");
+  if (wheel) wheel.style.transform = "rotate(0deg)";
 }
 
 function getRouletteChoiceAtRotation(rotation) {
@@ -108,6 +125,8 @@ function lockRoulette() {
   }
 
   if (Roulette.onLock) Roulette.onLock(choice);
+  Roulette.lastLockedChoice = choice;
+  zeroRouletteMotion();
 }
 
 function refreshRouletteI18n() {
@@ -119,19 +138,18 @@ function refreshRouletteI18n() {
   if (lockBtn && typeof t === "function") {
     lockBtn.textContent = t("roulette.lock");
   }
-  if (Roulette.locked) {
-    const wheel = document.getElementById("roulette-wheel");
-    if (wheel) {
-      const choice = getRouletteChoiceAtRotation(Roulette.rotation);
-      const lockedEl = document.getElementById("roulette-locked");
-      if (lockedEl) lockedEl.textContent = t("roulette.locked", { name: getChoiceName(choice) });
+  if (Roulette.locked && Roulette.lastLockedChoice) {
+    const lockedEl = document.getElementById("roulette-locked");
+    if (lockedEl) {
+      lockedEl.textContent = t("roulette.locked", { name: getChoiceName(Roulette.lastLockedChoice) });
     }
   }
 }
 
 function resetRouletteUI() {
   Roulette.locked = false;
-  stopRouletteSpin(false);
+  Roulette.lastLockedChoice = null;
+  zeroRouletteMotion();
   document.getElementById("roulette-locked")?.classList.add("hidden");
   document.getElementById("roulette-lock-btn")?.classList.remove("hidden");
   document.getElementById("roulette-lock-btn")?.removeAttribute("disabled");

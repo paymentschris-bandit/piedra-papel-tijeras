@@ -330,11 +330,16 @@ function startRound() {
 function resetChoiceUI() {
   document.querySelectorAll(".choice-btn").forEach((btn) => {
     btn.disabled = false;
-    btn.classList.remove("selected", "dimmed");
+    btn.classList.remove("selected", "dimmed", "choice-enter");
   });
   document.getElementById("waiting-msg")?.classList.add("hidden");
   document.getElementById("p1-choice-hidden")?.classList.add("hidden");
   resetRouletteUI();
+}
+
+function onChoiceRegistered() {
+  if (state.choiceMode !== "roulette") return;
+  if (typeof zeroRouletteMotion === "function") zeroRouletteMotion();
 }
 
 function updateTurnUI() {
@@ -502,6 +507,7 @@ function lockOnlineChoiceUI() {
   document.getElementById("roulette-lock-btn")?.classList.add("hidden");
   document.getElementById("roulette-hint")?.classList.add("hidden");
   stopRouletteSpin(true);
+  if (typeof zeroRouletteMotion === "function") zeroRouletteMotion();
 }
 
 function syncGameScreenFromRemote() {
@@ -694,6 +700,7 @@ function handleChoice(choice) {
     document.querySelectorAll(".choice-btn").forEach((btn) => { btn.disabled = true; });
     sendChoice(myNum, choice);
     state.choices[key] = choice;
+    onChoiceRegistered();
     lockOnlineChoiceUI();
     updateTurnUI();
     return;
@@ -701,6 +708,7 @@ function handleChoice(choice) {
 
   const key = state.currentPlayer === 1 ? "p1" : "p2";
   state.choices[key] = choice;
+  onChoiceRegistered();
 
   const selectedBtn = document.querySelector(`.choice-btn[data-choice="${choice}"]`);
   if (selectedBtn) animateChoice(selectedBtn);
@@ -728,6 +736,7 @@ function handleRouletteLock(choice) {
     if (state.choices[key]) return;
     state.choices[key] = choice;
     sendChoice(myNum, choice);
+    onChoiceRegistered();
     lockOnlineChoiceUI();
     updateTurnUI();
     return;
@@ -735,6 +744,7 @@ function handleRouletteLock(choice) {
 
   const key = state.currentPlayer === 1 ? "p1" : "p2";
   state.choices[key] = choice;
+  onChoiceRegistered();
 
   if (state.currentPlayer === 1) {
     state.currentPlayer = 2;
