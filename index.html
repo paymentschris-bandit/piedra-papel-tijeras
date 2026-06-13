@@ -45,37 +45,52 @@
   <div id="webcam-panel" class="webcam-panel hidden" aria-label="Videollamada">
     <div class="webcam-remote-wrap">
       <video id="remote-video" class="webcam-video" autoplay playsinline></video>
-      <span id="remote-video-label" class="webcam-label">Pareja</span>
+      <span id="remote-video-label" class="webcam-label" data-i18n="webcam.partner">Pareja</span>
     </div>
     <div class="webcam-local-wrap">
       <video id="local-video" class="webcam-video" autoplay playsinline muted></video>
-      <span class="webcam-label webcam-label-local">Tú</span>
+      <span class="webcam-label webcam-label-local" data-i18n="webcam.you">Tú</span>
     </div>
     <div class="webcam-toolbar">
-      <button type="button" id="wc-toggle-cam" class="webcam-ctrl">Cámara ON</button>
-      <button type="button" id="wc-toggle-mic" class="webcam-ctrl">Mic ON</button>
+      <button type="button" id="wc-toggle-cam" class="webcam-ctrl" data-i18n="webcam.camOn">Cámara ON</button>
+      <button type="button" id="wc-toggle-mic" class="webcam-ctrl" data-i18n="webcam.micOn">Mic ON</button>
       <button type="button" id="wc-fullscreen-btn" class="webcam-ctrl webcam-ctrl-mini" title="Ventana flotante">▢</button>
     </div>
   </div>
 
   <!-- Solo cámara mientras se cumple el reto -->
   <div id="wc-challenge-overlay" class="wc-challenge-overlay hidden" aria-hidden="true">
-    <button type="button" id="finish-challenge-btn" class="btn btn-primary wc-finish-challenge">Reto terminado ✓</button>
+    <button type="button" id="finish-challenge-btn" class="btn btn-primary wc-finish-challenge" data-i18n="webcam.finishChallenge">Reto terminado ✓</button>
   </div>
 
   <!-- Pantalla de verificación de edad -->
   <div id="age-gate" class="screen active">
     <div class="card age-card">
+      <div class="field lang-field">
+        <label for="lang-select-age" data-i18n="lang.label">Idioma</label>
+        <select id="lang-select-age" class="lang-select" aria-label="Language">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="pt">Português</option>
+          <option value="it">Italiano</option>
+          <option value="nl">Nederlands</option>
+          <option value="pl">Polski</option>
+          <option value="ru">Русский</option>
+          <option value="uk">Українська</option>
+        </select>
+      </div>
       <div class="age-badge">18+</div>
       <div class="logo logo-pulse sex-icon sex-icon-logo"></div>
-      <h1>Contenido para adultos</h1>
-      <p>Este juego contiene retos eróticos explícitos destinados exclusivamente a parejas adultas que juegan con consentimiento mutuo.</p>
-      <p class="small">Debes tener 18 años o más para continuar.</p>
+      <h1 data-i18n="age.title">Contenido para adultos</h1>
+      <p data-i18n="age.p1">Este juego contiene retos eróticos explícitos destinados exclusivamente a parejas adultas que juegan con consentimiento mutuo.</p>
+      <p class="small" data-i18n="age.p2">Debes tener 18 años o más para continuar.</p>
       <label class="checkbox-row">
         <input type="checkbox" id="age-confirm">
-        <span>Confirmo que soy mayor de 18 años y juego con consentimiento</span>
+        <span data-i18n="age.confirm">Confirmo que soy mayor de 18 años y juego con consentimiento</span>
       </label>
-      <button id="enter-btn" class="btn btn-primary" disabled>Entrar al juego</button>
+      <button id="enter-btn" class="btn btn-primary" disabled data-i18n="age.enter">Entrar al juego</button>
     </div>
   </div>
 
@@ -83,101 +98,117 @@
   <div id="setup-screen" class="screen">
     <header class="header">
       <span class="logo-small header-icons"></span>
-      <h1>Piedra · Papel · Tijeras</h1>
-      <p class="subtitle">El perdedor obedece. El ganador manda.</p>
+      <h1 data-i18n="setup.title">Piedra · Papel · Tijeras</h1>
+      <p class="subtitle" data-i18n="setup.subtitle">El perdedor obedece. El ganador manda.</p>
     </header>
 
     <div class="card setup-card">
+      <div class="field lang-field">
+        <label for="lang-select" data-i18n="lang.label">Idioma</label>
+        <select id="lang-select" class="lang-select" aria-label="Language">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="pt">Português</option>
+          <option value="it">Italiano</option>
+          <option value="nl">Nederlands</option>
+          <option value="pl">Polski</option>
+          <option value="ru">Русский</option>
+          <option value="uk">Українська</option>
+        </select>
+      </div>
+      <p class="challenges-note" data-i18n="setup.challengesNote">Los retos siguen en español.</p>
       <div class="field player-field">
-        <label for="player1">Jugador 1</label>
-        <input type="text" id="player1" placeholder="Nombre" maxlength="20">
+        <label for="player1" data-i18n="setup.player1">Jugador 1</label>
+        <input type="text" id="player1" data-i18n-placeholder="setup.namePlaceholder" placeholder="Nombre" maxlength="20">
         <div class="gender-row">
-          <span class="gender-label">Soy:</span>
-          <button type="button" class="gender-btn selected" data-player="1" data-gender="chico">♂ Chico</button>
-          <button type="button" class="gender-btn" data-player="1" data-gender="chica">♀ Chica</button>
+          <span class="gender-label" data-i18n="setup.genderLabel">Soy:</span>
+          <button type="button" class="gender-btn selected" data-player="1" data-gender="chico" data-i18n="setup.genderBoy">♂ Chico</button>
+          <button type="button" class="gender-btn" data-player="1" data-gender="chica" data-i18n="setup.genderGirl">♀ Chica</button>
         </div>
       </div>
       <div class="field player-field">
-        <label for="player2">Jugador 2</label>
-        <input type="text" id="player2" placeholder="Nombre" maxlength="20">
+        <label for="player2" data-i18n="setup.player2">Jugador 2</label>
+        <input type="text" id="player2" data-i18n-placeholder="setup.namePlaceholder" placeholder="Nombre" maxlength="20">
         <div class="gender-row">
-          <span class="gender-label">Soy:</span>
-          <button type="button" class="gender-btn" data-player="2" data-gender="chico">♂ Chico</button>
-          <button type="button" class="gender-btn selected" data-player="2" data-gender="chica">♀ Chica</button>
+          <span class="gender-label" data-i18n="setup.genderLabel">Soy:</span>
+          <button type="button" class="gender-btn" data-player="2" data-gender="chico" data-i18n="setup.genderBoy">♂ Chico</button>
+          <button type="button" class="gender-btn selected" data-player="2" data-gender="chica" data-i18n="setup.genderGirl">♀ Chica</button>
         </div>
       </div>
 
       <p id="pair-label" class="pair-label">Pareja: chico + chica</p>
 
       <div class="field">
-        <label>Modo de juego</label>
+        <label data-i18n="playMode.label">Modo de juego</label>
         <div class="mode-grid play-mode-grid">
-          <button type="button" class="mode-btn selected" data-play-mode="local">
+          <button type="button" class="mode-btn selected" data-play-mode="local" data-i18n-prefix="play.local">
             <span class="mode-icon">📱</span>
             <span class="mode-name">Un móvil</span>
             <span class="mode-desc">Pasáis el mismo teléfono</span>
           </button>
-          <button type="button" class="mode-btn" data-play-mode="online">
+          <button type="button" class="mode-btn" data-play-mode="online" data-i18n-prefix="play.online">
             <span class="mode-icon">📲</span>
             <span class="mode-name">Dos móviles</span>
             <span class="mode-desc">Cada uno en su dispositivo</span>
           </button>
-          <button type="button" class="mode-btn" data-play-mode="webcam">
+          <button type="button" class="mode-btn" data-play-mode="webcam" data-i18n-prefix="play.webcam">
             <span class="mode-icon">📹</span>
             <span class="mode-name">Webcam</span>
             <span class="mode-desc">A distancia con cámara</span>
           </button>
-          <button type="button" class="mode-btn" data-play-mode="outdoor">
+          <button type="button" class="mode-btn" data-play-mode="outdoor" data-i18n-prefix="play.outdoor">
             <span class="mode-icon">🌲</span>
             <span class="mode-name">Aire libre</span>
             <span class="mode-desc">Retos fuera de casa</span>
           </button>
         </div>
-        <p id="outdoor-hint" class="outdoor-hint hidden">Modo atrevido: jugáis juntos fuera. Solo donde sea legal, sin molestar a nadie y con palabra de seguridad.</p>
+        <p id="outdoor-hint" class="outdoor-hint hidden" data-i18n="outdoor.hint">Modo atrevido: jugáis juntos fuera. Solo donde sea legal, sin molestar a nadie y con palabra de seguridad.</p>
         <div id="outdoor-location-block" class="outdoor-location-block hidden">
-          <label>¿Dónde estáis?</label>
+          <label data-i18n="outdoor.where">¿Dónde estáis?</label>
           <div class="mode-grid outdoor-location-grid">
-            <button type="button" class="mode-btn outdoor-loc-btn selected" data-outdoor-location="general">
+            <button type="button" class="mode-btn outdoor-loc-btn selected" data-outdoor-location="general" data-i18n-prefix="outdoor.general">
               <span class="mode-icon">🌍</span>
               <span class="mode-name">General</span>
               <span class="mode-desc">Todos los retos actuales</span>
             </button>
-            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="coche">
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="coche" data-i18n-prefix="outdoor.coche">
               <span class="mode-icon">🚗</span>
               <span class="mode-name">Coche</span>
               <span class="mode-desc">Aparcado o en marcha</span>
             </button>
-            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="parque">
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="parque" data-i18n-prefix="outdoor.parque">
               <span class="mode-icon">🌳</span>
               <span class="mode-name">Parque</span>
               <span class="mode-desc">Bancos, setos, senderos</span>
             </button>
-            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="cine">
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="cine" data-i18n-prefix="outdoor.cine">
               <span class="mode-icon">🎬</span>
               <span class="mode-name">Cine</span>
               <span class="mode-desc">Sala oscura, butacas</span>
             </button>
-            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="playa">
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="playa" data-i18n-prefix="outdoor.playa">
               <span class="mode-icon">🏖️</span>
               <span class="mode-name">Playa</span>
               <span class="mode-desc">Dunas, rocas, agua</span>
             </button>
-            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="restaurante">
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="restaurante" data-i18n-prefix="outdoor.restaurante">
               <span class="mode-icon">🍽️</span>
               <span class="mode-name">Restaurante</span>
               <span class="mode-desc">Mesa, terraza, baño</span>
             </button>
-            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="parking">
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="parking" data-i18n-prefix="outdoor.parking">
               <span class="mode-icon">🅿️</span>
               <span class="mode-name">Parking</span>
               <span class="mode-desc">Garaje, plazas, ascensor</span>
             </button>
-            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="discoteca">
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="discoteca" data-i18n-prefix="outdoor.discoteca">
               <span class="mode-icon">🪩</span>
               <span class="mode-name">Discoteca</span>
               <span class="mode-desc">Pista, barra, baño, VIP</span>
             </button>
-            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="swinger">
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="swinger" data-i18n-prefix="outdoor.swinger">
               <span class="mode-icon">🔥</span>
               <span class="mode-name">Swinger Club</span>
               <span class="mode-desc">Parejas, solos, intercambio</span>
@@ -187,14 +218,14 @@
       </div>
 
       <div class="field">
-        <label>Forma de elegir</label>
+        <label data-i18n="choiceMode.label">Forma de elegir</label>
         <div class="mode-grid">
-          <button type="button" class="mode-btn selected" data-choice-mode="buttons">
+          <button type="button" class="mode-btn selected" data-choice-mode="buttons" data-i18n-prefix="choiceMode.buttons">
             <span class="mode-icon">🎯</span>
             <span class="mode-name">Botones</span>
             <span class="mode-desc">Tocáis la opción</span>
           </button>
-          <button type="button" class="mode-btn" data-choice-mode="roulette">
+          <button type="button" class="mode-btn" data-choice-mode="roulette" data-i18n-prefix="choiceMode.roulette">
             <span class="mode-icon">🎡</span>
             <span class="mode-name">Ruleta</span>
             <span class="mode-desc">Elegid mientras gira</span>
@@ -203,32 +234,32 @@
       </div>
 
       <div id="online-join-block" class="online-join-block hidden">
-        <label for="room-code">¿Te unes a una sala?</label>
+        <label for="room-code" data-i18n="online.joinLabel">¿Te unes a una sala?</label>
         <div class="join-row">
-          <input type="text" id="room-code" placeholder="Código de 6 dígitos" maxlength="6" inputmode="numeric" pattern="[0-9]*">
-          <button type="button" id="join-room-btn" class="btn btn-ghost join-btn">Unirse</button>
+          <input type="text" id="room-code" data-i18n-placeholder="online.codePlaceholder" placeholder="Código de 6 dígitos" maxlength="6" inputmode="numeric" pattern="[0-9]*">
+          <button type="button" id="join-room-btn" class="btn btn-ghost join-btn" data-i18n="online.joinBtn">Unirse</button>
         </div>
       </div>
 
       <div class="field">
-        <label>Intensidad de los retos</label>
+        <label data-i18n="intensity.label">Intensidad de los retos</label>
         <div class="intensity-grid">
-          <button type="button" class="intensity-btn" data-level="suave">
+          <button type="button" class="intensity-btn" data-level="suave" data-i18n-prefix="intensity.suave">
             <span class="intensity-icon"></span>
             <span class="intensity-name">Suave</span>
             <span class="intensity-desc">Coqueteo y caricias</span>
           </button>
-          <button type="button" class="intensity-btn selected" data-level="picante">
+          <button type="button" class="intensity-btn selected" data-level="picante" data-i18n-prefix="intensity.picante">
             <span class="intensity-icon"></span>
             <span class="intensity-name">Picante</span>
             <span class="intensity-desc">Explícito y morboso</span>
           </button>
-          <button type="button" class="intensity-btn" data-level="extremo">
+          <button type="button" class="intensity-btn" data-level="extremo" data-i18n-prefix="intensity.extremo">
             <span class="intensity-icon"></span>
             <span class="intensity-name">Extremo</span>
             <span class="intensity-desc">Sin límites (consensuado)</span>
           </button>
-          <button type="button" class="intensity-btn" data-level="progresivo">
+          <button type="button" class="intensity-btn" data-level="progresivo" data-i18n-prefix="intensity.progresivo">
             <span class="intensity-icon"></span>
             <span class="intensity-name">Escalada</span>
             <span class="intensity-desc">Suave → picante → extremo</span>
@@ -237,17 +268,17 @@
       </div>
 
       <div class="field">
-        <label for="rounds">Rondas a jugar</label>
+        <label for="rounds" data-i18n="rounds.label">Rondas a jugar</label>
         <select id="rounds">
-          <option value="5">5 rondas</option>
-          <option value="10" selected>10 rondas</option>
-          <option value="15">15 rondas</option>
-          <option value="999">Sin límite</option>
+          <option value="5" data-i18n="rounds.5">5 rondas</option>
+          <option value="10" selected data-i18n="rounds.10">10 rondas</option>
+          <option value="15" data-i18n="rounds.15">15 rondas</option>
+          <option value="999" data-i18n="rounds.unlimited">Sin límite</option>
         </select>
       </div>
 
-      <button id="start-btn" class="btn btn-primary">Comenzar partida</button>
-      <p id="online-hint" class="online-hint hidden">Modo dos móviles: crea la sala y comparte el código con tu pareja.</p>
+      <button id="start-btn" class="btn btn-primary" data-i18n="start.local">Comenzar partida</button>
+      <p id="online-hint" class="online-hint hidden" data-i18n="online.hint">Modo dos móviles: crea la sala y comparte el código con tu pareja.</p>
     </div>
   </div>
 
@@ -255,17 +286,17 @@
   <div id="lobby-screen" class="screen">
     <div class="card lobby-card">
       <div class="logo">📲</div>
-      <h2 id="lobby-title">Sala creada</h2>
-      <p id="lobby-subtitle" class="lobby-subtitle">Comparte este código con tu pareja</p>
+      <h2 id="lobby-title" data-i18n="lobby.created">Sala creada</h2>
+      <p id="lobby-subtitle" class="lobby-subtitle" data-i18n="lobby.subtitle">Comparte este código con tu pareja</p>
       <div id="room-code-display" class="room-code-display">------</div>
-      <button type="button" id="copy-code-btn" class="btn btn-ghost">Copiar código</button>
+      <button type="button" id="copy-code-btn" class="btn btn-ghost" data-i18n="lobby.copy">Copiar código</button>
       <div id="lobby-status" class="lobby-status">
         <span class="lobby-spinner"></span>
-        <span>Esperando al jugador 2…</span>
+        <span data-i18n="lobby.waiting">Esperando al jugador 2…</span>
       </div>
-      <p id="lobby-webcam-note" class="lobby-note lobby-webcam-note hidden">Modo webcam: al conectar os pedirá permiso de cámara y micrófono. Usad HTTPS o localhost.</p>
-      <p class="lobby-note">Ambos dispositivos necesitan internet. Si no conecta, abrid el juego con un servidor local (ver README).</p>
-      <button type="button" id="cancel-lobby-btn" class="btn btn-ghost">Cancelar</button>
+      <p id="lobby-webcam-note" class="lobby-note lobby-webcam-note hidden" data-i18n="lobby.webcamNote">Modo webcam: al conectar os pedirá permiso de cámara y micrófono. Usad HTTPS o localhost.</p>
+      <p class="lobby-note" data-i18n="lobby.note">Ambos dispositivos necesitan internet. Si no conecta, abrid el juego con un servidor local (ver README).</p>
+      <button type="button" id="cancel-lobby-btn" class="btn btn-ghost" data-i18n="lobby.cancel">Cancelar</button>
     </div>
   </div>
 
@@ -333,13 +364,13 @@
           </div>
           <div class="roulette-center">?</div>
         </div>
-        <p id="roulette-hint" class="roulette-hint">¡Pulsa <strong>ELEGIR</strong> mientras gira!</p>
-        <button type="button" id="roulette-lock-btn" class="btn btn-primary roulette-lock-btn">ELEGIR</button>
-        <p id="roulette-locked" class="roulette-locked hidden">✓ Elección registrada</p>
+        <p id="roulette-hint" class="roulette-hint" data-i18n-html="true" data-i18n="roulette.hint">¡Pulsa <strong>ELEGIR</strong> mientras gira!</p>
+        <button type="button" id="roulette-lock-btn" class="btn btn-primary roulette-lock-btn" data-i18n="roulette.lock">ELEGIR</button>
+        <p id="roulette-locked" class="roulette-locked hidden" data-i18n="game.choiceRegistered">✓ Elección registrada</p>
       </div>
 
-      <p id="waiting-msg" class="waiting-msg hidden">Esperando la elección del otro jugador…</p>
-      <p id="p1-choice-hidden" class="hidden-choice hidden">✓ Elección registrada</p>
+      <p id="waiting-msg" class="waiting-msg hidden" data-i18n="game.waitChoice">Esperando la elección del otro jugador…</p>
+      <p id="p1-choice-hidden" class="hidden-choice hidden" data-i18n="game.choiceRegistered">✓ Elección registrada</p>
     </main>
   </div>
 
@@ -354,7 +385,7 @@
       <div id="challenge-box" class="challenge-box">
         <div class="challenge-corner tl"></div>
         <div class="challenge-corner br"></div>
-        <span id="challenge-label" class="challenge-label">Reto para el perdedor</span>
+        <span id="challenge-label" class="challenge-label" data-i18n="result.challengeLabel">Reto para el perdedor</span>
         <div class="challenge-icon-row" id="challenge-icons" aria-hidden="true"></div>
         <p id="challenge-text"></p>
         <div id="challenge-tease-wrap" class="challenge-tease-wrap hidden" aria-live="polite">
@@ -363,11 +394,11 @@
       </div>
 
       <div class="result-actions">
-        <button id="start-challenge-btn" class="btn btn-primary wc-start-challenge hidden">▶ Empezar reto</button>
-        <p id="challenge-wait-msg" class="challenge-wait-msg hidden">Tu pareja está haciendo el reto…</p>
-        <button id="next-round-btn" class="btn btn-primary">Siguiente ronda</button>
-        <button id="new-challenge-btn" class="btn btn-ghost">Otro reto</button>
-        <p id="host-wait-msg" class="host-wait-msg hidden">Esperando a que el anfitrión continúe…</p>
+        <button id="start-challenge-btn" class="btn btn-primary wc-start-challenge hidden" data-i18n="result.startChallenge">▶ Empezar reto</button>
+        <p id="challenge-wait-msg" class="challenge-wait-msg hidden" data-i18n="result.waitChallenge">Tu pareja está haciendo el reto…</p>
+        <button id="next-round-btn" class="btn btn-primary" data-i18n="result.nextRound">Siguiente ronda</button>
+        <button id="new-challenge-btn" class="btn btn-ghost" data-i18n="result.newChallenge">Otro reto</button>
+        <p id="host-wait-msg" class="host-wait-msg hidden" data-i18n="result.hostWait">Esperando a que el anfitrión continúe…</p>
       </div>
     </div>
   </div>
@@ -380,13 +411,13 @@
       <p id="final-scores"></p>
 
       <div id="final-challenge-box" class="challenge-box final-challenge">
-        <span class="challenge-label">Premio final del ganador</span>
+        <span class="challenge-label" data-i18n="end.finalLabel">Premio final del ganador</span>
         <p id="final-challenge-text"></p>
       </div>
 
       <div class="result-actions">
-        <button id="play-again-btn" class="btn btn-primary">Jugar de nuevo</button>
-        <button id="back-setup-btn" class="btn btn-ghost">Cambiar configuración</button>
+        <button id="play-again-btn" class="btn btn-primary" data-i18n="end.playAgain">Jugar de nuevo</button>
+        <button id="back-setup-btn" class="btn btn-ghost" data-i18n="end.backSetup">Cambiar configuración</button>
       </div>
     </div>
   </div>
@@ -402,6 +433,9 @@
       });
     }
   </script>
+  <script src="i18n-locales.js"></script>
+  <script src="i18n-more-locales.js"></script>
+  <script src="i18n.js"></script>
   <script src="challenges.js"></script>
   <script src="challenges-expansion.js"></script>
   <script src="outdoor-locations.js"></script>

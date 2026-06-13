@@ -59,20 +59,18 @@ function updateSetupForPlayMode() {
   const hint = document.getElementById("online-hint");
   if (hint) {
     hint.textContent =
-      state.playMode === "webcam"
-        ? "Modo webcam: entrad los dos por HTTPS (URL de Vercel o localhost). Ver aviso rosa si usáis http://IP."
-        : "Modo dos móviles: crea la sala y comparte el código con tu pareja.";
+      state.playMode === "webcam" ? t("online.hintWebcam") : t("online.hint");
   }
 
   const startBtn = document.getElementById("start-btn");
   if (startBtn) {
     startBtn.textContent = isOutdoor
-      ? "Salir a jugar"
+      ? t("start.outdoor")
       : state.playMode === "webcam"
-        ? "Crear sala con webcam"
+        ? t("start.webcam")
         : isNetwork
-          ? "Crear sala online"
-          : "Comenzar partida";
+          ? t("start.online")
+          : t("start.local");
   }
 
   const p2Field = document.querySelectorAll(".player-field")[1];
@@ -168,12 +166,12 @@ function handleStartClick() {
 function handleJoinClick() {
   const code = document.getElementById("room-code")?.value.trim();
   if (!code) {
-    alert("Introduce el código de la sala.");
+    alert(t("alert.noRoomCode"));
     return;
   }
 
-  const guestName = document.getElementById("player1").value.trim() || "Jugador 2";
-  state.player1 = "Anfitrión";
+  const guestName = document.getElementById("player1").value.trim() || t("player.guest");
+  state.player1 = t("player.host");
   state.player2 = guestName;
   state.gender2 = state.gender1;
   state.playMode = document.querySelector('.mode-btn[data-play-mode="webcam"].selected')
@@ -183,14 +181,15 @@ function handleJoinClick() {
 
   joinOnlineRoom(code, onGuestConnected)
     .then(() => {
-      document.getElementById("lobby-title").textContent = "Conectando…";
-      document.getElementById("lobby-subtitle").textContent = "Sincronizando con la sala";
+      document.getElementById("lobby-title").textContent = t("lobby.connecting");
+      document.getElementById("lobby-subtitle").textContent = t("lobby.connectingSubtitle");
       document.getElementById("room-code-display").textContent = code;
-      document.getElementById("lobby-status").innerHTML = "<span class='lobby-spinner'></span><span>Conectando…</span>";
+      document.getElementById("lobby-status").innerHTML =
+        `<span class='lobby-spinner'></span><span>${t("lobby.connecting")}</span>`;
       document.getElementById("copy-code-btn").classList.add("hidden");
       showScreen("lobby");
     })
-    .catch((err) => alert(err.message || "Error al unirse."));
+    .catch((err) => alert(err.message || t("alert.joinError")));
 }
 
 function startLocalGame() {
@@ -198,7 +197,7 @@ function startLocalGame() {
   const p2 = document.getElementById("player2").value.trim();
 
   if (!p1 || !p2) {
-    alert("Introduce los nombres de ambos jugadores.");
+    alert(t("alert.noNames"));
     return;
   }
 
@@ -213,10 +212,10 @@ function startLocalGame() {
 
 function startOnlineHost() {
   const p1 = document.getElementById("player1").value.trim();
-  const p2 = document.getElementById("player2")?.value.trim() || "Jugador 2";
+  const p2 = document.getElementById("player2")?.value.trim() || t("player.guest");
 
   if (!p1) {
-    alert("Introduce tu nombre.");
+    alert(t("alert.noName"));
     return;
   }
 
@@ -228,13 +227,11 @@ function startOnlineHost() {
     .then((code) => {
       document.getElementById("room-code-display").textContent = code;
       document.getElementById("lobby-title").textContent =
-        isWebcamMode() ? "Sala webcam creada" : "Sala creada";
+        isWebcamMode() ? t("lobby.webcamCreated") : t("lobby.created");
       document.getElementById("lobby-subtitle").textContent =
-        isWebcamMode()
-          ? "Comparte el código — conectaréis cámara al empezar"
-          : "Comparte este código con tu pareja";
+        isWebcamMode() ? t("lobby.subtitleWebcam") : t("lobby.subtitle");
       document.getElementById("lobby-status").innerHTML =
-        '<span class="lobby-spinner"></span><span>Esperando al jugador 2…</span>';
+        `<span class="lobby-spinner"></span><span>${t("lobby.waiting")}</span>`;
       document.getElementById("copy-code-btn").classList.remove("hidden");
       document.getElementById("lobby-webcam-note")?.classList.toggle("hidden", !isWebcamMode());
       showScreen("lobby");
@@ -243,12 +240,12 @@ function startOnlineHost() {
         initWebcamMedia();
       }
     })
-    .catch((err) => alert(err.message || "Error al crear la sala."));
+    .catch((err) => alert(err.message || t("alert.createError")));
 }
 
 function onGuestConnected() {
   document.getElementById("lobby-status").innerHTML =
-    '<span style="color:var(--gold)">✓</span><span>¡Conectados! Empezando…</span>';
+    `<span style="color:var(--gold)">✓</span><span>${t("lobby.connected")}</span>`;
 
   const start = () => {
     setTimeout(() => beginGame(), 800);
@@ -296,9 +293,9 @@ function updateScoreboard() {
 
   const roundLabel = document.getElementById("round-label");
   if (state.maxRounds >= 999) {
-    roundLabel.textContent = `Ronda ${state.currentRound}`;
+    roundLabel.textContent = t("game.round", { n: state.currentRound });
   } else {
-    roundLabel.textContent = `Ronda ${state.currentRound} / ${state.maxRounds}`;
+    roundLabel.textContent = t("game.roundOf", { n: state.currentRound, max: state.maxRounds });
   }
 
   updateProgressLevelUI();
@@ -355,13 +352,13 @@ function updateTurnUI() {
     if (state.phase === "result" || state.phase === "end") return;
 
     if (hasChosen) {
-      turnLabel.innerHTML = `Esperando al otro jugador…`;
+      turnLabel.innerHTML = t("game.waitOther");
       waitingMsg?.classList.remove("hidden");
     } else if (opponentChosen) {
-      turnLabel.innerHTML = `¡Tu pareja ya eligió! <strong>${escapeHtml(myName)}</strong>, te toca ${getGenderIcon(getPlayerGender(myNum))}`;
+      turnLabel.innerHTML = `${t("game.turnPartnerChose")} <strong>${escapeHtml(myName)}</strong> ${getGenderIcon(getPlayerGender(myNum))}`;
       waitingMsg?.classList.add("hidden");
     } else {
-      turnLabel.innerHTML = `Tu turno — <strong>${escapeHtml(myName)}</strong> ${getGenderIcon(getPlayerGender(myNum))}`;
+      turnLabel.innerHTML = `${t("game.turnOnline")} <strong>${escapeHtml(myName)}</strong> ${getGenderIcon(getPlayerGender(myNum))}`;
       waitingMsg?.classList.add("hidden");
     }
     return;
@@ -372,7 +369,7 @@ function updateTurnUI() {
   }
 
   const name = getPlayerName(state.currentPlayer);
-  turnLabel.innerHTML = `Turno de <strong>${escapeHtml(name)}</strong> ${getGenderIcon(getPlayerGender(state.currentPlayer))}`;
+  turnLabel.innerHTML = `${t("game.turnPrefix")} <strong>${escapeHtml(name)}</strong> ${getGenderIcon(getPlayerGender(state.currentPlayer))}`;
   waitingMsg?.classList.add("hidden");
 }
 
@@ -553,6 +550,10 @@ function updateProgressLevelUI() {
 function getOutdoorLocationLabel() {
   const key = state.outdoorLocation || "general";
   const meta = typeof OUTDOOR_LOCATION_META !== "undefined" ? OUTDOOR_LOCATION_META[key] : null;
+  const icon = meta?.icon || "🌍";
+  if (typeof t === "function") {
+    return `${icon} ${t(`outdoor.${key}.name`)}`;
+  }
   if (!meta) return "Aire libre";
   return `${meta.icon} ${meta.name}`;
 }
@@ -560,13 +561,17 @@ function getOutdoorLocationLabel() {
 function getChallengeLabel(intensity) {
   const remote = isRemotePlayMode();
   const outdoor = isOutdoorPlayMode();
-  const tag = remote ? "Reto a distancia · " : outdoor ? `${getOutdoorLocationLabel()} · ` : "";
+  const locLabel = outdoor ? getOutdoorLocationLabel() : "";
   if (state.intensity === "progresivo") {
-    return `${tag}Reto para el perdedor · ${getIntensityLabel(intensity)}`;
+    const tag = remote ? t("challenge.label.remotePrefix") : outdoor ? t("challenge.label.outdoorPrefix", { location: locLabel }) : "";
+    return t("challenge.label.progressive", {
+      tag,
+      intensity: getIntensityLabel(intensity),
+    });
   }
-  if (remote) return "Reto a distancia · cumple frente a la cámara";
-  if (outdoor) return `${getOutdoorLocationLabel()} · cumple donde indique el reto`;
-  return "Reto para el perdedor";
+  if (remote) return t("challenge.label.remote");
+  if (outdoor) return t("challenge.label.outdoor", { location: locLabel });
+  return t("challenge.label.default");
 }
 
 function pickChallenge(loserNum, winnerNum, round = state.currentRound) {
@@ -828,16 +833,16 @@ function renderResultUI(winner, challengeData) {
   const newChallengeBtn = document.getElementById("new-challenge-btn");
 
   if (winner === null) {
-    title.textContent = "¡Empate!";
-    subtitle.textContent = "Nadie gana. Repitan la ronda.";
+    title.textContent = t("result.tie.title");
+    subtitle.textContent = t("result.tie.subtitle");
     challengeBox.classList.add("hidden");
     newChallengeBtn.classList.add("hidden");
-    document.getElementById("challenge-label").textContent = "Reto para el perdedor";
+    document.getElementById("challenge-label").textContent = t("result.challengeLabel");
   } else {
     const winnerName = getPlayerName(winner);
     const loserName = getPlayerName(winner === 1 ? 2 : 1);
-    title.textContent = `¡${winnerName} gana!`;
-    subtitle.textContent = `${loserName} debe cumplir el reto…`;
+    title.textContent = t("result.win.title", { name: winnerName });
+    subtitle.textContent = t("result.win.subtitle", { name: loserName });
 
     if (challengeData) {
       document.getElementById("challenge-text").textContent = challengeData.text;
@@ -905,7 +910,7 @@ function showEndScreen() {
           getPlayerName(winnerNum === 1 ? 2 : 1),
           getPlayerName(winnerNum)
         )
-      : "Ambos eligen un reto extremo para el otro según vuestro tipo de pareja y los cumplís esta noche.",
+      : t("end.tie.reward"),
   });
 
   showScreen("end");
@@ -935,7 +940,7 @@ function renderEndFromState(data) {
   if (winnerNum) {
     const winnerName = getPlayerName(winnerNum);
     document.getElementById("winner-title").innerHTML =
-      `${iconHtml("crown", "sex-icon sex-icon-sm")} ${escapeHtml(winnerName)} domina la partida`;
+      `${iconHtml("crown", "sex-icon sex-icon-sm")} ${escapeHtml(t("end.winnerTitle", { name: winnerName }))}`;
     document.getElementById("final-scores").textContent =
       `${formatPlayerName(1)} ${p1} — ${p2} ${formatPlayerName(2)}`;
     document.getElementById("final-challenge-text").textContent =
@@ -951,21 +956,47 @@ function renderEndFromState(data) {
     const finalLabel = document.querySelector("#final-challenge-box .challenge-label");
     if (finalLabel) {
       finalLabel.textContent =
-        state.intensity === "progresivo"
-          ? "Premio final del ganador · Extremo"
-          : "Premio final del ganador";
+        state.intensity === "progresivo" ? t("end.finalLabelProgressive") : t("end.finalLabel");
     }
     setChallengeMood("extremo");
     emojiRain("extremo", 25);
     pulseVignette(3000);
   } else {
-    document.getElementById("winner-title").textContent = "¡Empate total!";
+    document.getElementById("winner-title").textContent = t("end.tie.title");
     document.getElementById("final-scores").textContent =
       `${formatPlayerName(1)} ${p1} — ${p2} ${formatPlayerName(2)}`;
     document.getElementById("final-challenge-text").textContent =
-      data.finalChallengeText ||
-      "Ambos eligen un reto extremo para el otro según vuestro tipo de pareja y los cumplís esta noche.";
+      data.finalChallengeText || t("end.tie.reward");
   }
+}
+
+function onLanguageChanged() {
+  updatePairLabel();
+  updateSetupForPlayMode();
+  updateProgressLevelUI();
+  if (state.activeScreen === "game") {
+    updateTurnUI();
+    updateScoreboard();
+  }
+  if (state.activeScreen === "result" && state.lastResult) {
+    const challengeData = state.lastResult.winner
+      ? {
+          text: document.getElementById("challenge-text")?.textContent,
+          effectiveIntensity: getEffectiveIntensity(state.intensity, state.currentRound, state.maxRounds),
+        }
+      : null;
+    renderResultUI(state.lastResult.winner, challengeData?.text ? challengeData : null);
+  }
+  if (state.activeScreen === "end") {
+    renderEndFromState({
+      scores: state.scores,
+      winnerNum: state.scores.p1 > state.scores.p2 ? 1 : state.scores.p2 > state.scores.p1 ? 2 : null,
+      finalChallengeText: document.getElementById("final-challenge-text")?.textContent,
+    });
+  }
+  if (typeof updateWebcamControlLabels === "function") updateWebcamControlLabels();
+  if (typeof updateWebcamFullscreenBtn === "function") updateWebcamFullscreenBtn();
+  if (typeof refreshRouletteI18n === "function") refreshRouletteI18n();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

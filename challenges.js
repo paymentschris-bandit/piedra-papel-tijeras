@@ -245,6 +245,7 @@ function getEffectiveIntensity(selectedMode, currentRound, maxRounds) {
 }
 
 function getIntensityLabel(intensity) {
+  if (typeof t === "function") return t(`intensity.${intensity}.name`);
   const meta = INTENSITY_META[intensity] || INTENSITY_META.picante;
   return meta.name;
 }
@@ -252,6 +253,21 @@ function getIntensityLabel(intensity) {
 function getProgressiveHint(currentRound, maxRounds) {
   const current = getProgressiveIntensity(currentRound, maxRounds);
   const third = maxRounds >= 999 ? 5 : Math.max(1, Math.ceil(maxRounds / 3));
+  const label = getIntensityLabel(current);
+
+  if (typeof t === "function") {
+    if (current === "suave") {
+      const until = maxRounds >= 999 ? 5 : third;
+      return t("progressive.phase", { label, from: 1, until });
+    }
+    if (current === "picante") {
+      const until = maxRounds >= 999 ? 10 : third * 2;
+      const from = maxRounds >= 999 ? 6 : third + 1;
+      return t("progressive.phase", { label, from, until });
+    }
+    const from = maxRounds >= 999 ? 11 : third * 2 + 1;
+    return t("progressive.phasePlus", { label, from });
+  }
 
   if (current === "suave") {
     const until = maxRounds >= 999 ? 5 : third;
@@ -933,9 +949,19 @@ function determineWinner(c1, c2) {
 
 function getPairLabel(g1, g2) {
   const type = getPairType(g1, g2);
+  if (typeof t === "function") {
+    if (type === "chico_chico") return t("pair.boys");
+    if (type === "chica_chica") return t("pair.girls");
+    return t("pair.mixed");
+  }
   if (type === "chico_chico") return "Pareja: dos chicos";
   if (type === "chica_chica") return "Pareja: dos chicas";
   return "Pareja: chico + chica";
+}
+
+function getChoiceName(choice) {
+  if (typeof t === "function") return t(`choice.${choice}`);
+  return CHOICE_NAMES[choice];
 }
 
 function getGenderIcon(gender) {

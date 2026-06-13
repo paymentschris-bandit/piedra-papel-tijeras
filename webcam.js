@@ -14,8 +14,13 @@ function isMobileWebcamLayout() {
 function updateWebcamFullscreenBtn() {
   const btn = document.getElementById("wc-fullscreen-btn");
   if (!btn) return;
-  btn.textContent = WC.fullscreen ? "Ventana ▢" : "Pantalla ▣";
-  btn.title = WC.fullscreen ? "Modo ventana flotante" : "Cámara a pantalla completa";
+  if (typeof t === "function") {
+    btn.textContent = WC.fullscreen ? t("webcam.window") : t("webcam.fullscreen");
+    btn.title = WC.fullscreen ? t("webcam.windowTitle") : t("webcam.fullscreenTitle");
+  } else {
+    btn.textContent = WC.fullscreen ? "Ventana ▢" : "Pantalla ▣";
+    btn.title = WC.fullscreen ? "Modo ventana flotante" : "Cámara a pantalla completa";
+  }
 }
 
 function applyWebcamLayout() {
@@ -301,8 +306,13 @@ function startWebcamCall() {
 function updateWebcamControlLabels() {
   const camBtn = document.getElementById("wc-toggle-cam");
   const micBtn = document.getElementById("wc-toggle-mic");
-  if (camBtn) camBtn.textContent = WC.camEnabled ? "Cámara ON" : "Cámara OFF";
-  if (micBtn) micBtn.textContent = WC.micEnabled ? "Mic ON" : "Mic OFF";
+  if (typeof t === "function") {
+    if (camBtn) camBtn.textContent = WC.camEnabled ? t("webcam.camOn") : t("webcam.camOff");
+    if (micBtn) micBtn.textContent = WC.micEnabled ? t("webcam.micOn") : t("webcam.micOff");
+  } else {
+    if (camBtn) camBtn.textContent = WC.camEnabled ? "Cámara ON" : "Cámara OFF";
+    if (micBtn) micBtn.textContent = WC.micEnabled ? "Mic ON" : "Mic OFF";
+  }
 }
 
 function toggleWebcamTrack(kind) {

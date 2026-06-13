@@ -382,8 +382,8 @@ function copyRoomCode() {
   navigator.clipboard?.writeText(MP.roomCode).then(() => {
     const btn = document.getElementById("copy-code-btn");
     if (btn) {
-      const orig = btn.textContent;
-      btn.textContent = "¡Copiado!";
+      const orig = typeof t === "function" ? t("lobby.copy") : btn.textContent;
+      btn.textContent = typeof t === "function" ? t("lobby.copied") : "¡Copiado!";
       setTimeout(() => { btn.textContent = orig; }, 2000);
     }
   });

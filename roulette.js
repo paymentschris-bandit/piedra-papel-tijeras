@@ -79,7 +79,7 @@ function lockRoulette() {
 
   const choice = getRouletteChoiceAtRotation(Roulette.rotation);
   const emoji = CHOICE_EMOJI[choice];
-  const name = CHOICE_NAMES[choice];
+  const name = getChoiceName(choice);
 
   const center = document.querySelector(".roulette-center");
   if (center) center.textContent = emoji;
@@ -90,7 +90,7 @@ function lockRoulette() {
 
   const lockedEl = document.getElementById("roulette-locked");
   if (lockedEl) {
-    lockedEl.textContent = `✓ ${name} — elección registrada`;
+    lockedEl.textContent = t("roulette.locked", { name });
     lockedEl.classList.remove("hidden");
   }
 
@@ -108,6 +108,25 @@ function lockRoulette() {
   }
 
   if (Roulette.onLock) Roulette.onLock(choice);
+}
+
+function refreshRouletteI18n() {
+  const hint = document.getElementById("roulette-hint");
+  const lockBtn = document.getElementById("roulette-lock-btn");
+  if (hint && typeof t === "function") {
+    hint.innerHTML = t("roulette.hint");
+  }
+  if (lockBtn && typeof t === "function") {
+    lockBtn.textContent = t("roulette.lock");
+  }
+  if (Roulette.locked) {
+    const wheel = document.getElementById("roulette-wheel");
+    if (wheel) {
+      const choice = getRouletteChoiceAtRotation(Roulette.rotation);
+      const lockedEl = document.getElementById("roulette-locked");
+      if (lockedEl) lockedEl.textContent = t("roulette.locked", { name: getChoiceName(choice) });
+    }
+  }
 }
 
 function resetRouletteUI() {

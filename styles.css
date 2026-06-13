@@ -337,6 +337,17 @@ body {
   color: rgba(154, 138, 148, 0.6);
 }
 
+.lang-field select {
+  width: 100%;
+}
+
+.challenges-note {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  font-style: italic;
+}
+
 .player-field input {
   margin-bottom: 0.75rem;
 }
