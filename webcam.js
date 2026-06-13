@@ -38,9 +38,13 @@ function toggleWebcamFullscreen() {
   setWebcamFullscreen(!WC.fullscreen);
 }
 
+function setWebcamChallengeLive(on) {
+  document.body.classList.toggle("webcam-challenge-live", !!on);
+}
+
 function updateWebcamScreenMode(screenName) {
   if (!isWebcamMode()) {
-    document.body.classList.remove("webcam-reto-mode", "webcam-play-mode");
+    document.body.classList.remove("webcam-reto-mode", "webcam-play-mode", "webcam-challenge-live");
     return;
   }
   const isReto = screenName === "result" || screenName === "end";
@@ -59,7 +63,15 @@ function showWebcamPanel() {
 
 function hideWebcamPanel() {
   document.getElementById("webcam-panel")?.classList.add("hidden");
-  document.body.classList.remove("webcam-active", "webcam-fullscreen", "webcam-pip", "webcam-reto-mode", "webcam-play-mode");
+  document.body.classList.remove(
+    "webcam-active",
+    "webcam-fullscreen",
+    "webcam-pip",
+    "webcam-reto-mode",
+    "webcam-play-mode",
+    "webcam-challenge-live"
+  );
+  document.getElementById("wc-challenge-overlay")?.classList.add("hidden");
 }
 
 function updateRemoteVideoLabel() {
@@ -340,10 +352,6 @@ function initWebcamControls() {
   document.getElementById("wc-fullscreen-btn")?.addEventListener("click", toggleWebcamFullscreen);
   document.getElementById("wc-toggle-cam")?.addEventListener("click", () => toggleWebcamTrack("video"));
   document.getElementById("wc-toggle-mic")?.addEventListener("click", () => toggleWebcamTrack("audio"));
-  document.getElementById("wc-minimize-btn")?.addEventListener("click", () => {
-    setWebcamFullscreen(false);
-    document.getElementById("webcam-panel")?.classList.toggle("webcam-minimized");
-  });
   window.addEventListener("resize", () => {
     if (isWebcamMode() && isMobileWebcamLayout() && !document.getElementById("webcam-panel")?.classList.contains("hidden")) {
       if (!document.body.classList.contains("webcam-pip")) WC.fullscreen = true;

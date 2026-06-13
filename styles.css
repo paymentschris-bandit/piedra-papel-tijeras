@@ -1619,25 +1619,37 @@ body.webcam-fullscreen .webcam-remote-wrap .webcam-video {
 }
 
 body.webcam-fullscreen .webcam-local-wrap {
-  top: max(0.5rem, env(safe-area-inset-top));
-  bottom: auto;
+  top: auto;
+  bottom: calc(max(0.65rem, env(safe-area-inset-bottom)) + 4.5rem);
   right: max(0.5rem, env(safe-area-inset-right));
-  width: min(28vw, 110px);
-  max-width: 110px;
+  left: auto;
+  width: min(32vw, 120px);
+  max-width: 120px;
   border-radius: 10px;
+  z-index: 12;
 }
 
 body.webcam-fullscreen .webcam-toolbar {
-  position: absolute;
-  bottom: max(0.5rem, env(safe-area-inset-bottom));
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed;
+  top: max(0.5rem, env(safe-area-inset-top));
+  right: max(0.5rem, env(safe-area-inset-right));
+  left: auto;
+  bottom: auto;
+  transform: none;
   width: auto;
-  max-width: calc(100% - 1rem);
+  min-width: 5.5rem;
+  max-width: min(42vw, 150px);
+  flex-direction: column;
+  align-items: stretch;
   border-radius: 12px;
-  z-index: 6;
-  flex-wrap: wrap;
-  justify-content: center;
+  z-index: 20;
+  flex-wrap: nowrap;
+  gap: 0.2rem;
+}
+
+body.webcam-fullscreen .webcam-ctrl-mini {
+  min-width: unset;
+  padding: 0.35rem;
 }
 
 body.webcam-fullscreen .webcam-ctrl {
@@ -1662,14 +1674,24 @@ body.webcam-fullscreen .screen.active > * {
 }
 
 body.webcam-fullscreen #game-screen.active {
-  justify-content: flex-start;
-  gap: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  pointer-events: none;
 }
 
-body.webcam-fullscreen .game-header {
-  margin-bottom: 0.35rem;
-  width: 100%;
-  max-width: 100%;
+body.webcam-fullscreen #game-screen .game-header {
+  order: 2;
+  position: fixed;
+  bottom: max(0.5rem, env(safe-area-inset-bottom));
+  left: max(0.5rem, env(safe-area-inset-left));
+  right: max(0.5rem, env(safe-area-inset-right));
+  margin: 0;
+  width: auto;
+  max-width: none;
+  z-index: 11;
+  pointer-events: auto;
 }
 
 body.webcam-fullscreen .scoreboard {
@@ -1677,24 +1699,33 @@ body.webcam-fullscreen .scoreboard {
   font-size: 0.9rem;
 }
 
-body.webcam-fullscreen .game-main {
-  flex: 1;
+body.webcam-fullscreen #game-screen .game-main {
+  order: 1;
+  position: fixed;
+  top: max(3.35rem, calc(env(safe-area-inset-top) + 2.85rem));
+  right: max(0.5rem, env(safe-area-inset-right));
+  left: auto;
+  width: min(240px, 58vw);
+  flex: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-start;
+  max-width: min(240px, 58vw);
   min-height: 0;
+  z-index: 11;
+  pointer-events: auto;
 }
 
 body.webcam-fullscreen .turn-label {
-  font-size: 0.95rem;
-  margin-bottom: 0.45rem;
-  padding: 0.35rem 0.75rem;
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+  padding: 0.3rem 0.65rem;
   border-radius: 10px;
   background: rgba(10, 7, 13, 0.72);
   backdrop-filter: blur(8px);
+  text-align: right;
+  align-self: flex-end;
 }
 
 body.webcam-fullscreen .roulette-container {
@@ -1705,7 +1736,9 @@ body.webcam-fullscreen .roulette-container {
   border: 1px solid rgba(224, 86, 122, 0.4);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
   gap: 0.45rem;
-  max-width: min(100%, 240px);
+  max-width: min(220px, 58vw);
+  margin-left: auto;
+  margin-right: 0;
 }
 
 body.webcam-fullscreen .roulette-wheel-wrap {
@@ -1755,31 +1788,84 @@ body.webcam-reto-mode #choices-buttons {
 
 body.webcam-fullscreen.webcam-reto-mode #result-screen.active,
 body.webcam-fullscreen.webcam-reto-mode #end-screen.active {
-  justify-content: flex-end;
-  align-items: stretch;
-  padding-bottom: max(0.65rem, env(safe-area-inset-bottom));
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: max(3.5rem, calc(env(safe-area-inset-top) + 3rem));
+  padding-left: max(0.5rem, env(safe-area-inset-left));
+  padding-right: calc(min(32vw, 120px) + 0.85rem);
+  padding-bottom: calc(max(0.65rem, env(safe-area-inset-bottom)) + 4.5rem);
 }
 
 body.webcam-fullscreen.webcam-reto-mode .result-card,
 body.webcam-fullscreen.webcam-reto-mode .end-card {
   width: 100%;
-  max-width: 100%;
-  max-height: min(78dvh, 520px);
+  max-width: min(100%, 420px);
+  max-height: min(46dvh, 360px);
   overflow-y: auto;
-  background: rgba(18, 10, 22, 0.9);
+  background: rgba(18, 10, 22, 0.88);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(224, 86, 122, 0.35);
   margin: 0;
 }
 
-body.webcam-fullscreen.webcam-reto-mode .webcam-toolbar {
-  bottom: auto;
-  top: max(0.45rem, env(safe-area-inset-top));
-  transform: translateX(-50%);
+body.webcam-fullscreen.webcam-reto-mode .result-card.wc-result-hidden {
+  display: none !important;
 }
 
-body.webcam-fullscreen.webcam-reto-mode .webcam-local-wrap {
-  top: calc(max(0.45rem, env(safe-area-inset-top)) + 2.6rem);
+.wc-start-challenge {
+  width: 100%;
+  max-width: 280px;
+  margin-bottom: 0.45rem;
+}
+
+.challenge-wait-msg {
+  color: var(--accent, #e0567a);
+  font-size: 0.88rem;
+  text-align: center;
+  margin: 0.25rem 0 0.5rem;
+  padding: 0.35rem 0.5rem;
+  background: rgba(10, 7, 13, 0.55);
+  border-radius: 8px;
+}
+
+/* Modo cumpliendo reto: solo cámara (+ botón al terminar) */
+body.webcam-challenge-live .screen.active {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+body.webcam-challenge-live .webcam-toolbar {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.webcam-challenge-live .webcam-local-wrap {
+  bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+.wc-challenge-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 25;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 1rem max(1.25rem, env(safe-area-inset-bottom));
+  pointer-events: none;
+  background: transparent;
+}
+
+.wc-challenge-overlay.hidden {
+  display: none;
+}
+
+.wc-finish-challenge {
+  pointer-events: auto;
+  min-width: min(90vw, 280px);
+  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
 }
 
 @media (max-width: 480px) {

@@ -205,7 +205,18 @@ function handleIncoming(data, onConnected) {
         animateChallengeReveal();
         const mood = getEffectiveIntensity(state.intensity, state.currentRound, state.maxRounds);
         showChallengeTease(data.tease || [], mood);
+        updateOnlineResultControls();
       }
+      break;
+    case "challengeStart":
+      state.challengePerforming = true;
+      updateWebcamChallengeUI();
+      updateOnlineResultControls();
+      break;
+    case "challengeEnd":
+      state.challengePerforming = false;
+      updateWebcamChallengeUI();
+      updateOnlineResultControls();
       break;
     case "syncState":
       applyRemoteState(data.state);
@@ -242,6 +253,7 @@ function getSerializableState(forcedScreen) {
     challengeText: document.getElementById("challenge-text")?.textContent || "",
     challengeLabel: document.getElementById("challenge-label")?.textContent || "",
     challengeTease: state.challengeTease || [],
+    challengePerforming: !!state.challengePerforming,
     finalChallengeText: document.getElementById("final-challenge-text")?.textContent || "",
     usedChallenges: [...state.usedChallenges],
     screen: forcedScreen || state.activeScreen || getCurrentScreenName(),
@@ -316,6 +328,7 @@ function applyRemoteState(remote) {
   state.lastResult = remote.lastResult;
   state.usedChallenges = remote.usedChallenges || [];
   state.challengeTease = remote.challengeTease || [];
+  state.challengePerforming = !!remote.challengePerforming;
 
   const screen = resolveRemoteScreen(remote);
 
@@ -338,6 +351,7 @@ function applyRemoteState(remote) {
     }
     updateOnlineResultControls();
     showScreen("result");
+    if (isWebcamMode()) updateWebcamChallengeUI();
   } else if (screen === "end") {
     renderEndFromState({
       scores: remote.scores,

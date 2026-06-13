@@ -51,11 +51,15 @@
       <span class="webcam-label webcam-label-local">Tú</span>
     </div>
     <div class="webcam-toolbar">
-      <button type="button" id="wc-fullscreen-btn" class="webcam-ctrl" title="Pantalla completa">Pantalla ▣</button>
       <button type="button" id="wc-toggle-cam" class="webcam-ctrl">Cámara ON</button>
       <button type="button" id="wc-toggle-mic" class="webcam-ctrl">Mic ON</button>
-      <button type="button" id="wc-minimize-btn" class="webcam-ctrl webcam-ctrl-ghost" title="Ventana pequeña">—</button>
+      <button type="button" id="wc-fullscreen-btn" class="webcam-ctrl webcam-ctrl-mini" title="Ventana flotante">▢</button>
     </div>
+  </div>
+
+  <!-- Solo cámara mientras se cumple el reto -->
+  <div id="wc-challenge-overlay" class="wc-challenge-overlay hidden" aria-hidden="true">
+    <button type="button" id="finish-challenge-btn" class="btn btn-primary wc-finish-challenge">Reto terminado ✓</button>
   </div>
 
   <!-- Pantalla de verificación de edad -->
@@ -348,6 +352,8 @@
       </div>
 
       <div class="result-actions">
+        <button id="start-challenge-btn" class="btn btn-primary wc-start-challenge hidden">▶ Empezar reto</button>
+        <p id="challenge-wait-msg" class="challenge-wait-msg hidden">Tu pareja está haciendo el reto…</p>
         <button id="next-round-btn" class="btn btn-primary">Siguiente ronda</button>
         <button id="new-challenge-btn" class="btn btn-ghost">Otro reto</button>
         <p id="host-wait-msg" class="host-wait-msg hidden">Esperando a que el anfitrión continúe…</p>

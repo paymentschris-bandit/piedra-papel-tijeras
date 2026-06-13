@@ -11,6 +11,7 @@ const state = {
   choices: { p1: null, p2: null },
   usedChallenges: [],
   challengeTease: [],
+  challengePerforming: false,
   lastResult: null,
   playMode: "local",
   outdoorLocation: "general",
@@ -305,6 +306,7 @@ function updateScoreboard() {
 function startRound() {
   state.choices = { p1: null, p2: null };
   state.phase = "playing";
+  resetChallengePerformState();
   clearChallengeTease();
   state.challengeTease = [];
 
@@ -376,9 +378,102 @@ function updateTurnUI() {
 function updateOnlineResultControls() {
   const isOnline = isOnlineMode();
   const isGuestPlayer = isGuest();
-  document.getElementById("next-round-btn")?.classList.toggle("hidden", isOnline && isGuestPlayer);
+  const hideNext =
+    (isOnline && isGuestPlayer) ||
+    (isWebcamMode() && state.challengePerforming) ||
+    (isWebcamMode() && state.activeScreen === "result" && state.lastResult?.winner && !state.challengePerforming && hasActiveChallengeOnResult());
+
+  document.getElementById("next-round-btn")?.classList.toggle("hidden", hideNext);
   document.getElementById("new-challenge-btn")?.classList.toggle("hidden", isOnline && isGuestPlayer);
-  document.getElementById("host-wait-msg")?.classList.toggle("hidden", !isOnline || !isGuestPlayer);
+  document.getElementById("host-wait-msg")?.classList.toggle("hidden", !isOnline || !isGuestPlayer || state.challengePerforming);
+
+  if (isWebcamMode() && state.activeScreen === "result") updateWebcamChallengeUI();
+}
+
+function hasActiveChallengeOnResult() {
+  const box = document.getElementById("challenge-box");
+  return box && !box.classList.contains("hidden");
+}
+
+function getLoserPlayerNum() {
+  if (!state.lastResult?.winner) return null;
+  return state.lastResult.winner === 1 ? 2 : 1;
+}
+
+function isLocalPlayerLoser() {
+  const loser = getLoserPlayerNum();
+  if (!loser) return false;
+  if (!isOnlineMode()) return true;
+  return getLocalPlayerNum() === loser;
+}
+
+function updateWebcamChallengeUI() {
+  const startBtn = document.getElementById("start-challenge-btn");
+  const waitMsg = document.getElementById("challenge-wait-msg");
+  const overlay = document.getElementById("wc-challenge-overlay");
+  const resultCard = document.querySelector("#result-screen .result-card");
+
+  if (!isWebcamMode() || state.activeScreen !== "result" || !state.lastResult?.winner) {
+    startBtn?.classList.add("hidden");
+    waitMsg?.classList.add("hidden");
+    overlay?.classList.add("hidden");
+    if (typeof setWebcamChallengeLive === "function") setWebcamChallengeLive(false);
+    return;
+  }
+
+  const hasChallenge = hasActiveChallengeOnResult();
+
+  if (state.challengePerforming) {
+    startBtn?.classList.add("hidden");
+    waitMsg?.classList.add("hidden");
+    resultCard?.classList.add("wc-result-hidden");
+    if (typeof setWebcamChallengeLive === "function") setWebcamChallengeLive(true);
+    if (isLocalPlayerLoser()) {
+      overlay?.classList.remove("hidden");
+    } else {
+      overlay?.classList.add("hidden");
+    }
+    return;
+  }
+
+  resultCard?.classList.remove("wc-result-hidden");
+  overlay?.classList.add("hidden");
+  if (typeof setWebcamChallengeLive === "function") setWebcamChallengeLive(false);
+
+  if (hasChallenge && isLocalPlayerLoser()) {
+    startBtn?.classList.remove("hidden");
+    waitMsg?.classList.add("hidden");
+  } else if (hasChallenge && isOnlineMode() && !isLocalPlayerLoser()) {
+    startBtn?.classList.add("hidden");
+    waitMsg?.classList.remove("hidden");
+  } else {
+    startBtn?.classList.add("hidden");
+    waitMsg?.classList.add("hidden");
+  }
+}
+
+function handleStartChallenge() {
+  if (!isLocalPlayerLoser() || state.challengePerforming) return;
+  state.challengePerforming = true;
+  sendMessage({ type: "challengeStart" });
+  updateWebcamChallengeUI();
+  document.getElementById("next-round-btn")?.classList.add("hidden");
+  document.getElementById("host-wait-msg")?.classList.add("hidden");
+}
+
+function handleFinishChallenge() {
+  if (!isLocalPlayerLoser() || !state.challengePerforming) return;
+  state.challengePerforming = false;
+  sendMessage({ type: "challengeEnd" });
+  updateWebcamChallengeUI();
+  updateOnlineResultControls();
+}
+
+function resetChallengePerformState() {
+  state.challengePerforming = false;
+  if (typeof setWebcamChallengeLive === "function") setWebcamChallengeLive(false);
+  document.getElementById("wc-challenge-overlay")?.classList.add("hidden");
+  document.querySelector("#result-screen .result-card")?.classList.remove("wc-result-hidden");
 }
 
 function lockOnlineChoiceUI() {
@@ -492,6 +587,8 @@ function initGameControls() {
 
   document.getElementById("next-round-btn").addEventListener("click", handleNextRound);
   document.getElementById("new-challenge-btn").addEventListener("click", handleNewChallenge);
+  document.getElementById("start-challenge-btn")?.addEventListener("click", handleStartChallenge);
+  document.getElementById("finish-challenge-btn")?.addEventListener("click", handleFinishChallenge);
   document.getElementById("play-again-btn").addEventListener("click", handlePlayAgain);
   document.getElementById("back-setup-btn").addEventListener("click", () => {
     cleanupPeer();
@@ -501,6 +598,7 @@ function initGameControls() {
 }
 
 function handleNextRound() {
+  resetChallengePerformState();
   if (state.lastResult?.winner === null) {
     startRound();
     showScreen("game");
@@ -535,11 +633,13 @@ function handleNewChallenge() {
   if (!state.lastResult?.winner) return;
   if (isOnlineMode() && !isHost()) return;
 
+  resetChallengePerformState();
   const loserNum = state.lastResult.winner === 1 ? 2 : 1;
   const challenge = pickChallenge(loserNum, state.lastResult.winner);
   state.usedChallenges.push(challenge.id);
   state.challengeTease = challenge.tease || [];
   displayChallenge(challenge);
+  updateOnlineResultControls();
 
   if (isHost()) {
     sendMessage({
@@ -684,6 +784,8 @@ function showRoundResult(fromRemote = false) {
 
   showScreen("result");
 
+  if (isWebcamMode()) updateWebcamChallengeUI();
+
   if (isHost()) {
     sendRoundResult();
   }
@@ -762,6 +864,8 @@ function renderResultFromState(remote) {
   }
 
   updateOnlineResultControls();
+
+  if (isWebcamMode()) updateWebcamChallengeUI();
 }
 
 function showEndScreen() {
