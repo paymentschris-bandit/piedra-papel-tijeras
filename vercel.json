@@ -1,6 +1,9 @@
 {
   "version": 2,
   "name": "ppt-juego-parejas",
+  "rewrites": [
+    { "source": "/favicon.ico", "destination": "/favicon.svg" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

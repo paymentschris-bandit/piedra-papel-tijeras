@@ -215,6 +215,7 @@ function handleIncoming(data, onConnected) {
       break;
     case "challengeEnd":
       state.challengePerforming = false;
+      state.challengeCompleted = true;
       updateWebcamChallengeUI();
       updateOnlineResultControls();
       break;
@@ -254,6 +255,7 @@ function getSerializableState(forcedScreen) {
     challengeLabel: document.getElementById("challenge-label")?.textContent || "",
     challengeTease: state.challengeTease || [],
     challengePerforming: !!state.challengePerforming,
+    challengeCompleted: !!state.challengeCompleted,
     finalChallengeText: document.getElementById("final-challenge-text")?.textContent || "",
     usedChallenges: [...state.usedChallenges],
     screen: forcedScreen || state.activeScreen || getCurrentScreenName(),
@@ -329,6 +331,7 @@ function applyRemoteState(remote) {
   state.usedChallenges = remote.usedChallenges || [];
   state.challengeTease = remote.challengeTease || [];
   state.challengePerforming = !!remote.challengePerforming;
+  state.challengeCompleted = !!remote.challengeCompleted;
 
   const screen = resolveRemoteScreen(remote);
 

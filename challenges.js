@@ -712,6 +712,39 @@ function getOutdoorLocationKey() {
   return loc && loc !== "general" ? loc : "general";
 }
 
+function isSwingerClubMode() {
+  return isOutdoorPlayMode() && getOutdoorLocationKey() === "swinger";
+}
+
+const SWINGER_GROUP_CHALLENGE =
+  /Pareja B|pareja ajena|pareja invitada os mira|los cuatro|los dos chicos|las dos chicas|las chicas se|los chicos reciben|tres parejas|seis personas|cinco personas|parejas cruzadas|Intercambio completo|intercambio total|dos parejas en|dos parejas,|dos parejas —|chicos en círculo|chicas en el centro|chicas al centro|orgía mixta|vuestros chicos|los chicos forman|los chicos se masturban|las tres chicas|intercambiad bragas|intercambiad calzoncillos|intercambio con Pareja B|intercambio de pareja una ronda|intercambio de manos con Pareja B|intercambio oral:|intercambio de masturbación con Pareja B|intercambio suave en .* con Pareja B|otra pareja gay|otra pareja lésbica|intercambio con pareja lésbica|intercambio con pareja gay|cinco personas|orgía suave en círculo: cada uno toca|grabación consensuada solo cuerpos mientras intercambiáis caricias con Pareja B|\bel otro chico\b|\bla otra chica\b|roleplay de presentación swinger|simula sexo con el otro chico|simula sexo con la otra chica|tú montas al otro chico|swap cruzado/i;
+
+function isSwingerGroupChallenge(text) {
+  return SWINGER_GROUP_CHALLENGE.test(text);
+}
+
+function adaptChallengeForLoser(text, loserGender) {
+  if (loserGender !== "chica") return text;
+  return text
+    .replace(/\bte hace una paja\b/gi, "te masturba con la mano")
+    .replace(/\bte hace paja\b/gi, "te masturba")
+    .replace(/\brecibes dedos o paja\b/gi, "recibes dedos o masturbación")
+    .replace(/\brecibes paja\b/gi, "recibes masturbación con la mano")
+    .replace(/\bmientras vuestros chicos miran\b/gi, "mientras {ganador} mira");
+}
+
+function resolveSwingerPool(node) {
+  if (!node) return [];
+  if (Array.isArray(node)) {
+    return node.filter((t) => !isSwingerGroupChallenge(t));
+  }
+  if (node.pareja) {
+    const groupMode = typeof state !== "undefined" && state.swingerGroupMode;
+    return groupMode ? node.pareja.concat(node.grupo || []) : node.pareja;
+  }
+  return [];
+}
+
 function getChallengesSource() {
   if (isRemotePlayMode()) return REMOTE_CHALLENGES;
   if (isOutdoorPlayMode()) {
@@ -735,9 +768,13 @@ function getChallengePool(intensity, pairType, loserGender) {
   const source = getChallengesSource();
   const level = source[intensity] || source.picante;
   if (pairType === "hetero") {
-    return level.hetero[loserGender] || level.hetero.chica;
+    const hetero = level.hetero[loserGender] || level.hetero.chica;
+    if (isSwingerClubMode()) return resolveSwingerPool(hetero);
+    return Array.isArray(hetero) ? hetero : hetero?.pareja || [];
   }
-  return level[pairType] || [];
+  const pool = level[pairType] || [];
+  if (isSwingerClubMode()) return resolveSwingerPool(pool);
+  return Array.isArray(pool) ? pool : pool?.pareja || [];
 }
 
 function getFinalRewardPool(intensity, pairType, loserGender) {
@@ -866,8 +903,12 @@ function getRandomChallenge(intensity, pairType, loserGender, used = [], loserNa
   }));
 
   const pick = source[Math.floor(Math.random() * source.length)];
+  const text = adaptChallengeForLoser(
+    applyNames(pick.text, loserName, winnerName),
+    loserGender
+  );
   return {
-    text: applyNames(pick.text, loserName, winnerName),
+    text,
     id: pick.id,
   };
 }

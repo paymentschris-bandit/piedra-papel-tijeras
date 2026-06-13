@@ -13,6 +13,7 @@ function loadAppChallengeState() {
   code = code.split("var OUTDOOR_FINAL_REWARDS")[0] + code.match(/var OUTDOOR_FINAL_REWARDS[\s\S]*/)?.[0]?.split("function isRemotePlayMode")[0] || "";
   // simpler: load full challenges.js with var
   code = fs.readFileSync(`${ROOT}/challenges.js`, "utf8").replace(/^const /gm, "var ");
+  code += fs.readFileSync(`${ROOT}/challenges-expansion.js`, "utf8");
   code += fs.readFileSync(`${ROOT}/outdoor-locations.js`, "utf8").replace(/^const /gm, "var ");
   code += fs.readFileSync(`${ROOT}/outdoor-expansion.js`, "utf8");
   code += fs.readFileSync(`${ROOT}/swinger-club-challenges.js`, "utf8");
@@ -76,6 +77,39 @@ function printSection(title, tree, opts = {}) {
       console.log(`    ${r.path}: ${r.count}`);
     }
   }
+  if (opts.swingerDetail && tree) {
+    console.log("\n  Swinger — pareja (2 jugadores) vs grupo (4+ en club):");
+    for (const intensity of ["suave", "picante", "extremo"]) {
+      const level = tree[intensity];
+      if (!level) continue;
+      for (const orient of ["hetero", "chico_chico", "chica_chica"]) {
+        if (orient === "hetero") {
+          for (const role of ["chica", "chico"]) {
+            const node = level.hetero?.[role];
+            if (node?.pareja) {
+              console.log(
+                `    ${intensity}.hetero.${role}: pareja=${node.pareja.length} | grupo=${node.grupo?.length ?? 0}`
+              );
+            }
+          }
+        } else {
+          const node = level[orient];
+          if (node?.pareja) {
+            console.log(
+              `    ${intensity}.${orient}: pareja=${node.pareja.length} | grupo=${node.grupo?.length ?? 0}`
+            );
+          }
+        }
+      }
+    }
+    const parejaTotal = walkArrays(tree)
+      .filter((r) => r.type === "retos" && r.path.includes(".pareja"))
+      .reduce((a, r) => a + r.count, 0);
+    const grupoTotal = walkArrays(tree)
+      .filter((r) => r.type === "retos" && r.path.includes(".grupo"))
+      .reduce((a, r) => a + r.count, 0);
+    console.log(`  ── En partida (solo pareja): ${parejaTotal} retos | Grupo (opcional): ${grupoTotal} retos`);
+  }
   return { rows, total: sum(rows), byInt, bySub: groupBySubcat(rows) };
 }
 
@@ -97,7 +131,11 @@ const locNames = ctx.OUTDOOR_LOCATION_META || {};
 for (const loc of Object.keys(ctx.OUTDOOR_LOCATION_CHALLENGES || {}).sort()) {
   const meta = locNames[loc];
   const label = meta ? `${meta.icon} ${meta.name}` : loc;
-  const s = printSection(`  ${label} (${loc})`, ctx.OUTDOOR_LOCATION_CHALLENGES[loc]);
+  const s = printSection(
+    `  ${label} (${loc})`,
+    ctx.OUTDOOR_LOCATION_CHALLENGES[loc],
+    loc === "swinger" ? { swingerDetail: true } : {}
+  );
   outdoorLocTotal += s.total;
 }
 
