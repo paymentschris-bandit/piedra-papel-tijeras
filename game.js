@@ -10,6 +10,7 @@ const state = {
   currentPlayer: 1,
   choices: { p1: null, p2: null },
   usedChallenges: [],
+  challengeTease: [],
   lastResult: null,
   playMode: "local",
   choiceMode: "buttons",
@@ -294,6 +295,8 @@ function updateScoreboard() {
 function startRound() {
   state.choices = { p1: null, p2: null };
   state.phase = "playing";
+  clearChallengeTease();
+  state.challengeTease = [];
 
   if (isOnlineMode()) {
     state.currentPlayer = getLocalPlayerNum();
@@ -455,7 +458,14 @@ function pickChallenge(loserNum, winnerNum, round = state.currentRound) {
     winnerName
   );
 
-  return { ...challenge, effectiveIntensity };
+  const tease = getChallengeTease(
+    effectiveIntensity,
+    challenge.text,
+    loserName,
+    winnerName
+  );
+
+  return { ...challenge, effectiveIntensity, tease };
 }
 
 function initGameControls() {
@@ -491,6 +501,19 @@ function handleNextRound() {
   if (isHost()) sendNextRound();
 }
 
+function displayChallenge(challengeData) {
+  if (!challengeData) {
+    clearChallengeTease();
+    return;
+  }
+  document.getElementById("challenge-text").textContent = challengeData.text;
+  document.getElementById("challenge-label").textContent =
+    getChallengeLabel(challengeData.effectiveIntensity);
+  animateChallengeReveal();
+  animateChallengeRevealDecor(challengeData.effectiveIntensity);
+  showChallengeTease(challengeData.tease, challengeData.effectiveIntensity);
+}
+
 function handleNewChallenge() {
   if (!state.lastResult?.winner) return;
   if (isOnlineMode() && !isHost()) return;
@@ -498,17 +521,15 @@ function handleNewChallenge() {
   const loserNum = state.lastResult.winner === 1 ? 2 : 1;
   const challenge = pickChallenge(loserNum, state.lastResult.winner);
   state.usedChallenges.push(challenge.id);
-  document.getElementById("challenge-text").textContent = challenge.text;
-  document.getElementById("challenge-label").textContent =
-    getChallengeLabel(challenge.effectiveIntensity);
-  animateChallengeReveal();
-  animateChallengeRevealDecor(challenge.effectiveIntensity);
+  state.challengeTease = challenge.tease || [];
+  displayChallenge(challenge);
 
   if (isHost()) {
     sendMessage({
       type: "newChallenge",
       text: challenge.text,
       label: getChallengeLabel(challenge.effectiveIntensity),
+      tease: challenge.tease || [],
     });
   }
 }
@@ -612,6 +633,9 @@ function showRoundResult(fromRemote = false) {
     const loserNum = winner === 1 ? 2 : 1;
     challengeData = pickChallenge(loserNum, winner);
     state.usedChallenges.push(challengeData.id);
+    state.challengeTease = challengeData.tease || [];
+  } else {
+    state.challengeTease = [];
   }
 
   renderResultUI(winner, challengeData);
@@ -622,9 +646,13 @@ function showRoundResult(fromRemote = false) {
     if (challengeData) {
       animateChallengeReveal();
       animateChallengeRevealDecor(challengeData.effectiveIntensity);
+      showChallengeTease(challengeData.tease, challengeData.effectiveIntensity);
+    } else {
+      clearChallengeTease();
     }
   } else if (challengeData) {
     setChallengeMood(challengeData.effectiveIntensity);
+    showChallengeTease(challengeData.tease, challengeData.effectiveIntensity);
   }
 
   updateScoreboard();
@@ -679,6 +707,8 @@ function renderResultUI(winner, challengeData) {
       document.getElementById("challenge-text").textContent = challengeData.text;
       document.getElementById("challenge-label").textContent =
         getChallengeLabel(challengeData.effectiveIntensity);
+    } else {
+      clearChallengeTease();
     }
 
     challengeBox.classList.toggle("hidden", !challengeData);
@@ -695,7 +725,11 @@ function renderResultFromState(remote) {
   state.scores = { ...remote.scores };
 
   const challengeData = remote.challengeText
-    ? { text: remote.challengeText, effectiveIntensity: state.intensity }
+    ? {
+        text: remote.challengeText,
+        effectiveIntensity: getEffectiveIntensity(state.intensity, state.currentRound, state.maxRounds),
+        tease: remote.challengeTease || [],
+      }
     : null;
 
   renderResultUI(remote.lastResult?.winner ?? null, challengeData);
@@ -705,6 +739,9 @@ function renderResultFromState(remote) {
     document.getElementById("challenge-label").textContent = remote.challengeLabel;
     const mood = getEffectiveIntensity(state.intensity, state.currentRound, state.maxRounds);
     setChallengeMood(mood);
+    showChallengeTease(remote.challengeTease || [], mood);
+  } else {
+    clearChallengeTease();
   }
 
   updateOnlineResultControls();

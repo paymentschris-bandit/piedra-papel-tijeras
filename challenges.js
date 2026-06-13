@@ -718,6 +718,93 @@ function applyNames(text, loserName, winnerName) {
     .replace(/\{ganador\}/g, winnerName);
 }
 
+const TEASE_HIGH_AROUSAL =
+  /correrte|masturb|edging|orgasmo|acabar|acabes|borde|prohibido|gime|gemid|folla|chup|empap|clítor|coño|polla|paja|traga|desnud|facesitting|vaquera|perrito|69|edging/i;
+
+const TEASE_MESSAGES = {
+  hold: [
+    "Aguanta… todavía no te corras.",
+    "Respira hondo. {ganador} decide cuándo puedes soltarte.",
+    "Ni se te ocurra acabar antes de tiempo.",
+    "Quédate en el filo. Controla el cuerpo.",
+    "Todavía no. Sigue… pero no te pases.",
+    "Mordisca el labio y aguanta un poco más.",
+    "Más despacio. {ganador} mira si obedeces.",
+  ],
+  edge: [
+    "Si te corres sin permiso, {ganador} lo recordará en la siguiente ronda.",
+    "Un poco más y estás en el borde… para ahí si no te lo han dicho.",
+    "Siente cómo sube y no dejes que explote. Todavía no.",
+    "Casi… pero {ganador} no ha dicho «ya».",
+    "Edging obligatorio: para en seco si llegas demasiado lejos.",
+    "Gime si quieres, pero no acabes. {ganador} manda el final.",
+    "Si fallas, repetirás el doble al terminar la partida.",
+  ],
+  taunt: [
+    "{ganador} quiere verte retorcerte un poco más.",
+    "Obedece el reto… y no te hagas el listo acabando antes.",
+    "Cuanto más aguantes, peor — o mejor — será lo siguiente.",
+    "Disfruta la tensión. Aún no has terminado.",
+    "Si pierdes el control, {ganador} elige el castigo.",
+    "Esto es solo el calentamiento. No te relajes todavía.",
+  ],
+  outdoor: [
+    "Si alguien os mira, aguantad igual. No os corráis aún.",
+    "El riesgo de que os vean hace que aguantes más… o eso espera {ganador}.",
+    "Respira el aire libre y controla el impulso.",
+  ],
+  remote: [
+    "Frente a la cámara: {ganador} ve si te pasas. Todavía no.",
+    "No te corras en pantalla hasta que {ganador} lo ordene.",
+    "Gime para la webcam, pero aguanta el orgasmo un rato más.",
+  ],
+};
+
+function shouldShowTease(intensity, challengeText) {
+  if (TEASE_HIGH_AROUSAL.test(challengeText)) return Math.random() < 0.88;
+  if (intensity === "extremo") return Math.random() < 0.68;
+  if (intensity === "picante") return Math.random() < 0.48;
+  return Math.random() < 0.28;
+}
+
+function pickFromPool(pool) {
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+function getChallengeTease(intensity, challengeText, loserName = "", winnerName = "") {
+  if (!shouldShowTease(intensity, challengeText)) return [];
+
+  const pool = [
+    ...TEASE_MESSAGES.hold,
+    ...TEASE_MESSAGES.taunt,
+  ];
+  if (TEASE_HIGH_AROUSAL.test(challengeText)) {
+    pool.push(...TEASE_MESSAGES.edge);
+  }
+  if (typeof isOutdoorPlayMode === "function" && isOutdoorPlayMode()) {
+    pool.push(...TEASE_MESSAGES.outdoor);
+  }
+  if (typeof isRemotePlayMode === "function" && isRemotePlayMode()) {
+    pool.push(...TEASE_MESSAGES.remote);
+  }
+
+  const messages = [applyNames(pickFromPool(pool), loserName, winnerName)];
+
+  const wantSecond =
+    intensity === "extremo" ||
+    (TEASE_HIGH_AROUSAL.test(challengeText) && Math.random() < 0.45);
+  if (wantSecond) {
+    const edgePool = [...TEASE_MESSAGES.edge, ...TEASE_MESSAGES.hold];
+    let second = applyNames(pickFromPool(edgePool), loserName, winnerName);
+    if (second === messages[0]) {
+      second = applyNames(pickFromPool(edgePool), loserName, winnerName);
+    }
+    if (second !== messages[0]) messages.push(second);
+  }
+
+  return messages;
+}
+
 function getChallengeId(intensity, pairType, loserGender, index) {
   const prefix = isRemotePlayMode() ? "remote:" : isOutdoorPlayMode() ? "outdoor:" : "";
   return `${prefix}${intensity}:${pairType}:${loserGender}:${index}`;

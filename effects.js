@@ -212,6 +212,44 @@ function animateChallengeReveal() {
   box.classList.add("challenge-reveal");
 }
 
+let teaseTimers = [];
+
+function clearChallengeTease() {
+  teaseTimers.forEach(clearTimeout);
+  teaseTimers = [];
+  const wrap = document.getElementById("challenge-tease-wrap");
+  const el = document.getElementById("challenge-tease");
+  if (!wrap || !el) return;
+  wrap.classList.add("hidden");
+  wrap.classList.remove("tease-pulse");
+  el.classList.remove("visible");
+  el.textContent = "";
+}
+
+function showChallengeTease(messages, intensity) {
+  clearChallengeTease();
+  if (!messages?.length) return;
+
+  const wrap = document.getElementById("challenge-tease-wrap");
+  const el = document.getElementById("challenge-tease");
+  if (!wrap || !el) return;
+
+  wrap.classList.remove("hidden");
+  wrap.classList.toggle("tease-pulse", intensity === "extremo" || messages.length > 1);
+
+  let delay = 1400;
+  messages.forEach((msg, index) => {
+    const timer = setTimeout(() => {
+      el.classList.remove("visible");
+      void el.offsetWidth;
+      el.textContent = msg;
+      el.classList.add("visible");
+    }, delay);
+    teaseTimers.push(timer);
+    delay += index === 0 ? 2800 : 0;
+  });
+}
+
 function updateEscaladaBar(currentRound, maxRounds) {
   const bar = document.getElementById("escalada-bar");
   const fill = document.getElementById("escalada-fill");

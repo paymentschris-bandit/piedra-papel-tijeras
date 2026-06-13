@@ -203,6 +203,8 @@ function handleIncoming(data, onConnected) {
         document.getElementById("challenge-text").textContent = data.text;
         document.getElementById("challenge-label").textContent = data.label;
         animateChallengeReveal();
+        const mood = getEffectiveIntensity(state.intensity, state.currentRound, state.maxRounds);
+        showChallengeTease(data.tease || [], mood);
       }
       break;
     case "syncState":
@@ -238,6 +240,7 @@ function getSerializableState(forcedScreen) {
     lastResult: state.lastResult,
     challengeText: document.getElementById("challenge-text")?.textContent || "",
     challengeLabel: document.getElementById("challenge-label")?.textContent || "",
+    challengeTease: state.challengeTease || [],
     finalChallengeText: document.getElementById("final-challenge-text")?.textContent || "",
     usedChallenges: [...state.usedChallenges],
     screen: forcedScreen || state.activeScreen || getCurrentScreenName(),
@@ -310,6 +313,7 @@ function applyRemoteState(remote) {
   state.phase = remote.phase;
   state.lastResult = remote.lastResult;
   state.usedChallenges = remote.usedChallenges || [];
+  state.challengeTease = remote.challengeTease || [];
 
   const screen = resolveRemoteScreen(remote);
 
