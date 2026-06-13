@@ -853,16 +853,22 @@ function getChallengeId(intensity, pairType, loserGender, index) {
 
 function getRandomChallenge(intensity, pairType, loserGender, used = [], loserName = "", winnerName = "") {
   const pool = getChallengePool(intensity, pairType, loserGender);
-  const available = pool.filter(
-    (_, i) => !used.includes(getChallengeId(intensity, pairType, loserGender, i))
-  );
-  const source = available.length > 0 ? available : pool;
-  const index = Math.floor(Math.random() * source.length);
-  const challenge = source[index];
-  const originalIndex = pool.indexOf(challenge);
+  const available = pool
+    .map((text, i) => ({
+      text,
+      id: getChallengeId(intensity, pairType, loserGender, i),
+    }))
+    .filter((item) => !used.includes(item.id));
+
+  const source = available.length > 0 ? available : pool.map((text, i) => ({
+    text,
+    id: getChallengeId(intensity, pairType, loserGender, i),
+  }));
+
+  const pick = source[Math.floor(Math.random() * source.length)];
   return {
-    text: applyNames(challenge, loserName, winnerName),
-    id: getChallengeId(intensity, pairType, loserGender, originalIndex),
+    text: applyNames(pick.text, loserName, winnerName),
+    id: pick.id,
   };
 }
 

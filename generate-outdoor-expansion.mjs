@@ -1,7 +1,7 @@
 import fs from "fs";
 import vm from "vm";
 
-const MIN = 20;
+const MIN = 40;
 const ROOT = import.meta.dirname;
 
 function loadOutdoorData() {
