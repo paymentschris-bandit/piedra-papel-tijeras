@@ -337,11 +337,6 @@ function resetChoiceUI() {
   resetRouletteUI();
 }
 
-function onChoiceRegistered() {
-  if (state.choiceMode !== "roulette") return;
-  if (typeof zeroRouletteMotion === "function") zeroRouletteMotion();
-}
-
 function updateTurnUI() {
   const turnLabel = document.getElementById("turn-label");
   const waitingMsg = document.getElementById("waiting-msg");
@@ -498,16 +493,24 @@ function lockOnlineChoiceUI() {
 
   const myNum = getLocalPlayerNum();
   const myKey = myNum === 1 ? "p1" : "p2";
-  if (!state.choices[myKey]) return;
+  const myChoice = state.choices[myKey];
+  if (!myChoice) return;
 
   document.querySelectorAll(".choice-btn").forEach((btn) => {
     btn.disabled = true;
   });
+
+  if (state.choiceMode === "roulette") {
+    stopRouletteSpin(true);
+    if (typeof applyRouletteLockedUI === "function") {
+      applyRouletteLockedUI(myChoice);
+    }
+    return;
+  }
+
   document.getElementById("roulette-lock-btn")?.setAttribute("disabled", "true");
   document.getElementById("roulette-lock-btn")?.classList.add("hidden");
   document.getElementById("roulette-hint")?.classList.add("hidden");
-  stopRouletteSpin(true);
-  if (typeof zeroRouletteMotion === "function") zeroRouletteMotion();
 }
 
 function syncGameScreenFromRemote() {
@@ -520,8 +523,6 @@ function syncGameScreenFromRemote() {
     if (!state.choices[myKey] && !Roulette.locked) {
       startRouletteSpin();
     } else if (state.choices[myKey]) {
-      stopRouletteSpin(true);
-      document.getElementById("roulette-locked")?.classList.remove("hidden");
       lockOnlineChoiceUI();
     }
   } else if (state.choices[myKey]) {
@@ -700,7 +701,6 @@ function handleChoice(choice) {
     document.querySelectorAll(".choice-btn").forEach((btn) => { btn.disabled = true; });
     sendChoice(myNum, choice);
     state.choices[key] = choice;
-    onChoiceRegistered();
     lockOnlineChoiceUI();
     updateTurnUI();
     return;
@@ -708,7 +708,6 @@ function handleChoice(choice) {
 
   const key = state.currentPlayer === 1 ? "p1" : "p2";
   state.choices[key] = choice;
-  onChoiceRegistered();
 
   const selectedBtn = document.querySelector(`.choice-btn[data-choice="${choice}"]`);
   if (selectedBtn) animateChoice(selectedBtn);
@@ -736,7 +735,6 @@ function handleRouletteLock(choice) {
     if (state.choices[key]) return;
     state.choices[key] = choice;
     sendChoice(myNum, choice);
-    onChoiceRegistered();
     lockOnlineChoiceUI();
     updateTurnUI();
     return;
@@ -744,7 +742,6 @@ function handleRouletteLock(choice) {
 
   const key = state.currentPlayer === 1 ? "p1" : "p2";
   state.choices[key] = choice;
-  onChoiceRegistered();
 
   if (state.currentPlayer === 1) {
     state.currentPlayer = 2;

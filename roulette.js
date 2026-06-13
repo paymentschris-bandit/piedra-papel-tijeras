@@ -82,22 +82,14 @@ function zeroRouletteMotion() {
   if (wheel) wheel.style.transform = "rotate(0deg)";
 }
 
-function getRouletteChoiceAtRotation(rotation) {
-  const normalized = ((rotation % 360) + 360) % 360;
-  const index = Math.floor(((360 - normalized + 30) % 360) / 120) % 3;
-  return ROULETTE_CHOICES[index];
-}
-
-function lockRoulette() {
-  if (Roulette.locked || !Roulette.spinning) return;
-
+/** Muestra elección registrada y resetea solo animación (state.choices ya guardado). */
+function applyRouletteLockedUI(choice) {
+  if (!choice) return;
   Roulette.locked = true;
-  stopRouletteSpin(true);
+  Roulette.lastLockedChoice = choice;
 
-  const choice = getRouletteChoiceAtRotation(Roulette.rotation);
   const emoji = CHOICE_EMOJI[choice];
   const name = getChoiceName(choice);
-
   const center = document.querySelector(".roulette-center");
   if (center) center.textContent = emoji;
 
@@ -107,9 +99,30 @@ function lockRoulette() {
 
   const lockedEl = document.getElementById("roulette-locked");
   if (lockedEl) {
-    lockedEl.textContent = t("roulette.locked", { name });
+    lockedEl.textContent =
+      typeof t === "function" ? t("roulette.locked", { name }) : `✓ ${name} — elección registrada`;
     lockedEl.classList.remove("hidden");
   }
+
+  zeroRouletteMotion();
+}
+
+function getRouletteChoiceAtRotation(rotation) {
+  const normalized = ((rotation % 360) + 360) % 360;
+  const index = Math.floor(((360 - normalized + 30) % 360) / 120) % 3;
+  return ROULETTE_CHOICES[index];
+}
+
+function lockRoulette() {
+  if (Roulette.locked || !Roulette.spinning) return;
+
+  stopRouletteSpin(true);
+
+  const choice = getRouletteChoiceAtRotation(Roulette.rotation);
+
+  if (Roulette.onLock) Roulette.onLock(choice);
+
+  applyRouletteLockedUI(choice);
 
   flashScreen("choice");
 
@@ -123,10 +136,6 @@ function lockRoulette() {
       burstParticles(rect.left + rect.width / 2, rect.top + rect.height / 2, 20);
     }
   }
-
-  if (Roulette.onLock) Roulette.onLock(choice);
-  Roulette.lastLockedChoice = choice;
-  zeroRouletteMotion();
 }
 
 function refreshRouletteI18n() {
