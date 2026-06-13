@@ -128,6 +128,46 @@
           </button>
         </div>
         <p id="outdoor-hint" class="outdoor-hint hidden">Modo atrevido: jugáis juntos fuera. Solo donde sea legal, sin molestar a nadie y con palabra de seguridad.</p>
+        <div id="outdoor-location-block" class="outdoor-location-block hidden">
+          <label>¿Dónde estáis?</label>
+          <div class="mode-grid outdoor-location-grid">
+            <button type="button" class="mode-btn outdoor-loc-btn selected" data-outdoor-location="general">
+              <span class="mode-icon">🌍</span>
+              <span class="mode-name">General</span>
+              <span class="mode-desc">Todos los retos actuales</span>
+            </button>
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="coche">
+              <span class="mode-icon">🚗</span>
+              <span class="mode-name">Coche</span>
+              <span class="mode-desc">Aparcado o en marcha</span>
+            </button>
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="parque">
+              <span class="mode-icon">🌳</span>
+              <span class="mode-name">Parque</span>
+              <span class="mode-desc">Bancos, setos, senderos</span>
+            </button>
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="cine">
+              <span class="mode-icon">🎬</span>
+              <span class="mode-name">Cine</span>
+              <span class="mode-desc">Sala oscura, butacas</span>
+            </button>
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="playa">
+              <span class="mode-icon">🏖️</span>
+              <span class="mode-name">Playa</span>
+              <span class="mode-desc">Dunas, rocas, agua</span>
+            </button>
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="restaurante">
+              <span class="mode-icon">🍽️</span>
+              <span class="mode-name">Restaurante</span>
+              <span class="mode-desc">Mesa, terraza, baño</span>
+            </button>
+            <button type="button" class="mode-btn outdoor-loc-btn" data-outdoor-location="parking">
+              <span class="mode-icon">🅿️</span>
+              <span class="mode-name">Parking</span>
+              <span class="mode-desc">Garaje, plazas, ascensor</span>
+            </button>
+          </div>
+        </div>
       </div>
 
       <div class="field">
@@ -345,6 +385,7 @@
     }
   </script>
   <script src="challenges.js"></script>
+  <script src="outdoor-locations.js"></script>
   <script src="effects.js"></script>
   <script src="icons.js"></script>
   <script src="decorations.js"></script>

@@ -1409,6 +1409,43 @@ body {
   display: none;
 }
 
+.outdoor-location-block {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(74, 124, 89, 0.25);
+}
+
+.outdoor-location-block.hidden {
+  display: none;
+}
+
+.outdoor-location-block > label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+.outdoor-location-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 520px) {
+  .outdoor-location-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 720px) {
+  .outdoor-location-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.outdoor-loc-btn .mode-desc {
+  font-size: 0.68rem;
+}
+
 body.outdoor-active .challenge-box {
   border-color: rgba(74, 124, 89, 0.45);
 }

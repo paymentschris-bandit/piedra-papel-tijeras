@@ -682,9 +682,22 @@ function isOutdoorPlayMode() {
   return typeof state !== "undefined" && state.playMode === "outdoor";
 }
 
+function getOutdoorLocationKey() {
+  if (!isOutdoorPlayMode()) return "general";
+  const loc = typeof state !== "undefined" && state.outdoorLocation;
+  return loc && loc !== "general" ? loc : "general";
+}
+
 function getChallengesSource() {
   if (isRemotePlayMode()) return REMOTE_CHALLENGES;
-  if (isOutdoorPlayMode()) return OUTDOOR_CHALLENGES;
+  if (isOutdoorPlayMode()) {
+    const loc = getOutdoorLocationKey();
+    if (loc === "general") return OUTDOOR_CHALLENGES;
+    if (typeof OUTDOOR_LOCATION_CHALLENGES !== "undefined" && OUTDOOR_LOCATION_CHALLENGES[loc]) {
+      return OUTDOOR_LOCATION_CHALLENGES[loc];
+    }
+    return OUTDOOR_CHALLENGES;
+  }
   return CHALLENGES;
 }
 
@@ -806,7 +819,11 @@ function getChallengeTease(intensity, challengeText, loserName = "", winnerName 
 }
 
 function getChallengeId(intensity, pairType, loserGender, index) {
-  const prefix = isRemotePlayMode() ? "remote:" : isOutdoorPlayMode() ? "outdoor:" : "";
+  const prefix = isRemotePlayMode()
+    ? "remote:"
+    : isOutdoorPlayMode()
+      ? `outdoor:${getOutdoorLocationKey()}:`
+      : "";
   return `${prefix}${intensity}:${pairType}:${loserGender}:${index}`;
 }
 

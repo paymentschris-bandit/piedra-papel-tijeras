@@ -235,6 +235,7 @@ function getSerializableState(forcedScreen) {
     scores: { ...state.scores },
     choiceMode: state.choiceMode,
     playMode: state.playMode,
+    outdoorLocation: state.outdoorLocation || "general",
     choices: { ...state.choices },
     phase: state.phase || "playing",
     lastResult: state.lastResult,
@@ -309,6 +310,7 @@ function applyRemoteState(remote) {
   state.scores = { ...remote.scores };
   state.choiceMode = remote.choiceMode;
   state.playMode = remote.playMode;
+  state.outdoorLocation = remote.outdoorLocation || "general";
   state.choices = { ...remote.choices };
   state.phase = remote.phase;
   state.lastResult = remote.lastResult;

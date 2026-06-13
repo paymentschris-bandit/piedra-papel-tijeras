@@ -13,6 +13,7 @@ const state = {
   challengeTease: [],
   lastResult: null,
   playMode: "local",
+  outdoorLocation: "general",
   choiceMode: "buttons",
   phase: "playing",
   activeScreen: "age",
@@ -50,6 +51,7 @@ function updateSetupForPlayMode() {
   document.getElementById("online-join-block")?.classList.toggle("hidden", !isNetwork);
   document.getElementById("online-hint")?.classList.toggle("hidden", !isNetwork);
   document.getElementById("outdoor-hint")?.classList.toggle("hidden", !isOutdoor);
+  document.getElementById("outdoor-location-block")?.classList.toggle("hidden", !isOutdoor);
   document.getElementById("lobby-webcam-note")?.classList.toggle("hidden", state.playMode !== "webcam");
 
   const hint = document.getElementById("online-hint");
@@ -108,6 +110,14 @@ function initSetup() {
       state.playMode = btn.dataset.playMode;
       updateSetupForPlayMode();
       if (typeof updateWebcamContextBanner === "function") updateWebcamContextBanner();
+    });
+  });
+
+  document.querySelectorAll(".outdoor-loc-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".outdoor-loc-btn").forEach((b) => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      state.outdoorLocation = btn.dataset.outdoorLocation;
     });
   });
 
@@ -430,15 +440,22 @@ function updateProgressLevelUI() {
   }
 }
 
+function getOutdoorLocationLabel() {
+  const key = state.outdoorLocation || "general";
+  const meta = typeof OUTDOOR_LOCATION_META !== "undefined" ? OUTDOOR_LOCATION_META[key] : null;
+  if (!meta) return "Aire libre";
+  return `${meta.icon} ${meta.name}`;
+}
+
 function getChallengeLabel(intensity) {
   const remote = isRemotePlayMode();
   const outdoor = isOutdoorPlayMode();
-  const tag = remote ? "Reto a distancia · " : outdoor ? "Reto al aire libre · " : "";
+  const tag = remote ? "Reto a distancia · " : outdoor ? `${getOutdoorLocationLabel()} · ` : "";
   if (state.intensity === "progresivo") {
     return `${tag}Reto para el perdedor · ${getIntensityLabel(intensity)}`;
   }
   if (remote) return "Reto a distancia · cumple frente a la cámara";
-  if (outdoor) return "Reto al aire libre · cumple donde indique el reto";
+  if (outdoor) return `${getOutdoorLocationLabel()} · cumple donde indique el reto`;
   return "Reto para el perdedor";
 }
 
