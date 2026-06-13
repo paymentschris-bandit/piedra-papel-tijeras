@@ -1573,6 +1573,215 @@ body.webcam-active .screen.active {
   padding-top: 0.5rem;
 }
 
+/* —— Webcam pantalla completa (cámara de fondo, UI encima) —— */
+body.webcam-fullscreen .bg-glow,
+body.webcam-fullscreen .bg-orbs,
+body.webcam-fullscreen .bg-noise,
+body.webcam-fullscreen .bg-silhouette,
+body.webcam-fullscreen .particles-canvas,
+body.webcam-fullscreen .floating-decor,
+body.webcam-fullscreen .emoji-rain,
+body.webcam-fullscreen .vignette-pulse {
+  opacity: 0 !important;
+  visibility: hidden;
+}
+
+body.webcam-fullscreen #webcam-panel {
+  position: fixed;
+  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  transform: none;
+  border-radius: 0;
+  border: none;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  background: #0a070d;
+}
+
+body.webcam-fullscreen .webcam-remote-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: unset;
+  flex: 1;
+}
+
+body.webcam-fullscreen .webcam-remote-wrap .webcam-video {
+  object-fit: cover;
+}
+
+body.webcam-fullscreen .webcam-local-wrap {
+  top: max(0.5rem, env(safe-area-inset-top));
+  bottom: auto;
+  right: max(0.5rem, env(safe-area-inset-right));
+  width: min(28vw, 110px);
+  max-width: 110px;
+  border-radius: 10px;
+}
+
+body.webcam-fullscreen .webcam-toolbar {
+  position: absolute;
+  bottom: max(0.5rem, env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: calc(100% - 1rem);
+  border-radius: 12px;
+  z-index: 6;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+body.webcam-fullscreen .webcam-ctrl {
+  font-size: 0.62rem;
+  padding: 0.4rem 0.45rem;
+  white-space: nowrap;
+}
+
+body.webcam-fullscreen .screen.active {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  min-height: unset;
+  background: transparent;
+  padding: max(0.5rem, env(safe-area-inset-top)) 0.65rem max(0.5rem, env(safe-area-inset-bottom));
+  justify-content: flex-start;
+  pointer-events: none;
+}
+
+body.webcam-fullscreen .screen.active > * {
+  pointer-events: auto;
+}
+
+body.webcam-fullscreen #game-screen.active {
+  justify-content: flex-start;
+  gap: 0.35rem;
+}
+
+body.webcam-fullscreen .game-header {
+  margin-bottom: 0.35rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+body.webcam-fullscreen .scoreboard {
+  padding: 0.55rem 0.85rem;
+  font-size: 0.9rem;
+}
+
+body.webcam-fullscreen .game-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+  min-height: 0;
+}
+
+body.webcam-fullscreen .turn-label {
+  font-size: 0.95rem;
+  margin-bottom: 0.45rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(10, 7, 13, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+body.webcam-fullscreen .roulette-container {
+  background: rgba(10, 7, 13, 0.78);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 0.55rem 0.85rem 0.75rem;
+  border: 1px solid rgba(224, 86, 122, 0.4);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+  gap: 0.45rem;
+  max-width: min(100%, 240px);
+}
+
+body.webcam-fullscreen .roulette-wheel-wrap {
+  width: min(150px, 36vw);
+  height: min(150px, 36vw);
+}
+
+body.webcam-fullscreen .roulette-pointer {
+  font-size: 1.25rem;
+  margin-bottom: -0.35rem;
+}
+
+body.webcam-fullscreen .roulette-segment span {
+  font-size: 1.45rem;
+}
+
+body.webcam-fullscreen .roulette-segment small {
+  font-size: 0.58rem;
+}
+
+body.webcam-fullscreen .roulette-center {
+  width: 38px;
+  height: 38px;
+  font-size: 0.95rem;
+}
+
+body.webcam-fullscreen .roulette-hint {
+  font-size: 0.72rem;
+  margin: 0;
+}
+
+body.webcam-fullscreen .roulette-lock-btn {
+  padding: 0.45rem 1.1rem;
+  font-size: 0.85rem;
+  min-height: unset;
+}
+
+body.webcam-fullscreen .roulette-locked {
+  font-size: 0.85rem;
+}
+
+/* Modo reto: solo cámara + tarjeta del reto */
+body.webcam-reto-mode #choices-roulette,
+body.webcam-reto-mode #choices-buttons {
+  display: none !important;
+}
+
+body.webcam-fullscreen.webcam-reto-mode #result-screen.active,
+body.webcam-fullscreen.webcam-reto-mode #end-screen.active {
+  justify-content: flex-end;
+  align-items: stretch;
+  padding-bottom: max(0.65rem, env(safe-area-inset-bottom));
+}
+
+body.webcam-fullscreen.webcam-reto-mode .result-card,
+body.webcam-fullscreen.webcam-reto-mode .end-card {
+  width: 100%;
+  max-width: 100%;
+  max-height: min(78dvh, 520px);
+  overflow-y: auto;
+  background: rgba(18, 10, 22, 0.9);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(224, 86, 122, 0.35);
+  margin: 0;
+}
+
+body.webcam-fullscreen.webcam-reto-mode .webcam-toolbar {
+  bottom: auto;
+  top: max(0.45rem, env(safe-area-inset-top));
+  transform: translateX(-50%);
+}
+
+body.webcam-fullscreen.webcam-reto-mode .webcam-local-wrap {
+  top: calc(max(0.45rem, env(safe-area-inset-top)) + 2.6rem);
+}
+
 @media (max-width: 480px) {
   .webcam-panel {
     top: auto;
@@ -1598,8 +1807,12 @@ body.webcam-active .screen.active {
     padding: 0.4rem 0.2rem;
   }
 
-  body.webcam-active .screen.active {
+  body.webcam-active.webcam-pip .screen.active {
     padding-bottom: 11rem;
+  }
+
+  body.webcam-active.webcam-fullscreen .screen.active {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
   }
 }
 

@@ -130,11 +130,16 @@ function showScreenAnimated(name) {
       current.classList.remove("active", "screen-out");
       next.classList.add("active", "screen-in");
       setTimeout(() => next.classList.remove("screen-in"), 450);
+      if (typeof updateWebcamScreenMode === "function") updateWebcamScreenMode(name);
     }, 200);
   } else {
     Object.values(screenMap).forEach((s) => s?.classList.remove("active", "screen-in", "screen-out"));
     next.classList.add("active", "screen-in");
     setTimeout(() => next.classList.remove("screen-in"), 450);
+  }
+
+  if (typeof updateWebcamScreenMode === "function") {
+    updateWebcamScreenMode(name);
   }
 }
 

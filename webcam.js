@@ -4,16 +4,62 @@ const WC = {
   camEnabled: true,
   micEnabled: true,
   handlersRegistered: false,
+  fullscreen: false,
 };
+
+function isMobileWebcamLayout() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
+function updateWebcamFullscreenBtn() {
+  const btn = document.getElementById("wc-fullscreen-btn");
+  if (!btn) return;
+  btn.textContent = WC.fullscreen ? "Ventana ▢" : "Pantalla ▣";
+  btn.title = WC.fullscreen ? "Modo ventana flotante" : "Cámara a pantalla completa";
+}
+
+function applyWebcamLayout() {
+  if (!isWebcamMode() && !document.body.classList.contains("webcam-preview")) return;
+  const panel = document.getElementById("webcam-panel");
+  if (!panel || panel.classList.contains("hidden")) return;
+
+  document.body.classList.toggle("webcam-fullscreen", WC.fullscreen);
+  document.body.classList.toggle("webcam-pip", !WC.fullscreen);
+  panel.classList.toggle("webcam-minimized", false);
+  updateWebcamFullscreenBtn();
+}
+
+function setWebcamFullscreen(on) {
+  WC.fullscreen = !!on;
+  applyWebcamLayout();
+}
+
+function toggleWebcamFullscreen() {
+  setWebcamFullscreen(!WC.fullscreen);
+}
+
+function updateWebcamScreenMode(screenName) {
+  if (!isWebcamMode()) {
+    document.body.classList.remove("webcam-reto-mode", "webcam-play-mode");
+    return;
+  }
+  const isReto = screenName === "result" || screenName === "end";
+  document.body.classList.toggle("webcam-reto-mode", isReto);
+  document.body.classList.toggle("webcam-play-mode", screenName === "game");
+}
 
 function showWebcamPanel() {
   document.getElementById("webcam-panel")?.classList.remove("hidden");
   document.body.classList.add("webcam-active");
+  if (WC.fullscreen === false && isMobileWebcamLayout()) {
+    WC.fullscreen = true;
+  }
+  applyWebcamLayout();
 }
 
 function hideWebcamPanel() {
   document.getElementById("webcam-panel")?.classList.add("hidden");
-  document.body.classList.remove("webcam-active");
+  document.body.classList.remove("webcam-active", "webcam-fullscreen", "webcam-pip", "webcam-reto-mode", "webcam-play-mode");
 }
 
 function updateRemoteVideoLabel() {
@@ -291,10 +337,18 @@ async function onWebcamSessionReady() {
 }
 
 function initWebcamControls() {
+  document.getElementById("wc-fullscreen-btn")?.addEventListener("click", toggleWebcamFullscreen);
   document.getElementById("wc-toggle-cam")?.addEventListener("click", () => toggleWebcamTrack("video"));
   document.getElementById("wc-toggle-mic")?.addEventListener("click", () => toggleWebcamTrack("audio"));
   document.getElementById("wc-minimize-btn")?.addEventListener("click", () => {
+    setWebcamFullscreen(false);
     document.getElementById("webcam-panel")?.classList.toggle("webcam-minimized");
+  });
+  window.addEventListener("resize", () => {
+    if (isWebcamMode() && isMobileWebcamLayout() && !document.getElementById("webcam-panel")?.classList.contains("hidden")) {
+      if (!document.body.classList.contains("webcam-pip")) WC.fullscreen = true;
+      applyWebcamLayout();
+    }
   });
 }
 
@@ -304,7 +358,8 @@ function initWebcamDevPreview() {
   const host = location.hostname;
   if (host !== "localhost" && host !== "127.0.0.1") return;
 
-  document.body.classList.add("webcam-preview");
+  document.body.classList.add("webcam-preview", "webcam-fullscreen");
+  WC.fullscreen = true;
   showWebcamPanel();
 
   const remote = document.getElementById("remote-video");

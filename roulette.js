@@ -24,8 +24,9 @@ function showChoiceUI(mode) {
   if (!buttons || !roulette) return;
 
   const isRoulette = mode === "roulette";
-  buttons.classList.toggle("hidden", isRoulette);
-  roulette.classList.toggle("hidden", !isRoulette);
+  const hideForReto = document.body.classList.contains("webcam-reto-mode");
+  buttons.classList.toggle("hidden", isRoulette || hideForReto);
+  roulette.classList.toggle("hidden", !isRoulette || hideForReto);
 }
 
 function startRouletteSpin() {
