@@ -525,6 +525,9 @@ const OUTDOOR_CHALLENGES = {
         "Deja la ventana del baño entreabierta: quítate la braga y sal al pasillo 5 segundos si el pasillo está vacío — {ganador} hace de lookout.",
         "En el coche con cristales no muy tintados, siéntate de lado y deja que {ganador} te toque el coño mientras alguien pasa caminando a 5 metros.",
         "Busca un balcón, ventana o escalera donde podáis ser vistos desde abajo: sube la falda 15 segundos. {ganador} elige el momento y vigila.",
+        "Exhibicionista: camina 30 segundos sin sujetador bajo la camiseta fina. {ganador} va a tu lado y vigila miradas.",
+        "En una calle con terrazas llenas, quédate de pie mientras {ganador} te toca el culo por encima del pantalón 20 segundos — parar si alguien se acerca.",
+        "Riesgo acordado: enseña las tetas 8 segundos en un portal o callejón. {ganador} tapa si oye pasos.",
       ],
       chico: [
         "En el coche aparcado, baja el pantalón lo justo y deja que {ganador} masturbe tu polla 2 minutos mirando el retrovisor.",
@@ -541,6 +544,9 @@ const OUTDOOR_CHALLENGES = {
         "En el coche con ventanilla bajada, deja que {ganador} te masturbe 90 segundos mientras alguien pasa caminando fuera — parar si se detiene.",
         "En un mirador o terraza, abre el abrigo sin camiseta 10 segundos mirando hacia donde hay gente lejos. {ganador} vigila y da la señal.",
         "Entrad juntos al baño de un bar: dentro, baja el pantalón y quédate así 30 segundos con la puerta sin cerrar del todo — solo si el pasillo está vacío.",
+        "Exhibicionista: camina 30 segundos con la polla marcando el pantalón sin disimular. {ganador} va contigo y avisa si alguien mira fijo.",
+        "En un mirador con gente lejos, baja el pantalón hasta las caderas 10 segundos de espaldas a la barandilla. {ganador} vigila.",
+        "Riesgo acordado: enseña tu polla 8 segundos en un portal. {ganador} tapa si oye pasos.",
       ],
     },
     chico_chico: [
@@ -558,6 +564,9 @@ const OUTDOOR_CHALLENGES = {
       "En un parking, bajad los pantalones a la vez 10 segundos de espaldas al tráfico. {ganador} elige el momento y vigila.",
       "Busca un balcón o ventana visible desde la calle: enseñad las pollas 8 segundos cada uno. Rápido si alguien levanta la vista.",
       "En la playa o parque, sentaos en un banco con las pollas fuera bajo una toalla o chaqueta — quitadla 15 segundos cuando {ganador} diga, mirando si viene gente.",
+      "Exhibicionista: caminad cogidos de la cintura con el bulto visible 30 segundos por una zona con gente. Parar si alguien os señala.",
+      "En un mirador, enseñad las pollas 12 segundos cada uno mirando hacia abajo. {ganador} elige el momento.",
+      "Riesgo acordado: paja mutua 60 segundos en un balcón visible desde la calle — parar si alguien os mira fijo.",
     ],
     chica_chica: [
       "En el coche aparcado, bajaos las bragas y frota vuestros coños — dedos o muslos — 2 minutos mirando el retrovisor.",
@@ -574,6 +583,9 @@ const OUTDOOR_CHALLENGES = {
       "En un parking, levantad la falda o abrid el abrigo sin sujetador 10 segundos mirando hacia la calle. {ganador} vigila.",
       "En una terraza o balcón, besad y meted mano bajo la ropa 45 segundos donde podáis ser vistos desde abajo — parar si alguien os mira fijo.",
       "Entrad juntas a un baño: dentro, baja bragas y quedad en bragas 30 segundos con la puerta entreabierta si el pasillo está vacío.",
+      "Exhibicionista: caminad de la mano con el vestido ceñido sin bragas 1 minuto. {ganador} avisa si alguien nota algo.",
+      "En un mirador, levantad la falda 12 segundos mirando hacia abajo. {ganador} vigila.",
+      "Riesgo acordado: dedos mutuos 60 segundos en un balcón visible — parar si alguien os mira fijo.",
     ],
   },
 
@@ -594,6 +606,9 @@ const OUTDOOR_CHALLENGES = {
         "En el coche con ventanas sin tintar, monta a {ganador} o frota tu coño contra él 90 segundos mientras pasan peatones. Parar si alguien se para a mirar.",
         "Busca un mirador o balcón: a cuatro patas, falda arriba, deja que {ganador} te toque o te folle con dedos 1 minuto sabiendo que alguien podría veros desde abajo.",
         "En la playa de noche cerca de un paseo: desnúdate completa 1 minuto caminando hacia el agua. Vuelve si oís voces o linternas.",
+        "Exhibicionista extremo: quédate en ropa interior 45 segundos en un sitio visible desde la calle. {ganador} hace de lookout.",
+        "En un parking con coches pasando, mastúrbate 90 segundos con la ventanilla entreabierta — parar si alguien se para.",
+        "Riesgo acordado: camina 20 segundos con la falda subida hasta la cintura en un callejón. {ganador} delante vigila.",
       ],
       chico: [
         "En el coche: folla a {ganador} — misionero en el asiento trasero o ella montada — 3 minutos. Para si hay luces.",
@@ -610,6 +625,9 @@ const OUTDOOR_CHALLENGES = {
         "En el coche con ventanas abiertas, deja que {ganador} te haga una paja o te chupe 2 minutos mientras alguien pase cerca — parar si se detiene.",
         "En un balcón, ventana o escalera visible: folla a {ganador} o frota tu polla contra ella 90 segundos sabiendo que podéis ser vistos. Palabra de seguridad.",
         "En la playa o campo: camina desnudo 1 minuto con {ganador} mirando desde la ropa. Vuelve al instante si hay gente cerca.",
+        "Exhibicionista extremo: quédate desnudo de cintura para abajo 45 segundos en un mirador. {ganador} vigila.",
+        "En el coche con ventanas abiertas, mastúrbate 90 segundos mientras pasa gente — parar si alguien se para.",
+        "Riesgo acordado: folla a {ganador} 60 segundos en un balcón visible. Palabra de seguridad.",
       ],
     },
     chico_chico: [
@@ -627,6 +645,9 @@ const OUTDOOR_CHALLENGES = {
       "En el coche con ventanas bajadas, follad o chupad 2 minutos mientras pasan peatones — parar si alguien se para.",
       "En un balcón o ventana visible desde la calle: uno folla al otro o masturbad mutuamente 90 segundos. {ganador} vigila y da la señal de parar.",
       "En la playa de noche cerca del paseo: desnúdate y mastúrbate 1 minuto mientras {ganador} mira si viene gente. Para si hay linternas o voces.",
+      "Exhibicionista extremo: desnudos 45 segundos en un mirador mirando hacia abajo. Parar si alguien sube.",
+      "En el coche con ventanas bajadas, follad 90 segundos mientras pasan peatones — parar si alguien se para.",
+      "Riesgo acordado: correros mirando hacia una calle visible — solo si os atrevís. Palabra de seguridad.",
     ],
     chica_chica: [
       "En el coche: dedos, lengua o tribbing hasta que una se corra — 3 minutos en el asiento trasero.",
@@ -643,6 +664,9 @@ const OUTDOOR_CHALLENGES = {
       "En el coche con ventanas abiertas, tocaos o 69 hasta correrte 2 minutos mientras pasa gente cerca — parar si alguien se detiene a mirar.",
       "En un balcón o mirador visible: tribbing o dedos profundos 90 segundos sabiendo que podéis ser vistas. Palabra de seguridad.",
       "En la playa de noche: caminad desnudas 1 minuto hacia el agua cerca del paseo. Volved al instante si hay gente o linternas.",
+      "Exhibicionista extremo: desnudas 45 segundos en un mirador. Parar si alguien sube.",
+      "En el coche con ventanas abiertas, 69 90 segundos mientras pasa gente — parar si alguien se para.",
+      "Riesgo acordado: orgasmo en un balcón visible 60 segundos. Palabra de seguridad.",
     ],
   },
 };
