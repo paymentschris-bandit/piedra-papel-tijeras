@@ -7,7 +7,8 @@ El juego es **100% estático** (HTML + JS). **Vercel** da HTTPS gratis → la c�
 ## Cuenta y repositorio
 
 - **GitHub:** [paymentschris-bandit](https://github.com/paymentschris-bandit)
-- **Repo:** `piedra-papel-tijeras` (privado recomendado)
+- **Repo:** `piedra-papel-tijeras` (privado) en GitHub
+- **Proyecto Vercel:** `ppt-juego-parejas` (nombre distinto; `piedra-papel-tijeras.vercel.app` es de otra persona)
 - **Vercel:** conectado por Git con `paymentschris@gmail.com`
 
 ## Subir a GitHub (primera vez)
@@ -33,7 +34,9 @@ git push -u origin main
 1. [vercel.com](https://vercel.com) → inicia sesión con `paymentschris@gmail.com`
 2. **Add New Project** → importa `paymentschris-bandit/piedra-papel-tijeras`
 3. Framework: **Other** (sitio estático, sin build)
-4. Deploy → URL tipo `https://piedra-papel-tijeras.vercel.app`
+4. Deploy → URL tipo `https://ppt-juego-parejas.vercel.app`
+
+> **No uses** `piedra-papel-tijeras.vercel.app` — ese enlace es otro juego ajeno al tuyo.
 
 Cada `git push` a `main` vuelve a desplegar solo.
 
