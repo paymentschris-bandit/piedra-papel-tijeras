@@ -2,45 +2,58 @@
 
 El juego es **100% estático** (HTML + JS). **Vercel** da HTTPS gratis → la cámara funciona en PC y móvil sin certificados ni túneles.
 
-**Supabase no hace falta** para este juego (no hay base de datos ni login). Si más adelante quieres guardar estadísticas o cuentas, ahí sí.
+**Supabase no hace falta** para este juego (no hay base de datos ni login).
 
-## Pasos (una vez)
+## Cuenta y repositorio
 
-1. Cuenta gratis en [vercel.com](https://vercel.com) (GitHub/Google).
-2. Instala la CLI (opcional):
-   ```powershell
-   npm i -g vercel
-   ```
-3. En la carpeta del juego:
-   ```powershell
-   cd "c:\Apps\Piedra papel tijeras"
-   git init
-   git add .
-   git commit -m "Deploy juego parejas"
-   vercel
-   ```
-4. Sigue las preguntas (proyecto nuevo, carpeta actual).
-5. Te dará una URL tipo: `https://tu-proyecto.vercel.app`
+- **GitHub:** [paymentschris-bandit](https://github.com/paymentschris-bandit)
+- **Repo:** `piedra-papel-tijeras` (privado recomendado)
+- **Vercel:** conectado por Git con `paymentschris@gmail.com`
 
-> Si cambias de cuenta Vercel: borra la carpeta `.vercel` local y ejecuta `vercel logout` + `vercel login` antes de volver a desplegar.
+## Subir a GitHub (primera vez)
+
+```powershell
+cd "c:\Apps\Piedra papel tijeras"
+gh auth login
+# Elige GitHub.com → HTTPS → inicia sesión como paymentschris-bandit
+
+gh repo create piedra-papel-tijeras --private --source=. --remote=origin --push
+```
+
+Si el repo ya existe en GitHub:
+
+```powershell
+git remote add origin https://github.com/paymentschris-bandit/piedra-papel-tijeras.git
+git branch -M main
+git push -u origin main
+```
+
+## Vercel (desde GitHub)
+
+1. [vercel.com](https://vercel.com) → inicia sesión con `paymentschris@gmail.com`
+2. **Add New Project** → importa `paymentschris-bandit/piedra-papel-tijeras`
+3. Framework: **Other** (sitio estático, sin build)
+4. Deploy → URL tipo `https://piedra-papel-tijeras.vercel.app`
+
+Cada `git push` a `main` vuelve a desplegar solo.
 
 ## Probar webcam
 
-1. Abre esa URL en **PC** y **móvil** (puede ser 4G, no hace falta misma WiFi).
-2. Modo **Webcam** → uno **Crea sala**, el otro **Unirse** con el código.
-3. Acepta cámara y micrófono en los dos.
+1. Abre la URL de Vercel en **PC** y **móvil**
+2. Modo **Webcam** → uno **Crea sala**, el otro **Unirse** con el código
+3. Acepta cámara y micrófono
 
 ## Actualizar tras cambios
 
 ```powershell
 git add .
-git commit -m "Cambios"
-vercel --prod
+git commit -m "Tus cambios"
+git push
 ```
 
-## Alternativa sin CLI
+Vercel despliega automáticamente. O manual: `npx vercel --prod` (tras `vercel login` con la cuenta nueva).
 
-1. Sube el proyecto a un repo en GitHub (privado recomendado).
-2. Vercel → **Add New Project** → importa el repo → Deploy.
+> Si cambias de cuenta Vercel: borra `.vercel` local y haz `vercel logout` + `vercel login`.
 
-No subas `local-*.pem`, `.cert-ip` ni `_backup/` (ya están en `.gitignore`).
+No subas `local-*.pem`, `.cert-ip` ni `_backup/` (están en `.gitignore`).
+
