@@ -41,6 +41,11 @@ const SOURCE_FILES = [
     vars: ["CHALLENGES_MEGA_V3", "REMOTE_MEGA_V3", "OUTDOOR_MEGA_V3"],
     skipMerge: true,
   },
+  {
+    file: "challenges-explicit-v4.js",
+    vars: ["CHALLENGES_EXPLICIT_V4", "REMOTE_EXPLICIT_V4", "OUTDOOR_EXPLICIT_V4"],
+    skipMerge: true,
+  },
 ];
 
 const INTENSITIES = ["suave", "picante", "extremo"];
@@ -511,6 +516,15 @@ function buildMergedFromCtx(processed) {
   }
   if (processed.OUTDOOR_MEGA_V3) {
     mergeChallengeTrees(merged.OUTDOOR_CHALLENGES, processed.OUTDOOR_MEGA_V3);
+  }
+  if (processed.CHALLENGES_EXPLICIT_V4) {
+    mergeChallengeTrees(merged.CHALLENGES, processed.CHALLENGES_EXPLICIT_V4);
+  }
+  if (processed.REMOTE_EXPLICIT_V4) {
+    mergeChallengeTrees(merged.REMOTE_CHALLENGES, processed.REMOTE_EXPLICIT_V4);
+  }
+  if (processed.OUTDOOR_EXPLICIT_V4) {
+    mergeChallengeTrees(merged.OUTDOOR_CHALLENGES, processed.OUTDOOR_EXPLICIT_V4);
   }
   return merged;
 }

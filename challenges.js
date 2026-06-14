@@ -123,10 +123,10 @@ const CHALLENGES = {
         "El ganador acaba donde quiera — boca, tetas, coño, culo — tú te arrodillas o te colocas y recibes. Limpia con la boca lo que indique si lo desean.",
         "Prohibido correrte hasta la siguiente ronda. Si {ganador} te provoca durante el juego, aguantas. Si pierdes otra vez, te hace correrte tres veces seguidas al final.",
         "Arrodíllate y lame el coño de {ganador} hasta que se corra en tu boca o hasta 4 minutos. Lengua en clítoris, dedos dentro, no pares hasta que ella diga basta.",
-        "Atado de muñecas y vendado: {ganador} te masturba con la mano con la mano con la mano con la mano, te chupa la polla o te monta 5 minutos. No sabes qué viene. Palabra de seguridad activa.",
+        "Atado de muñecas y vendado: {ganador} te masturba con la mano con la mano con la mano con la mano con la mano con la mano con la mano, te chupa la polla o te monta 5 minutos. No sabes qué viene. Palabra de seguridad activa.",
         "Roleplay 5 minutos: eres el sirviente sexual de {ganador}. Preguntas qué necesita, obedeces: lamer coño, follar, correrte donde ordene.",
         "Arrodíllate y chupa la polla de {ganador} hasta que acabe en tu boca o 4 minutos. Garganta profunda si puedes. Traga o recibe en la cara si lo acordáis.",
-        "Atado y vendado: {ganador} te chupa la polla, te mete dedos en el culo o te masturba con la mano con la mano con la mano con la mano 5 minutos. Solo sientes. Gime sin vergüenza.",
+        "Atado y vendado: {ganador} te chupa la polla, te mete dedos en el culo o te masturba con la mano con la mano con la mano con la mano con la mano con la mano con la mano 5 minutos. Solo sientes. Gime sin vergüenza.",
         "Arrodíllate y lame el coño de {ganador} hasta que se corra en tu boca o 4 minutos. Clítoris, labios, dedos dentro — no pares hasta que diga basta.",
         "Facesitting: siéntate desnuda en la cara de {ganador}, frota tu coño hasta correrte o 3 minutos. Controla la presión.",
         "Graba 90 segundos gimiendo, pidiendo su lengua en tu coño, repitiendo su nombre. Escuchadlo juntas."
@@ -172,6 +172,9 @@ const CHALLENGES = {
     ]
   }
 };
+;
+;
+;
 ;
 ;
 ;
@@ -440,6 +443,9 @@ const REMOTE_CHALLENGES = {
 ;
 ;
 ;
+;
+;
+;
 
 const REMOTE_FINAL_REWARDS = {
   suave: {
@@ -690,6 +696,9 @@ const OUTDOOR_CHALLENGES = {
     ]
   }
 };
+;
+;
+;
 ;
 ;
 ;

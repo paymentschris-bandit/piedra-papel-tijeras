@@ -15,6 +15,11 @@ function loadAppChallengeState() {
   code = fs.readFileSync(`${ROOT}/challenges.js`, "utf8").replace(/^const /gm, "var ");
   code += fs.readFileSync(`${ROOT}/challenges-expansion.js`, "utf8");
   code += fs.readFileSync(`${ROOT}/challenges-mega-v3.js`, "utf8");
+  try {
+    code += fs.readFileSync(`${ROOT}/challenges-explicit-v4.js`, "utf8");
+  } catch {
+    /* opcional hasta primera generación */
+  }
   code += fs.readFileSync(`${ROOT}/outdoor-locations.js`, "utf8").replace(/^const /gm, "var ");
   code += fs.readFileSync(`${ROOT}/outdoor-expansion.js`, "utf8");
   code += fs.readFileSync(`${ROOT}/swinger-club-challenges.js`, "utf8");

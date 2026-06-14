@@ -201,11 +201,11 @@ const SWINGER_CLUB_CHALLENGES = {
           "Trío chica-chica-chica en la zona de parejas: se une una chica invitada. Sentados en sofá, besos entre las tres y manos en muslos/pechos por encima de ropa — 2 minutos. {ganador} mira o participa si acordáis. Parad si alguien dice la palabra de seguridad.",
           "Trío chico-chica-chico en el jacuzzi: se une un chico invitado. Tú besas a {ganador}, el invitado te roza muslo y pecho por encima de ropa — 2 minutos. Roles claros antes de empezar. Parad si alguien dice la palabra de seguridad.",
           "En el pasillo de cabinas, tú usas dedos o consolador en una chica invitada mientras {ganador} la besa — 2 minutos. Ella dice en voz alta si quiere más o menos. Parad si alguien dice la palabra de seguridad.",
-          "En la piscina interior, un chico invitado te masturba con la mano con la mano con la mano con la mano con la mano con la mano con la mano mientras tú besas a {ganador} — 2 minutos. El invitado no penetra sin permiso explícito. Parad si alguien dice la palabra de seguridad.",
+          "En la piscina interior, un chico invitado te masturba con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano mientras tú besas a {ganador} — 2 minutos. El invitado no penetra sin permiso explícito. Parad si alguien dice la palabra de seguridad.",
           "En la zona de sofás, chupa la polla de un chico invitado 90 segundos en cabina. {ganador} vigila la puerta y puede parar en cualquier momento. Parad si alguien dice la palabra de seguridad.",
-          "Trío en la sala de juegos: un chico invitado te penetra o te masturba con la mano con la mano con la mano con la mano con la mano con la mano con la mano mientras tú besas a {ganador} — 3 minutos. Posición y ritmo los acordáis antes. Parad si alguien dice la palabra de seguridad.",
+          "Trío en la sala de juegos: un chico invitado te penetra o te masturba con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano mientras tú besas a {ganador} — 3 minutos. Posición y ritmo los acordáis antes. Parad si alguien dice la palabra de seguridad.",
           "En la cabina glory hole, tú y una chica invitada os tocais mutuamente (pechos, muslos, bragas) mientras {ganador} mira sentado — 2 minutos. Parad si alguien dice la palabra de seguridad.",
-          "En la zona de parejas, un chico invitado te masturba con la mano con la mano con la mano con la mano con la mano con la mano con la mano mientras {ganador} susurra instrucciones — 2 minutos. El invitado para si tú o {ganador} lo decís. Parad si alguien dice la palabra de seguridad.",
+          "En la zona de parejas, un chico invitado te masturba con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano mientras {ganador} susurra instrucciones — 2 minutos. El invitado para si tú o {ganador} lo decís. Parad si alguien dice la palabra de seguridad.",
           "En cabina de la piscina interior, 69 con una chica invitada 2 minutos. {ganador} espera fuera, mira o se une — lo decidís antes. Parad si alguien dice la palabra de seguridad.",
           "En la zona de sofás, sentada entre {ganador} y un chico invitado en jacuzzi: sus manos bajo el agua en tus muslos y entrepierna (sobre ropa) — 2 minutos. Parad si alguien dice la palabra de seguridad.",
           "En la cabina glory hole, arrodillada ante el agujero: chupa la polla anónima del otro lado 90 segundos. {ganador} espera fuera o mira desde la puerta. Parad si alguien dice la palabra de seguridad.",
@@ -214,7 +214,7 @@ const SWINGER_CLUB_CHALLENGES = {
           "En la sala de juegos, correrte en la mano del chico invitado mientras {ganador} susurra órdenes — 2 minutos. Parad si alguien dice la palabra de seguridad.",
           "En la cabina glory hole, besad y tocad a chica invitada por turnos (tú 60 s, {ganador} 60 s) — 2 minutos total. Parad si alguien dice la palabra de seguridad.",
           "En el jacuzzi, {ganador} te comparte con chico invitado: tocar y gemir 2 minutos — sin penetración si no acordáis. Parad si alguien dice la palabra de seguridad.",
-          "En el bar del club, un chico solo del club te masturba con la mano con la mano con la mano con la mano con la mano con la mano con la mano por encima de ropa mientras besas a {ganador} — 2 minutos. Él para si lo pedís. Parad si alguien dice la palabra de seguridad.",
+          "En el bar del club, un chico solo del club te masturba con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano por encima de ropa mientras besas a {ganador} — 2 minutos. Él para si lo pedís. Parad si alguien dice la palabra de seguridad.",
           "Trío en el pasillo de cabinas: invitad a una chica sola. Tú y ella os besáis; {ganador} mira o toca lo acordado — 2 minutos. Parad si alguien dice la palabra de seguridad.",
           "En la piscina interior, tú chupas a un chico invitado 90 segundos mientras {ganador} te acaricia la espalda — cabina con puerta. Parad si alguien dice la palabra de seguridad.",
           "En la zona de sofás, chica invitada te toca el coño por encima de bragas mientras {ganador} te besa — 2 minutos. Parad si alguien dice la palabra de seguridad.",
@@ -426,7 +426,7 @@ const SWINGER_CLUB_CHALLENGES = {
           "Intercambio completo en la zona de parejas con Pareja B: {ganador} tiene sexo con la pareja ajena (el otro chico o la otra chica, lo acordáis) y tú con quien os toque del otro lado — 4 minutos. Posiciones claras antes de empezar. Parad si alguien dice la palabra de seguridad.",
           "En el jacuzzi, tú y la chica de Pareja B tenéis sexo oral o con dedos/consolador mientras {ganador} y el otro chico se masturban mirando — 3 minutos. Luego podéis cambiar si queréis. Parad si alguien dice la palabra de seguridad.",
           "En sala privada de la sala privada, dos parejas en la misma cama en parejas cruzadas: penetración o sexo oral con la pareja ajena — 5 minutos. Palabra de seguridad activa. Parad si alguien dice la palabra de seguridad.",
-          "En la piscina interior, {ganador} mira sentado mientras el otro chico de Pareja B te penetra o te masturba con la mano con la mano con la mano con la mano con la mano con la mano — 3 minutos. {ganador} puede parar la escena en cualquier momento. Parad si alguien dice la palabra de seguridad.",
+          "En la piscina interior, {ganador} mira sentado mientras el otro chico de Pareja B te penetra o te masturba con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano con la mano — 3 minutos. {ganador} puede parar la escena en cualquier momento. Parad si alguien dice la palabra de seguridad.",
           "En la cabina glory hole, {ganador} elige si esta ronda es intercambio suave (besos y manos) o completo (sexo con pareja ajena) — cumplid lo acordado 4 minutos. Parad si alguien dice la palabra de seguridad.",
           "En la piscina interior, tres parejas en sala privada — intercambio total: cada uno con alguien que no es su pareja — 5 minutos. Parad si alguien dice la palabra de seguridad.",
           "En la cabina glory hole, sexo completo con Pareja B en la misma habitación: parejas cruzadas, penetración acordada — 5 minutos. Parad si alguien dice la palabra de seguridad.",
@@ -541,6 +541,9 @@ const SWINGER_CLUB_CHALLENGES = {
     }
   }
 };
+;
+;
+;
 ;
 ;
 ;

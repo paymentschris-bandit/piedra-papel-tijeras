@@ -280,7 +280,7 @@ const CHALLENGES_HOME_EXTRA = {
         "Ponte a cuatro contra la pared: {ganador} te lame el coño por encima de la braga hasta empaparla — 2 minutos.",
         "Métete un dedo en la boca y pásalo por tu clítoris mientras {ganador} te mira — 1 minuto.",
         "Pide seis nalgadas suaves. Después elige: que te meta dedos o que te chupe el clítoris 90 segundos.",
-        "Túmbate en la ducha con las piernas abiertas: {ganador} te masturba con la mano con dos dedos al ritmo que marque — 2 minutos.",
+        "Túmbate en la ducha con las piernas abiertas: {ganador} te masturba con la mano con la mano con la mano con la mano con dos dedos al ritmo que marque — 2 minutos.",
         "Simula montar a {ganador} en el aire — ropa puesta — gimiendo 90 segundos frente a él.",
         "Quítate la ropa de abajo y siéntate en su cara — si ambos queréis — 45 segundos. Tú controlas.",
         "Pide a {ganador} que te grabe solo audio gimiendo mientras te tocas — 90 segundos.",
@@ -310,7 +310,7 @@ const CHALLENGES_HOME_EXTRA = {
         "Ponte a cuatro contra la pared: {ganador} te lame el coño por encima de la braga hasta empaparla — 2 minutos Hazlo más despacio..",
         "Métete un dedo en la boca y pásalo por tu clítoris mientras {ganador} te mira — 1 minuto Hazlo más despacio..",
         "Pide seis nalgadas suaves. Después elige: que te meta dedos o que te chupe el clítoris 90 segundos Hazlo más despacio..",
-        "Túmbate en la ducha con las piernas abiertas: {ganador} te masturba con la mano con dos dedos al ritmo que marque — 2 minutos Hazlo más despacio..",
+        "Túmbate en la ducha con las piernas abiertas: {ganador} te masturba con la mano con la mano con la mano con la mano con dos dedos al ritmo que marque — 2 minutos Hazlo más despacio..",
         "Simula montar a {ganador} en el aire — ropa puesta — gimiendo 90 segundos frente a él Hazlo más despacio..",
         "Quítate la ropa de abajo y siéntate en su cara — si ambos queréis — 45 segundos. Tú controlas Hazlo más despacio..",
         "Pide a {ganador} que te grabe solo audio gimiendo mientras te tocas — 90 segundos Hazlo más despacio..",
@@ -527,9 +527,9 @@ const CHALLENGES_HOME_EXTRA = {
         "Usa un juguete — o dedos de {ganador} — mientras él comenta en voz alta qué ve — 3 minutos.",
         "Desnúdate en la puerta como si acabaras de llegar. {ganador} te «recibe» con manos y boca.",
         "Si pierdes otra ronda, {ganador} elige posición, lugar y si puedes correrte o no.",
-        "Edging x3: {ganador} te masturba con la mano hasta el borde y para. A la tercera, solo acabas si suplicas.",
+        "Edging x3: {ganador} te masturba con la mano con la mano con la mano con la mano hasta el borde y para. A la tercera, solo acabas si suplicas.",
         "Penetración anal solo si lo acordáis — {ganador} marca ritmo en la cama 2 minutos.",
-        "Grabación de audio mientras {ganador} te masturba con la mano hasta correrte — sin vídeo si preferís.",
+        "Grabación de audio mientras {ganador} te masturba con la mano con la mano con la mano con la mano hasta correrte — sin vídeo si preferís.",
         "Maratón: {ganador} te hace acabar y sigues — segunda ronda cuando él diga.",
         "Follad en la ducha en el sofá 3 minutos si tenéis espacio — agua templada, palabra de seguridad.",
         "Desnúdate del todo. Quédate desnuda el resto de la partida Hazlo más despacio..",
@@ -721,6 +721,9 @@ const CHALLENGES_HOME_EXTRA = {
     ]
   }
 };
+;
+;
+;
 ;
 
 const CHALLENGES_REMOTE_EXTRA = {
@@ -1239,10 +1242,6 @@ const CHALLENGES_REMOTE_EXTRA = {
         "Mastúrbate hasta el borde 3 minutos. No te corras sin permiso de {ganador} Cambiad de sitio antes de empezar..",
         "Correrte cuando {ganador} lo ordene — mirándole, diciendo su nombre Cambiad de sitio antes de empezar..",
         "Prohibido correrte hasta la siguiente ronda Cambiad de sitio antes de empezar..",
-        "Enseña coño y culo alternando 1 minuto.",
-        "Enseña coño y culo alternando 1 minuto Hazlo más despacio..",
-        "Enseña coño y culo alternando 1 minuto Repite con los ojos cerrados..",
-        "Enseña coño y culo alternando 1 minuto {ganador} elige el ritmo..",
         "Enseña coño y culo alternando 1 minuto Cambiad de sitio antes de empezar.."
       ],
       "chico": [
@@ -1433,6 +1432,9 @@ const CHALLENGES_REMOTE_EXTRA = {
     ]
   }
 };
+;
+;
+;
 ;
 
 function mergeChallengeTrees(target, extra) {
