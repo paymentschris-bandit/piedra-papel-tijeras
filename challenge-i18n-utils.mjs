@@ -67,6 +67,7 @@ export function loadAllChallengeSources(root = import.meta.dirname) {
   extra += fs.readFileSync(path.join(root, "outdoor-locations.js"), "utf8").replace(/^const /gm, "var ");
   extra += fs.readFileSync(path.join(root, "outdoor-expansion.js"), "utf8");
   extra += fs.readFileSync(path.join(root, "swinger-club-challenges.js"), "utf8");
+  extra += fs.readFileSync(path.join(root, "challenges-mega-v3.js"), "utf8");
   vm.runInNewContext(extra, ctx);
   return ctx;
 }

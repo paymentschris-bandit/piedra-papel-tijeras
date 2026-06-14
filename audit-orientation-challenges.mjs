@@ -36,6 +36,11 @@ const SOURCE_FILES = [
     vars: ["SWINGER_CLUB_CHALLENGES"],
     skipMerge: true,
   },
+  {
+    file: "challenges-mega-v3.js",
+    vars: ["CHALLENGES_MEGA_V3", "REMOTE_MEGA_V3", "OUTDOOR_MEGA_V3"],
+    skipMerge: true,
+  },
 ];
 
 const INTENSITIES = ["suave", "picante", "extremo"];
@@ -497,6 +502,15 @@ function buildMergedFromCtx(processed) {
   if (processed.SWINGER_CLUB_CHALLENGES) {
     if (!merged.OUTDOOR_LOCATION_CHALLENGES) merged.OUTDOOR_LOCATION_CHALLENGES = {};
     merged.OUTDOOR_LOCATION_CHALLENGES.swinger = structuredClone(processed.SWINGER_CLUB_CHALLENGES);
+  }
+  if (processed.CHALLENGES_MEGA_V3) {
+    mergeChallengeTrees(merged.CHALLENGES, processed.CHALLENGES_MEGA_V3);
+  }
+  if (processed.REMOTE_MEGA_V3) {
+    mergeChallengeTrees(merged.REMOTE_CHALLENGES, processed.REMOTE_MEGA_V3);
+  }
+  if (processed.OUTDOOR_MEGA_V3) {
+    mergeChallengeTrees(merged.OUTDOOR_CHALLENGES, processed.OUTDOOR_MEGA_V3);
   }
   return merged;
 }

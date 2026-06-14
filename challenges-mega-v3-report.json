@@ -1,0 +1,34 @@
+{
+  "reviewedBefore": 4815,
+  "corrected": 102,
+  "moved": 2219,
+  "removedDuplicates": 2282,
+  "removedInvalid": 8,
+  "newCreated": {
+    "home": 1440,
+    "remote": 1440,
+    "outdoor": 1440,
+    "byBucket": {
+      "home": {
+        "hetero_chica": 360,
+        "hetero_chico": 360,
+        "chico_chico": 360,
+        "chica_chica": 360
+      },
+      "remote": {
+        "hetero_chica": 360,
+        "hetero_chico": 360,
+        "chico_chico": 360,
+        "chica_chica": 360
+      },
+      "outdoor": {
+        "hetero_chica": 360,
+        "hetero_chico": 360,
+        "chico_chico": 360,
+        "chica_chica": 360
+      }
+    }
+  },
+  "problems": [],
+  "confidence": "alta"
+}

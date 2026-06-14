@@ -14,6 +14,7 @@ function loadAppChallengeState() {
   // simpler: load full challenges.js with var
   code = fs.readFileSync(`${ROOT}/challenges.js`, "utf8").replace(/^const /gm, "var ");
   code += fs.readFileSync(`${ROOT}/challenges-expansion.js`, "utf8");
+  code += fs.readFileSync(`${ROOT}/challenges-mega-v3.js`, "utf8");
   code += fs.readFileSync(`${ROOT}/outdoor-locations.js`, "utf8").replace(/^const /gm, "var ");
   code += fs.readFileSync(`${ROOT}/outdoor-expansion.js`, "utf8");
   code += fs.readFileSync(`${ROOT}/swinger-club-challenges.js`, "utf8");

@@ -54,6 +54,30 @@ function buildFullMap(allStrings, baseTranslations, suffixTranslations) {
   return map;
 }
 
+function loadExistingBaseTranslations(outFile, allStrings, suffixTranslations) {
+  if (!fs.existsSync(outFile)) return {};
+  const existing = JSON.parse(fs.readFileSync(outFile, "utf8"));
+  const baseTranslations = {};
+  for (const text of allStrings) {
+    const fullTranslated = existing[challengeKey(text)];
+    if (!fullTranslated) continue;
+    const { base, suffixKey } = splitChallengeSuffix(text);
+    const baseKey = challengeKey(base);
+    if (baseTranslations[baseKey]) continue;
+    if (!suffixKey) {
+      baseTranslations[baseKey] = fullTranslated;
+      continue;
+    }
+    const suffix = suffixTranslations[suffixKey] || SUFFIX_ES[suffixKey] || "";
+    if (suffix && fullTranslated.endsWith(suffix)) {
+      baseTranslations[baseKey] = fullTranslated.slice(0, fullTranslated.length - suffix.length);
+    } else {
+      baseTranslations[baseKey] = fullTranslated;
+    }
+  }
+  return baseTranslations;
+}
+
 async function translateSuffixes(targetLang) {
   const out = {};
   for (const { key } of CHALLENGE_SUFFIXES) {
@@ -125,12 +149,17 @@ async function main() {
     }
 
     console.log(`\n=== ${lang.toUpperCase()} ===`);
+    const suffixTranslations = await translateSuffixes(lang);
     let baseTranslations = {};
-    if (resume && fs.existsSync(partialFile)) {
-      baseTranslations = JSON.parse(fs.readFileSync(partialFile, "utf8"));
+    if (resume) {
+      baseTranslations = loadExistingBaseTranslations(outFile, allStrings, suffixTranslations);
+      const reused = Object.keys(baseTranslations).length;
+      if (reused) console.log(`  Reutilizadas: ${reused}/${bases.size}`);
+      if (fs.existsSync(partialFile)) {
+        Object.assign(baseTranslations, JSON.parse(fs.readFileSync(partialFile, "utf8")));
+      }
     }
 
-    const suffixTranslations = await translateSuffixes(lang);
     baseTranslations = await translateBases(bases, lang, baseTranslations);
     const map = buildFullMap(allStrings, baseTranslations, suffixTranslations);
 

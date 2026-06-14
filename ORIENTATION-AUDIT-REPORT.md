@@ -1,14 +1,14 @@
 # Informe de auditoría de orientación — Retos
 
-Fecha: 2026-06-14T17:53:11.563Z
+Fecha: 2026-06-14T20:27:16.614Z
 
 ## Resumen
 
 | Métrica | Cantidad |
 |---------|----------|
-| Total retos revisados | **10566** |
-| Retos corregidos (texto) | **49** |
-| Retos movidos de categoría | **1487** |
+| Total retos revisados | **14954** |
+| Retos corregidos (texto) | **102** |
+| Retos movidos de categoría | **2219** |
 | Duplicados eliminados | **2282** |
 | Retos eliminados (incompatibles) | **8** |
 | Fallos verificación final | **0** |
@@ -116,7 +116,7 @@ Fecha: 2026-06-14T17:53:11.563Z
 - **CHALLENGES_HOME_EXTRA.suave.chica_chica** → **CHALLENGES_HOME_EXTRA.suave.hetero.chica** (challenges-expansion.js)
   - Describe cómo quieres que te coma el coño Hazlo más despacio..…
 
-… y 1437 más.
+… y 2169 más.
 
 ## Eliminados (muestra — primeros 30)
 

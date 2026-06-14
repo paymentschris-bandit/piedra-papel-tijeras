@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "total": 5867,
-  "bases": 5866,
+  "total": 9248,
+  "bases": 9248,
   "langs": [
     "en",
     "fr",
@@ -13,5 +13,5 @@
     "ru",
     "uk"
   ],
-  "generatedAt": "2026-06-14T18:08:23.183Z"
+  "generatedAt": "2026-06-14T20:31:58.558Z"
 }
