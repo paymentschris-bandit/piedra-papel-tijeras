@@ -865,14 +865,16 @@ function pickFromPool(pool) {
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
-function getChallengeTease(intensity, challengeText, loserName = "", winnerName = "") {
-  if (!shouldShowTease(intensity, challengeText)) return [];
+function getChallengeTease(intensity, challengeSourceText, loserName = "", winnerName = "") {
+  if (!shouldShowTease(intensity, challengeSourceText)) {
+    return { messages: [], sources: [] };
+  }
 
   const pool = [
     ...TEASE_MESSAGES.hold,
     ...TEASE_MESSAGES.taunt,
   ];
-  if (TEASE_HIGH_AROUSAL.test(challengeText)) {
+  if (TEASE_HIGH_AROUSAL.test(challengeSourceText)) {
     pool.push(...TEASE_MESSAGES.edge);
   }
   if (typeof isOutdoorPlayMode === "function" && isOutdoorPlayMode()) {
@@ -882,21 +884,29 @@ function getChallengeTease(intensity, challengeText, loserName = "", winnerName 
     pool.push(...TEASE_MESSAGES.remote);
   }
 
-  const messages = [applyNames(pickFromPool(pool), loserName, winnerName)];
+  const firstSource = pickFromPool(pool);
+  const localize =
+    typeof localizeChallengeTemplate === "function" ? localizeChallengeTemplate : (t) => t;
+  const messages = [applyNames(localize(firstSource), loserName, winnerName)];
+  const sources = [firstSource];
 
   const wantSecond =
     intensity === "extremo" ||
-    (TEASE_HIGH_AROUSAL.test(challengeText) && Math.random() < 0.45);
+    (TEASE_HIGH_AROUSAL.test(challengeSourceText) && Math.random() < 0.45);
   if (wantSecond) {
     const edgePool = [...TEASE_MESSAGES.edge, ...TEASE_MESSAGES.hold];
-    let second = applyNames(pickFromPool(edgePool), loserName, winnerName);
-    if (second === messages[0]) {
-      second = applyNames(pickFromPool(edgePool), loserName, winnerName);
+    let secondSource = pickFromPool(edgePool);
+    if (secondSource === firstSource) {
+      secondSource = pickFromPool(edgePool);
     }
-    if (second !== messages[0]) messages.push(second);
+    const second = applyNames(localize(secondSource), loserName, winnerName);
+    if (second !== messages[0]) {
+      messages.push(second);
+      sources.push(secondSource);
+    }
   }
 
-  return messages;
+  return { messages, sources };
 }
 
 function getChallengeId(intensity, pairType, loserGender, index) {
@@ -923,12 +933,13 @@ function getRandomChallenge(intensity, pairType, loserGender, used = [], loserNa
   }));
 
   const pick = source[Math.floor(Math.random() * source.length)];
-  const text = adaptChallengeForLoser(
-    applyNames(pick.text, loserName, winnerName),
-    loserGender
-  );
+  const sourceTemplate = adaptChallengeForLoser(pick.text, loserGender);
+  const localize =
+    typeof localizeChallengeTemplate === "function" ? localizeChallengeTemplate : (t) => t;
+  const text = applyNames(localize(sourceTemplate), loserName, winnerName);
   return {
     text,
+    sourceTemplate,
     id: pick.id,
   };
 }
@@ -937,10 +948,13 @@ function getRandomFinalReward(intensity, pairType, loserGender, loserName = "", 
   const rewardIntensity =
     intensity === "progresivo" ? "extremo" : intensity;
   const reward = getFinalRewardPool(rewardIntensity, pairType, loserGender);
-  if (typeof reward === "string") {
-    return applyNames(reward, loserName, winnerName);
-  }
-  return applyNames(reward, loserName, winnerName);
+  const sourceTemplate = typeof reward === "string" ? reward : reward;
+  const localize =
+    typeof localizeChallengeTemplate === "function" ? localizeChallengeTemplate : (t) => t;
+  return {
+    text: applyNames(localize(sourceTemplate), loserName, winnerName),
+    sourceTemplate,
+  };
 }
 
 function determineWinner(c1, c2) {

@@ -75,8 +75,15 @@ function setLanguage(lang) {
   localStorage.setItem("ppt-lang", lang);
   document.documentElement.lang = lang;
   syncLangSelects();
-  applyDom();
-  if (typeof onLanguageChanged === "function") onLanguageChanged();
+  const done = () => {
+    applyDom();
+    if (typeof onLanguageChanged === "function") onLanguageChanged();
+  };
+  if (typeof preloadChallengeLocale === "function") {
+    preloadChallengeLocale(lang).then(done);
+  } else {
+    done();
+  }
 }
 
 function initI18n() {

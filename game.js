@@ -597,14 +597,19 @@ function pickChallenge(loserNum, winnerNum, round = state.currentRound) {
     winnerName
   );
 
-  const tease = getChallengeTease(
+  const teaseResult = getChallengeTease(
     effectiveIntensity,
-    challenge.text,
+    challenge.sourceTemplate,
     loserName,
     winnerName
   );
 
-  return { ...challenge, effectiveIntensity, tease };
+  return {
+    ...challenge,
+    effectiveIntensity,
+    tease: teaseResult.messages,
+    teaseSource: teaseResult.sources,
+  };
 }
 
 function initGameControls() {
@@ -665,12 +670,16 @@ function handleNewChallenge() {
   const challenge = pickChallenge(loserNum, state.lastResult.winner);
   state.usedChallenges.push(challenge.id);
   state.challengeTease = challenge.tease || [];
+  state.challengeSourceTemplate = challenge.sourceTemplate || "";
+  state.challengeTeaseSource = challenge.teaseSource || [];
   displayChallenge(challenge);
   updateOnlineResultControls();
 
   if (isHost()) {
     sendMessage({
       type: "newChallenge",
+      sourceTemplate: challenge.sourceTemplate,
+      teaseSource: challenge.teaseSource || [],
       text: challenge.text,
       label: getChallengeLabel(challenge.effectiveIntensity),
       tease: challenge.tease || [],
@@ -780,8 +789,12 @@ function showRoundResult(fromRemote = false) {
     challengeData = pickChallenge(loserNum, winner);
     state.usedChallenges.push(challengeData.id);
     state.challengeTease = challengeData.tease || [];
+    state.challengeSourceTemplate = challengeData.sourceTemplate || "";
+    state.challengeTeaseSource = challengeData.teaseSource || [];
   } else {
     state.challengeTease = [];
+    state.challengeSourceTemplate = "";
+    state.challengeTeaseSource = [];
   }
 
   renderResultUI(winner, challengeData);
@@ -867,27 +880,55 @@ function renderResultUI(winner, challengeData) {
   }
 }
 
+function buildChallengeFromRemote(remote) {
+  if (!remote.challengeSourceTemplate && !remote.challengeText) return null;
+  const winner = remote.lastResult?.winner;
+  if (!winner) return null;
+  const loserNum = winner === 1 ? 2 : 1;
+  const loserName = getPlayerName(loserNum);
+  const winnerName = getPlayerName(winner);
+  const localize =
+    typeof localizeChallengeTemplate === "function" ? localizeChallengeTemplate : (t) => t;
+
+  if (remote.challengeSourceTemplate) {
+    const text = applyNames(localize(remote.challengeSourceTemplate), loserName, winnerName);
+    const tease = (remote.challengeTeaseSource || []).map((tpl) =>
+      applyNames(localize(tpl), loserName, winnerName)
+    );
+    return {
+      text,
+      sourceTemplate: remote.challengeSourceTemplate,
+      teaseSource: remote.challengeTeaseSource || [],
+      effectiveIntensity: getEffectiveIntensity(state.intensity, state.currentRound, state.maxRounds),
+      tease,
+    };
+  }
+
+  return {
+    text: remote.challengeText,
+    effectiveIntensity: getEffectiveIntensity(state.intensity, state.currentRound, state.maxRounds),
+    tease: remote.challengeTease || [],
+  };
+}
+
 function renderResultFromState(remote) {
   state.choices = { ...remote.choices };
   state.lastResult = remote.lastResult;
   state.scores = { ...remote.scores };
+  state.challengeSourceTemplate = remote.challengeSourceTemplate || "";
+  state.challengeTeaseSource = remote.challengeTeaseSource || [];
 
-  const challengeData = remote.challengeText
-    ? {
-        text: remote.challengeText,
-        effectiveIntensity: getEffectiveIntensity(state.intensity, state.currentRound, state.maxRounds),
-        tease: remote.challengeTease || [],
-      }
-    : null;
+  const challengeData = buildChallengeFromRemote(remote);
 
   renderResultUI(remote.lastResult?.winner ?? null, challengeData);
 
-  if (remote.challengeText) {
-    document.getElementById("challenge-text").textContent = remote.challengeText;
-    document.getElementById("challenge-label").textContent = remote.challengeLabel;
-    const mood = getEffectiveIntensity(state.intensity, state.currentRound, state.maxRounds);
+  if (challengeData) {
+    document.getElementById("challenge-text").textContent = challengeData.text;
+    document.getElementById("challenge-label").textContent =
+      remote.challengeLabel || getChallengeLabel(challengeData.effectiveIntensity);
+    const mood = challengeData.effectiveIntensity;
     setChallengeMood(mood);
-    showChallengeTease(remote.challengeTease || [], mood);
+    showChallengeTease(challengeData.tease || [], mood);
   } else {
     clearChallengeTease();
   }
@@ -906,18 +947,23 @@ function showEndScreen() {
   if (p1 > p2) winnerNum = 1;
   else if (p2 > p1) winnerNum = 2;
 
+  let finalReward = null;
+  if (winnerNum) {
+    finalReward = getRandomFinalReward(
+      state.intensity,
+      getPairType(state.gender1, state.gender2),
+      getPlayerGender(winnerNum === 1 ? 2 : 1),
+      getPlayerName(winnerNum === 1 ? 2 : 1),
+      getPlayerName(winnerNum)
+    );
+    state.finalChallengeSource = finalReward.sourceTemplate || "";
+    state.endWinnerNum = winnerNum;
+  }
+
   renderEndFromState({
     scores: state.scores,
     winnerNum,
-    finalChallengeText: winnerNum
-      ? getRandomFinalReward(
-          state.intensity,
-          getPairType(state.gender1, state.gender2),
-          getPlayerGender(winnerNum === 1 ? 2 : 1),
-          getPlayerName(winnerNum === 1 ? 2 : 1),
-          getPlayerName(winnerNum)
-        )
-      : t("end.tie.reward"),
+    finalChallengeText: finalReward || { text: t("end.tie.reward"), sourceTemplate: null },
   });
 
   showScreen("end");
@@ -950,15 +996,32 @@ function renderEndFromState(data) {
       `${iconHtml("crown", "sex-icon sex-icon-sm")} ${escapeHtml(t("end.winnerTitle", { name: winnerName }))}`;
     document.getElementById("final-scores").textContent =
       `${formatPlayerName(1)} ${p1} — ${p2} ${formatPlayerName(2)}`;
-    document.getElementById("final-challenge-text").textContent =
-      data.finalChallengeText ||
-      getRandomFinalReward(
-        state.intensity,
-        getPairType(state.gender1, state.gender2),
-        getPlayerGender(winnerNum === 1 ? 2 : 1),
-        getPlayerName(winnerNum === 1 ? 2 : 1),
-        winnerName
-      );
+    const reward =
+      typeof data.finalChallengeText === "object" && data.finalChallengeText?.text
+        ? data.finalChallengeText
+        : data.finalChallengeSource
+          ? {
+              text: applyNames(
+                (typeof localizeChallengeTemplate === "function"
+                  ? localizeChallengeTemplate
+                  : (t) => t)(data.finalChallengeSource),
+                getPlayerName(winnerNum === 1 ? 2 : 1),
+                winnerName
+              ),
+              sourceTemplate: data.finalChallengeSource,
+            }
+          : data.finalChallengeText
+            ? { text: data.finalChallengeText, sourceTemplate: "" }
+            : getRandomFinalReward(
+                state.intensity,
+                getPairType(state.gender1, state.gender2),
+                getPlayerGender(winnerNum === 1 ? 2 : 1),
+                getPlayerName(winnerNum === 1 ? 2 : 1),
+                winnerName
+              );
+    document.getElementById("final-challenge-text").textContent = reward.text;
+    state.finalChallengeSource = reward.sourceTemplate || "";
+    state.endWinnerNum = winnerNum;
 
     const finalLabel = document.querySelector("#final-challenge-box .challenge-label");
     if (finalLabel) {
@@ -973,7 +1036,9 @@ function renderEndFromState(data) {
     document.getElementById("final-scores").textContent =
       `${formatPlayerName(1)} ${p1} — ${p2} ${formatPlayerName(2)}`;
     document.getElementById("final-challenge-text").textContent =
-      data.finalChallengeText || t("end.tie.reward");
+      typeof data.finalChallengeText === "object" && data.finalChallengeText?.text
+        ? data.finalChallengeText.text
+        : data.finalChallengeText || t("end.tie.reward");
   }
 }
 

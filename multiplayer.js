@@ -200,11 +200,26 @@ function handleIncoming(data, onConnected) {
       break;
     case "newChallenge":
       if (isGuest()) {
-        document.getElementById("challenge-text").textContent = data.text;
+        state.challengeSourceTemplate = data.sourceTemplate || "";
+        state.challengeTeaseSource = data.teaseSource || [];
+        const challengeData = buildChallengeFromRemote({
+          challengeSourceTemplate: data.sourceTemplate,
+          challengeTeaseSource: data.teaseSource,
+          challengeText: data.text,
+          challengeTease: data.tease,
+          lastResult: state.lastResult,
+        });
+        if (challengeData) {
+          document.getElementById("challenge-text").textContent = challengeData.text;
+          state.challengeTease = challengeData.tease || [];
+        } else {
+          document.getElementById("challenge-text").textContent = data.text;
+          state.challengeTease = data.tease || [];
+        }
         document.getElementById("challenge-label").textContent = data.label;
         animateChallengeReveal();
         const mood = getEffectiveIntensity(state.intensity, state.currentRound, state.maxRounds);
-        showChallengeTease(data.tease || [], mood);
+        showChallengeTease(state.challengeTease, mood);
         updateOnlineResultControls();
       }
       break;
@@ -253,10 +268,14 @@ function getSerializableState(forcedScreen) {
     lastResult: state.lastResult,
     challengeText: document.getElementById("challenge-text")?.textContent || "",
     challengeLabel: document.getElementById("challenge-label")?.textContent || "",
+    challengeSourceTemplate: state.challengeSourceTemplate || "",
+    challengeTeaseSource: state.challengeTeaseSource || [],
     challengeTease: state.challengeTease || [],
     challengePerforming: !!state.challengePerforming,
     challengeCompleted: !!state.challengeCompleted,
     finalChallengeText: document.getElementById("final-challenge-text")?.textContent || "",
+    finalChallengeSource: state.finalChallengeSource || "",
+    endWinnerNum: state.endWinnerNum || null,
     usedChallenges: [...state.usedChallenges],
     screen: forcedScreen || state.activeScreen || getCurrentScreenName(),
   };
@@ -330,6 +349,9 @@ function applyRemoteState(remote) {
   state.lastResult = remote.lastResult;
   state.usedChallenges = remote.usedChallenges || [];
   state.challengeTease = remote.challengeTease || [];
+  state.challengeSourceTemplate = remote.challengeSourceTemplate || "";
+  state.challengeTeaseSource = remote.challengeTeaseSource || [];
+  state.finalChallengeSource = remote.finalChallengeSource || "";
   state.challengePerforming = !!remote.challengePerforming;
   state.challengeCompleted = !!remote.challengeCompleted;
 
@@ -358,7 +380,14 @@ function applyRemoteState(remote) {
   } else if (screen === "end") {
     renderEndFromState({
       scores: remote.scores,
-      finalChallengeText: remote.finalChallengeText,
+      winnerNum: remote.endWinnerNum,
+      finalChallengeText: remote.finalChallengeSource
+        ? {
+            text: remote.finalChallengeText,
+            sourceTemplate: remote.finalChallengeSource,
+          }
+        : remote.finalChallengeText,
+      finalChallengeSource: remote.finalChallengeSource,
     });
     showScreen("end");
   }
