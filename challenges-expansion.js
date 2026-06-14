@@ -69,12 +69,7 @@ const CHALLENGES_HOME_EXTRA = {
         "Susurrale al oído la postura en la que más te excita correrte con él Hazlo más despacio..",
         "Túmbate de lado en la cama y deja que {ganador} te abrace por detrás rozando tu entrepierna 1 minuto Hazlo más despacio..",
         "Quítate los calcetines con los dientes y dáselos a {ganador} como trofeo simbólico Hazlo más despacio..",
-        "Confiesa qué prenda interior llevas y deja que {ganador} la elija para quitártela después Hazlo más despacio..",
-        "Ponte las manos de {ganador} en tu cintura y bailad lento pegados en el sofá — 45 segundos Hazlo más despacio..",
-        "Descríbele cómo te gusta que te bese el cuello mientras te señalas la zona exacta Hazlo más despacio..",
-        "Siéntate a horcajadas sobre {ganador} — sin penetrar — y frota tu braga contra su pantalón 1 minuto Hazlo más despacio..",
-        "Pide a {ganador} que te mire a los ojos mientras te muerdes el labio inferior 20 segundos Hazlo más despacio..",
-        "En contra la pared, abre las piernas lo justo y deja que {ganador} te pase la mano por la cara interior del muslo Hazlo más despacio.."
+        "Confiesa qué prenda interior llevas y deja que {ganador} la elija para quitártela después Hazlo más despacio.."
       ],
       "chico": [
         "Quítate la camiseta en la cama y pon la mano de {ganador} sobre tu pecho acelerado.",
@@ -140,13 +135,7 @@ const CHALLENGES_HOME_EXTRA = {
         "Ponla contra la pared contra la pared y frota tu erección entre sus piernas Hazlo más despacio..",
         "Pide permiso para bajar su braga un centímetro cada 10 segundos — 30 segundos total Hazlo más despacio..",
         "Acaricia tu polla frente a {ganador} sin bajar el pantalón. Pregúntale si quiere ver más Hazlo más despacio..",
-        "Ponte de pie en la ducha y deja que {ganador} trace la línea de tu polla con un dedo por encima del pantalón Hazlo más despacio..",
-        "Descríbele en qué habitación de la casa te gustaría follarla esta noche Hazlo más despacio..",
-        "Abraza a {ganador} por detrás en la cocina y frota tu erección contra su culo 45 segundos Hazlo más despacio..",
-        "Quítate el cinturón con los dientes y dáselo a {ganador} Hazlo más despacio..",
-        "Confiesa qué parte de su cuerpo miras primero cuando se desnuda Hazlo más despacio..",
-        "Quítate la camiseta en la cama y pon la mano de {ganador} sobre tu pecho acelerado Esta vez sin hablar..",
-        "Arrodíllate frente a {ganador} y frota su muslo interno bajo la falda 30 segundos Esta vez sin hablar.."
+        "Ponte de pie en la ducha y deja que {ganador} trace la línea de tu polla con un dedo por encima del pantalón Hazlo más despacio.."
       ]
     },
     "chico_chico": [
@@ -219,7 +208,13 @@ const CHALLENGES_HOME_EXTRA = {
       "Abrazad empujando erecciones en la cocina 45 segundos Esta vez sin hablar..",
       "Lame su ombligo bajando hacia la polla — sin chupar aún — 30 segundos Esta vez sin hablar..",
       "Masturbación mutua por encima del pantalón en el suelo 45 segundos Esta vez sin hablar..",
-      "Mordisquea su oreja mientras le aprietas la polla Esta vez sin hablar.."
+      "Mordisquea su oreja mientras le aprietas la polla Esta vez sin hablar..",
+      "Juego: mirada fija 30 segundos sin reír mientras os tocáis Esta vez sin hablar..",
+      "Describe cómo quieres que {ganador} te folle el culo Esta vez sin hablar..",
+      "Quítate una prenda que {ganador} elija sin usar las manos Esta vez sin hablar..",
+      "Frotad pollas — ropa puesta — en el sofá 45 segundos Esta vez sin hablar..",
+      "Masaje en muslos y huevos de {ganador} contra la pared 2 minutos Esta vez sin hablar..",
+      "Susurrad tres fantasías gays con detalle — quién, dónde, cómo acabaríais Esta vez sin hablar.."
     ],
     "chica_chica": [
       "Besad con lengua en la cama 60 segundos. Mano bajo la falda.",
@@ -291,7 +286,12 @@ const CHALLENGES_HOME_EXTRA = {
       "Mordisquea sus pezones alternando en la cocina Esta vez sin hablar..",
       "Abrazad pegando caderas 45 segundos Esta vez sin hablar..",
       "Huele su cuello y dime en voz alta qué te pone Esta vez sin hablar..",
-      "Juego: {ganador} te vendan los ojos y te toca 30 segundos Esta vez sin hablar.."
+      "Juego: {ganador} te vendan los ojos y te toca 30 segundos Esta vez sin hablar..",
+      "Describe cómo quieres que te coma el coño Esta vez sin hablar..",
+      "Quítate las bragas y dáselas a {ganador} Esta vez sin hablar..",
+      "Acaricia tu pecho mirándola a los ojos en el suelo Esta vez sin hablar..",
+      "Frotad coños — ropa puesta — en el sofá 45 segundos Esta vez sin hablar..",
+      "Masaje en muslos internos de {ganador} contra la pared 2 minutos Esta vez sin hablar.."
     ]
   },
   "picante": {
@@ -359,12 +359,7 @@ const CHALLENGES_HOME_EXTRA = {
         "Pide a {ganador} que te grabe solo audio gimiendo mientras te tocas — 90 segundos Hazlo más despacio..",
         "Lame la polla de {ganador} por encima del pantalón en la cocina hasta dejar marca de saliva Hazlo más despacio..",
         "Confiesa en qué agujero quieres que acabe la próxima vez y demuéstralo con gestos 30 segundos Hazlo más despacio..",
-        "Frota tu clítoris contra su rodilla en el suelo — piel con piel — 1 minuto sin correrte Hazlo más despacio..",
-        "Roleplay: {ganador} es tu profesor. Obedece tres órdenes verbales en 2 minutos Hazlo más despacio..",
-        "Ponte de espaldas en la cama: {ganador} te mete dedos mientras te mordisquea la oreja — 2 minutos Hazlo más despacio..",
-        "Chupa sus dedos uno a uno y guíalos hacia tu coño en el sofá Hazlo más despacio..",
-        "Pide que te ate las muñecas con una corbata contra la pared y te toque donde quiera — 2 minutos Hazlo más despacio..",
-        "Descríbele paso a paso cómo te masturbas mientras lo haces frente a él — 90 segundos Hazlo más despacio.."
+        "Frota tu clítoris contra su rodilla en el suelo — piel con piel — 1 minuto sin correrte Hazlo más despacio.."
       ],
       "chico": [
         "Arrodíllate y lame el coño de {ganador} 2 minutos. Ella dirige con la voz.",
@@ -428,13 +423,7 @@ const CHALLENGES_HOME_EXTRA = {
         "Quítate la ropa de abajo. {ganador} te ordena velocidad de masturbación — 2 minutos Hazlo más despacio..",
         "Confiesa la fantasía de correrte dentro de ella y pregúntale si le excitaría Hazlo más despacio..",
         "Arrodíllate y lame el coño de {ganador} 2 minutos. Ella dirige con la voz Esta vez sin hablar..",
-        "Saca la polla en la cama y deja que {ganador} te mire 45 segundos antes de tocarte Esta vez sin hablar..",
-        "Mete dos dedos en {ganador} mientras le chupas un pezón — 2 minutos Esta vez sin hablar..",
-        "Frota tu polla contra su coño — braga apartada — 90 segundos en el sofá Esta vez sin hablar..",
-        "Ponte detrás de {ganador} y frota entre sus nalgas mientras le mordisqueas el cuello Esta vez sin hablar..",
-        "Masturbación mutua 3 minutos: tú en su clítoris, ella en tu polla Esta vez sin hablar..",
-        "Simula follártela contra la pared agarrando tu polla y gimiendo 90 segundos Esta vez sin hablar..",
-        "Confiesa dónde quieres correrte: coño, boca, tetas o culo Esta vez sin hablar.."
+        "Saca la polla en la cama y deja que {ganador} te mire 45 segundos antes de tocarte Esta vez sin hablar.."
       ]
     },
     "chico_chico": [
@@ -505,7 +494,11 @@ const CHALLENGES_HOME_EXTRA = {
       "Confiesa si prefieres correrte en su boca o en su culo Esta vez sin hablar..",
       "Ponte a cuatro contra la pared: {ganador} frota su polla entre tus nalgas — sin penetrar — 90 segundos Esta vez sin hablar..",
       "Chupa la polla de {ganador} en la cama 2 minutos Repite con los ojos cerrados..",
-      "Masturbación mutua en el sofá 3 minutos al unísono Repite con los ojos cerrados.."
+      "Masturbación mutua en el sofá 3 minutos al unísono Repite con los ojos cerrados..",
+      "Frota tu polla contra su culo — ropa apartada — 90 segundos Repite con los ojos cerrados..",
+      "69 contra la pared 2 minutos si cabéis Repite con los ojos cerrados..",
+      "Guía su dedo lubricado hacia tu culo mientras le susurras Repite con los ojos cerrados..",
+      "Azotes: 6 en las nalgas. Di «gracias» o «más» Repite con los ojos cerrados.."
     ],
     "chica_chica": [
       "Lame el coño de {ganador} en la cama 2 minutos.",
@@ -575,7 +568,14 @@ const CHALLENGES_HOME_EXTRA = {
       "Sentad frente a frente contra la pared y masturbad mutuamente — 2 minutos Esta vez sin hablar..",
       "Confiesa si prefieres correrte en su boca o en sus dedos Esta vez sin hablar..",
       "Lame el coño de {ganador} en la cama 2 minutos Repite con los ojos cerrados..",
-      "Masturbación mutua en el sofá 3 minutos — dedos en clítoris Repite con los ojos cerrados.."
+      "Masturbación mutua en el sofá 3 minutos — dedos en clítoris Repite con los ojos cerrados..",
+      "Tribbing piel con piel contra la pared 90 segundos Repite con los ojos cerrados..",
+      "69 en la ducha 2 minutos Repite con los ojos cerrados..",
+      "Mete dos dedos en {ganador} mientras le chupas el clítoris Repite con los ojos cerrados..",
+      "Azotes: 6 nalgadas. Pide más si quieres Repite con los ojos cerrados..",
+      "Quítate el sujetador. {ganador} te ordena cómo tocarte 2 minutos Repite con los ojos cerrados..",
+      "Simula lamer su coño en el aire en la cocina 45 segundos con sonidos Repite con los ojos cerrados..",
+      "Confiesa fantasía de correrte en su boca Repite con los ojos cerrados.."
     ]
   },
   "extremo": {
@@ -644,11 +644,7 @@ const CHALLENGES_HOME_EXTRA = {
         "Facesitting 2 minutos en la cocina si ambos queréis — tú controlas presión y tiempo Hazlo más despacio..",
         "Follad en en el suelo 3 minutos. Cambiad de posición cuando {ganador} lo ordene Hazlo más despacio..",
         "Usa un juguete — o dedos de {ganador} — mientras él comenta en voz alta qué ve — 3 minutos Hazlo más despacio..",
-        "Desnúdate en la puerta como si acabaras de llegar. {ganador} te «recibe» con manos y boca Hazlo más despacio..",
-        "Si pierdes otra ronda, {ganador} elige posición, lugar y si puedes correrte o no Hazlo más despacio..",
-        "Edging x3: {ganador} te masturba hasta el borde y para. A la tercera, solo acabas si suplicas Hazlo más despacio..",
-        "Penetración anal solo si lo acordáis — {ganador} marca ritmo en la cama 2 minutos Hazlo más despacio..",
-        "Grabación de audio mientras {ganador} te masturba hasta correrte — sin vídeo si preferís Hazlo más despacio.."
+        "Desnúdate en la puerta como si acabaras de llegar. {ganador} te «recibe» con manos y boca Hazlo más despacio.."
       ],
       "chico": [
         "Desnúdate completo el resto de la partida. Polla dura cuando {ganador} lo pida.",
@@ -714,11 +710,7 @@ const CHALLENGES_HOME_EXTRA = {
         "Follad en la ducha contra la pared 3 minutos si tenéis Esta vez sin hablar..",
         "Penetración anal solo si lo acordáis — {ganador} marca ritmo 2 minutos Esta vez sin hablar..",
         "Grabación de audio mientras {ganador} te masturba Esta vez sin hablar..",
-        "Si pierdes otra ronda, {ganador} elige posición y lugar del orgasmo Esta vez sin hablar..",
-        "Maratón: {ganador} te hace acabar y sigues duro — segunda ronda cuando ella diga Esta vez sin hablar..",
-        "Cómele el coño hasta que se corra o 4 minutos — lo que antes Esta vez sin hablar..",
-        "Atadura suave: {ganador} te ata y te masturba contra la pared 3 minutos Esta vez sin hablar..",
-        "Follad en la ducha en la ducha 3 minutos si tenéis Esta vez sin hablar.."
+        "Si pierdes otra ronda, {ganador} elige posición y lugar del orgasmo Esta vez sin hablar.."
       ]
     },
     "chico_chico": [
@@ -789,7 +781,13 @@ const CHALLENGES_HOME_EXTRA = {
       "Edging x3: {ganador} te masturba y para. A la tercera, solo acabas si suplicas Esta vez sin hablar..",
       "Penetración anal solo si lo acordáis — {ganador} marca ritmo 2 minutos Esta vez sin hablar..",
       "Correrte en su pecho mientras él te masturba — 2 minutos Esta vez sin hablar..",
-      "Follad en la ducha en el suelo 3 minutos si tenéis Esta vez sin hablar.."
+      "Follad en la ducha en el suelo 3 minutos si tenéis Esta vez sin hablar..",
+      "Chupad mutuamente hasta correros — sin parar — 4 minutos máximo Esta vez sin hablar..",
+      "Desnúdate el resto de la partida Repite con los ojos cerrados..",
+      "Chupa hasta que {ganador} acabe o 4 minutos Repite con los ojos cerrados..",
+      "Follad en la cama 3 minutos. Palabra de seguridad Repite con los ojos cerrados..",
+      "Mastúrbate hasta correrte cuando {ganador} lo ordene Repite con los ojos cerrados..",
+      "Prohibido correrte hasta la siguiente ronda Repite con los ojos cerrados.."
     ],
     "chica_chica": [
       "Desnúdate el resto de la partida.",
@@ -859,7 +857,9 @@ const CHALLENGES_HOME_EXTRA = {
       "Edging x3: {ganador} te masturba y para. A la tercera, solo acabas si suplicas Esta vez sin hablar..",
       "Lame y mete dedos hasta orgasmo en el sofá — 4 minutos máximo Esta vez sin hablar..",
       "Correrte en su mano mientras os besáis — 2 minutos Esta vez sin hablar..",
-      "Usad juguete o dedos alternando — 3 minutos Esta vez sin hablar.."
+      "Usad juguete o dedos alternando — 3 minutos Esta vez sin hablar..",
+      "Tribbing en contra la pared hasta que una se corra — luego la otra continúa Esta vez sin hablar..",
+      "Desnúdate el resto de la partida Repite con los ojos cerrados.."
     ]
   }
 };
@@ -932,14 +932,7 @@ const CHALLENGES_REMOTE_EXTRA = {
         "Muestra tu cuello y pide a {ganador} que te diga dónde te besaría primero {ganador} elige el ritmo..",
         "Ponte de perfil y empuja tu culo hacia la cámara 20 segundos {ganador} elige el ritmo..",
         "Describe cómo te masturbas cuando piensas en {ganador} — sin demostrar aún {ganador} elige el ritmo..",
-        "Quítate los calcetines frente a la cámara y dáselos simbólicamente a {ganador} {ganador} elige el ritmo..",
-        "Acércate a la webcam y describe tu ropa interior. {ganador} elige qué prenda quitas Cambiad de sitio antes de empezar..",
-        "Susurra tres fantasías con {ganador} mirando a la cámara Cambiad de sitio antes de empezar..",
-        "Frota pezones por encima de la ropa 45 segundos. Dile lo dura que se te ponen Cambiad de sitio antes de empezar..",
-        "Date la vuelta frente a la cámara y describe cómo te tocaría {ganador} Cambiad de sitio antes de empezar..",
-        "Imita besar a {ganador} por videollamada 45 segundos Cambiad de sitio antes de empezar..",
-        "Abre piernas un poco y acaricia muslo interno 1 minuto mirando a la cámara Cambiad de sitio antes de empezar..",
-        "Quítate una prenda sin salir del encuadre — orden de {ganador} Cambiad de sitio antes de empezar.."
+        "Quítate los calcetines frente a la cámara y dáselos simbólicamente a {ganador} {ganador} elige el ritmo.."
       ],
       "chico": [
         "Muestra el bulto en pantalón y frota 45 segundos mirando a {ganador}.",
@@ -1013,7 +1006,8 @@ const CHALLENGES_REMOTE_EXTRA = {
         "Describe cómo te masturbas pensando en {ganador} Sin prisa — disfrutad cada segundo..",
         "Quítate el cinturón frente a la cámara — {ganador} elige qué sigue Sin prisa — disfrutad cada segundo..",
         "Muestra el bulto en pantalón y frota 45 segundos mirando a {ganador} Repetid el reto el doble de tiempo si os apetece..",
-        "Susurra qué harías con tu boca en el coño de {ganador} si estuvierais juntos Repetid el reto el doble de tiempo si os apetece.."
+        "Susurra qué harías con tu boca en el coño de {ganador} si estuvierais juntos Repetid el reto el doble de tiempo si os apetece..",
+        "Quítate la camiseta frente a la cámara. {ganador} elige dónde morderte Repetid el reto el doble de tiempo si os apetece.."
       ]
     },
     "chico_chico": [
@@ -1088,7 +1082,9 @@ const CHALLENGES_REMOTE_EXTRA = {
       "Describe cómo te masturbas pensando en {ganador} Sin prisa — disfrutad cada segundo..",
       "Ponte de rodillas y pide tres órdenes a {ganador} Sin prisa — disfrutad cada segundo..",
       "Quítate camiseta y frota pecho mirando a {ganador} Repetid el reto el doble de tiempo si os apetece..",
-      "Bulto en cámara — frota 45 segundos Repetid el reto el doble de tiempo si os apetece.."
+      "Bulto en cámara — frota 45 segundos Repetid el reto el doble de tiempo si os apetece..",
+      "Imita chupar a {ganador} 45 segundos Repetid el reto el doble de tiempo si os apetece..",
+      "Confiesa fantasía gay a distancia Repetid el reto el doble de tiempo si os apetece.."
     ],
     "chica_chica": [
       "Describe ropa interior en webcam. {ganador} elige prenda.",
@@ -1162,7 +1158,11 @@ const CHALLENGES_REMOTE_EXTRA = {
       "Describe cómo te masturbas pensando en {ganador} Sin prisa — disfrutad cada segundo..",
       "Pide a {ganador} que te diga dónde te tocaría primero Sin prisa — disfrutad cada segundo..",
       "Describe ropa interior en webcam. {ganador} elige prenda Repetid el reto el doble de tiempo si os apetece..",
-      "Frota pezones 45 segundos mirando a {ganador} Repetid el reto el doble de tiempo si os apetece.."
+      "Frota pezones 45 segundos mirando a {ganador} Repetid el reto el doble de tiempo si os apetece..",
+      "Imita lamer a {ganador} 45 segundos Repetid el reto el doble de tiempo si os apetece..",
+      "Confiesa fantasía lésbica a distancia Repetid el reto el doble de tiempo si os apetece..",
+      "Abre piernas y acaricia muslo 1 minuto Repetid el reto el doble de tiempo si os apetece..",
+      "Quítate sujetador bajo orden de {ganador} Repetid el reto el doble de tiempo si os apetece.."
     ]
   },
   "picante": {
@@ -1227,17 +1227,7 @@ const CHALLENGES_REMOTE_EXTRA = {
         "Arrodíllate frente a la webcam y abre la boca. {ganador} te dice qué imaginar {ganador} elige el ritmo..",
         "Enseña tetas y pregunta si quiere que bajes más {ganador} elige el ritmo..",
         "Frota tu clítoris por encima de la braga al ritmo que marque {ganador} — 2 minutos {ganador} elige el ritmo..",
-        "Pide permiso para correrte. {ganador} dice sí o no {ganador} elige el ritmo..",
-        "Quítate la ropa de arriba. {ganador} te ordena cómo tocarte los pechos 2 minutos Cambiad de sitio antes de empezar..",
-        "Mastúrbate frente a la cámara 2 minutos — {ganador} guía por voz. No te corras Cambiad de sitio antes de empezar..",
-        "Simula chupar a {ganador} 90 segundos frente a la webcam Cambiad de sitio antes de empezar..",
-        "Baja bragas lo justo para que vea tu coño 15 segundos Cambiad de sitio antes de empezar..",
-        "Mete un dedo en la boca y pásalo por tu braga mientras gimes Cambiad de sitio antes de empezar..",
-        "Segunda cámara en móvil: enseña tu coño desde abajo Cambiad de sitio antes de empezar..",
-        "Roleplay: puta a distancia. Cuéntale qué harías por dinero Cambiad de sitio antes de empezar..",
-        "Descríbele cómo quieres que te folle mientras te tocas 2 minutos Cambiad de sitio antes de empezar..",
-        "Arrodíllate frente a la webcam y abre la boca. {ganador} te dice qué imaginar Cambiad de sitio antes de empezar..",
-        "Enseña tetas y pregunta si quiere que bajes más Cambiad de sitio antes de empezar.."
+        "Pide permiso para correrte. {ganador} dice sí o no {ganador} elige el ritmo.."
       ],
       "chico": [
         "Saca la polla. Mastúrbate 2 minutos al ritmo de {ganador}. No te corras.",
@@ -1308,8 +1298,7 @@ const CHALLENGES_REMOTE_EXTRA = {
         "Roleplay: jefe y empleado. Pide permiso para masturbarte 2 minutos Cambiad de sitio antes de empezar..",
         "De rodillas obedece órdenes de {ganador} 2 minutos en cámara Cambiad de sitio antes de empezar..",
         "Descríbele cómo te correras en ella mientras te tocas 2 minutos Cambiad de sitio antes de empezar..",
-        "Enseña el culo a la webcam 30 segundos Cambiad de sitio antes de empezar..",
-        "Ponte de espaldas y masturbate mirando a {ganador} 90 segundos Cambiad de sitio antes de empezar.."
+        "Enseña el culo a la webcam 30 segundos Cambiad de sitio antes de empezar.."
       ]
     },
     "chico_chico": [
@@ -1382,7 +1371,10 @@ const CHALLENGES_REMOTE_EXTRA = {
       "Quítate ropa entera. {ganador} elige qué enseñar Cambiad de sitio antes de empezar..",
       "Lubricante en punta frente a cámara 1 minuto Cambiad de sitio antes de empezar..",
       "De rodillas empuja culo hacia webcam Cambiad de sitio antes de empezar..",
-      "Descríbele cómo quieres que te folle mientras te tocas Cambiad de sitio antes de empezar.."
+      "Descríbele cómo quieres que te folle mientras te tocas Cambiad de sitio antes de empezar..",
+      "Segunda cámara: polla desde abajo 45 segundos Cambiad de sitio antes de empezar..",
+      "Pide permiso para correrte. {ganador} decide Cambiad de sitio antes de empezar..",
+      "Saca polla y masturbate 2 minutos — {ganador} guía Sin prisa — disfrutad cada segundo.."
     ],
     "chica_chica": [
       "Quítate sujetador y bragas. {ganador} ordena cómo tocarte 2 minutos.",
@@ -1454,7 +1446,15 @@ const CHALLENGES_REMOTE_EXTRA = {
       "Quítate bragas y arrójalas a la cámara Cambiad de sitio antes de empezar..",
       "Mete dedo en boca y pasa por braga Cambiad de sitio antes de empezar..",
       "Enseña coño 15 segundos si te atreves Cambiad de sitio antes de empezar..",
-      "Descríbele orgasmo que quieres darle cuando os veáis Cambiad de sitio antes de empezar.."
+      "Descríbele orgasmo que quieres darle cuando os veáis Cambiad de sitio antes de empezar..",
+      "Frota clítoris al ritmo de {ganador} — 2 minutos Cambiad de sitio antes de empezar..",
+      "Pide permiso para correrte. {ganador} decide Cambiad de sitio antes de empezar..",
+      "Quítate sujetador y bragas. {ganador} ordena cómo tocarte 2 minutos Sin prisa — disfrutad cada segundo..",
+      "Masturbate clítoris 2 minutos — {ganador} guía Sin prisa — disfrutad cada segundo..",
+      "Simula lamer a {ganador} 90 segundos Sin prisa — disfrutad cada segundo..",
+      "Segunda cámara entre piernas Sin prisa — disfrutad cada segundo..",
+      "Roleplay amante virtual 2 minutos Sin prisa — disfrutad cada segundo..",
+      "Tribbing contra almohada mirando a {ganador} Sin prisa — disfrutad cada segundo.."
     ]
   },
   "extremo": {
@@ -1524,12 +1524,7 @@ const CHALLENGES_REMOTE_EXTRA = {
         "Mastúrbate hasta el borde 3 minutos. No te corras sin permiso de {ganador} Cambiad de sitio antes de empezar..",
         "Mete dos dedos en tu coño en cámara al ritmo que marque {ganador} Cambiad de sitio antes de empezar..",
         "Correrte cuando {ganador} lo ordene — mirándole, diciendo su nombre Cambiad de sitio antes de empezar..",
-        "Prohibido correrte hasta la siguiente ronda Cambiad de sitio antes de empezar..",
-        "Usa juguete o dedos — {ganador} dirige 3 minutos Cambiad de sitio antes de empezar..",
-        "Enseña culo a la webcam a cuatro 30 segundos Cambiad de sitio antes de empezar..",
-        "Roleplay: esclava por videollamada 3 minutos Cambiad de sitio antes de empezar..",
-        "Simula garganta profunda 2 minutos Cambiad de sitio antes de empezar..",
-        "Si pierdes otra ronda, te corres dos veces en cámara cuando {ganador} diga Cambiad de sitio antes de empezar.."
+        "Prohibido correrte hasta la siguiente ronda Cambiad de sitio antes de empezar.."
       ],
       "chico": [
         "Desnúdate completo frente a la webcam el resto de la partida.",
@@ -1601,7 +1596,9 @@ const CHALLENGES_REMOTE_EXTRA = {
         "Roleplay: puto a distancia 3 minutos Cambiad de sitio antes de empezar..",
         "Simula follarte a {ganador} 2 minutos Cambiad de sitio antes de empezar..",
         "Segunda cámara masturbándote desde abajo Cambiad de sitio antes de empezar..",
-        "Si pierdes otra ronda, acabas dos veces en cámara Cambiad de sitio antes de empezar.."
+        "Si pierdes otra ronda, acabas dos veces en cámara Cambiad de sitio antes de empezar..",
+        "Edging x3 guiado por {ganador} Cambiad de sitio antes de empezar..",
+        "Enseña polla y huevos alternando 1 minuto Cambiad de sitio antes de empezar.."
       ]
     },
     "chico_chico": [
@@ -1674,7 +1671,8 @@ const CHALLENGES_REMOTE_EXTRA = {
       "Segunda cámara polla y culo alternando Cambiad de sitio antes de empezar..",
       "Roleplay sumiso extremo 3 minutos Cambiad de sitio antes de empezar..",
       "Folla tu mano 2 minutos gimiendo su nombre Cambiad de sitio antes de empezar..",
-      "Si pierdes otra ronda, acabas dos veces en cámara Cambiad de sitio antes de empezar.."
+      "Si pierdes otra ronda, acabas dos veces en cámara Cambiad de sitio antes de empezar..",
+      "Edging x3 guiado por {ganador} Cambiad de sitio antes de empezar.."
     ],
     "chica_chica": [
       "Desnúdate completa el resto de la partida.",
@@ -1746,7 +1744,9 @@ const CHALLENGES_REMOTE_EXTRA = {
       "Vibrador o ducha en cámara — {ganador} dirige Cambiad de sitio antes de empezar..",
       "Enseña coño y culo alternando 1 minuto Cambiad de sitio antes de empezar..",
       "Roleplay juguete 3 minutos Cambiad de sitio antes de empezar..",
-      "Si pierdes otra ronda, acabas dos veces en cámara Cambiad de sitio antes de empezar.."
+      "Si pierdes otra ronda, acabas dos veces en cámara Cambiad de sitio antes de empezar..",
+      "Edging x3 guiado por {ganador} Cambiad de sitio antes de empezar..",
+      "Tribbing en almohada hasta el borde — 3 minutos Cambiad de sitio antes de empezar.."
     ]
   }
 };

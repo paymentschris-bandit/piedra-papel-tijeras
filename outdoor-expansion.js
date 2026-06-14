@@ -65,14 +65,7 @@ const OUTDOOR_GENERAL_EXTRA = {
         "Mano de {ganador} sobre tu polla en al aire libre 20 segundos bajo la chaqueta Repetid el reto el doble de tiempo si os apetece..",
         "Confesad fantasías en al aire libre mientras os tocáis el muslo Repetid el reto el doble de tiempo si os apetece..",
         "Abrazad empujando erecciones en un rincón de al aire libre 40 segundos Repetid el reto el doble de tiempo si os apetece..",
-        "En al aire libre, abre las piernas dejando ver el bulto. {ganador} avisa si alguien mira Repetid el reto el doble de tiempo si os apetece..",
-        "Besad donde podáis ser vistos de lejos en al aire libre 20 segundos Repetid el reto el doble de tiempo si os apetece..",
-        "Frota tu polla contra la suya en al aire libre 35 segundos Repetid el reto el doble de tiempo si os apetece..",
-        "Quita la ropa interior en un baño y dásela a {ganador} Repetid el reto el doble de tiempo si os apetece..",
-        "En al aire libre, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Mirad a los ojos todo el rato..",
-        "Mano de {ganador} sobre tu polla en al aire libre 20 segundos bajo la chaqueta Mirad a los ojos todo el rato..",
-        "Confesad fantasías en al aire libre mientras os tocáis el muslo Mirad a los ojos todo el rato..",
-        "Abrazad empujando erecciones en un rincón de al aire libre 40 segundos Mirad a los ojos todo el rato.."
+        "En al aire libre, abre las piernas dejando ver el bulto. {ganador} avisa si alguien mira Repetid el reto el doble de tiempo si os apetece.."
       ],
       "chico": [
         "En al aire libre, besad 25 segundos y frota pollas — ropa puesta — 30 segundos.",
@@ -140,9 +133,7 @@ const OUTDOOR_GENERAL_EXTRA = {
         "Frota tu polla contra la suya en al aire libre 35 segundos Repetid el reto el doble de tiempo si os apetece..",
         "Quita la ropa interior en un baño y dásela a {ganador} Repetid el reto el doble de tiempo si os apetece..",
         "En al aire libre, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Mirad a los ojos todo el rato..",
-        "Mano de {ganador} sobre tu polla en al aire libre 20 segundos bajo la chaqueta Mirad a los ojos todo el rato..",
-        "Confesad fantasías en al aire libre mientras os tocáis el muslo Mirad a los ojos todo el rato..",
-        "Abrazad empujando erecciones en un rincón de al aire libre 40 segundos Mirad a los ojos todo el rato.."
+        "Mano de {ganador} sobre tu polla en al aire libre 20 segundos bajo la chaqueta Mirad a los ojos todo el rato.."
       ]
     },
     "chico_chico": [
@@ -213,7 +204,11 @@ const OUTDOOR_GENERAL_EXTRA = {
       "En al aire libre, abre las piernas dejando ver el bulto. {ganador} avisa si alguien mira Repite con los ojos cerrados..",
       "Besad donde podáis ser vistos de lejos en al aire libre 20 segundos Repite con los ojos cerrados..",
       "Frota tu polla contra la suya en al aire libre 35 segundos Repite con los ojos cerrados..",
-      "Quita la ropa interior en un baño y dásela a {ganador} Repite con los ojos cerrados.."
+      "Quita la ropa interior en un baño y dásela a {ganador} Repite con los ojos cerrados..",
+      "En al aire libre, sacad las pollas y masturbad mutuamente 2 minutos mirando si viene alguien Repite con los ojos cerrados..",
+      "En el baño de al aire libre, chúpale la polla 90 segundos en silencio Repite con los ojos cerrados..",
+      "Frota tu polla contra el culo de {ganador} en al aire libre 1 minuto Repite con los ojos cerrados..",
+      "Flash mutuo en al aire libre: enseñad las pollas 5 segundos cada uno Repite con los ojos cerrados.."
     ],
     "chica_chica": [
       "En al aire libre, guía su mano bajo tu ropa hacia el muslo 30 segundos.",
@@ -283,7 +278,12 @@ const OUTDOOR_GENERAL_EXTRA = {
       "Mordisquea su cuello en al aire libre mientras os abrazáis pegadas Repite con los ojos cerrados..",
       "En al aire libre, abre las piernas lo justo para que {ganador} vea tu braga Repite con los ojos cerrados..",
       "Susurrale tres fantasías lésbicas en al aire libre Repite con los ojos cerrados..",
-      "Quítate el sujetador en el baño y dáselo a {ganador} Repite con los ojos cerrados.."
+      "Quítate el sujetador en el baño y dáselo a {ganador} Repite con los ojos cerrados..",
+      "En al aire libre, bajaos bragas y tocaos mutuamente 2 minutos mirando si viene alguien Repite con los ojos cerrados..",
+      "Lame el coño de {ganador} en un rincón de al aire libre 90 segundos Repite con los ojos cerrados..",
+      "Besad y meted mano bajo la ropa 90 segundos en al aire libre Repite con los ojos cerrados..",
+      "Tribbing en al aire libre 2 minutos con ropa apartada lo justo Repite con los ojos cerrados..",
+      "Flash: enseñad tetas o coño 5 segundos bajo la chaqueta en al aire libre Repite con los ojos cerrados.."
     ]
   },
   "picante": {
@@ -341,17 +341,7 @@ const OUTDOOR_GENERAL_EXTRA = {
         "En el baño de al aire libre, chúpale la polla 90 segundos en silencio Sin prisa — disfrutad cada segundo..",
         "Frota tu polla contra el culo de {ganador} en al aire libre 1 minuto Sin prisa — disfrutad cada segundo..",
         "Flash mutuo en al aire libre: enseñad las pollas 5 segundos cada uno Sin prisa — disfrutad cada segundo..",
-        "Masturbación mutua en al aire libre 2 minutos bajo chaquetas Sin prisa — disfrutad cada segundo..",
-        "En al aire libre, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila Sin prisa — disfrutad cada segundo..",
-        "Confesad fantasía de follaros en al aire libre sin que os vean Sin prisa — disfrutad cada segundo..",
-        "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en al aire libre Sin prisa — disfrutad cada segundo..",
-        "En al aire libre, sacad las pollas y masturbad mutuamente 2 minutos mirando si viene alguien Repetid el reto el doble de tiempo si os apetece..",
-        "En el baño de al aire libre, chúpale la polla 90 segundos en silencio Repetid el reto el doble de tiempo si os apetece..",
-        "Frota tu polla contra el culo de {ganador} en al aire libre 1 minuto Repetid el reto el doble de tiempo si os apetece..",
-        "Flash mutuo en al aire libre: enseñad las pollas 5 segundos cada uno Repetid el reto el doble de tiempo si os apetece..",
-        "Masturbación mutua en al aire libre 2 minutos bajo chaquetas Repetid el reto el doble de tiempo si os apetece..",
-        "En al aire libre, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila Repetid el reto el doble de tiempo si os apetece..",
-        "Confesad fantasía de follaros en al aire libre sin que os vean Repetid el reto el doble de tiempo si os apetece.."
+        "Masturbación mutua en al aire libre 2 minutos bajo chaquetas Sin prisa — disfrutad cada segundo.."
       ],
       "chico": [
         "En al aire libre, sacad las pollas y masturbad mutuamente 2 minutos mirando si viene alguien.",
@@ -413,10 +403,7 @@ const OUTDOOR_GENERAL_EXTRA = {
         "En al aire libre, sacad las pollas y masturbad mutuamente 2 minutos mirando si viene alguien Repetid el reto el doble de tiempo si os apetece..",
         "En el baño de al aire libre, chúpale la polla 90 segundos en silencio Repetid el reto el doble de tiempo si os apetece..",
         "Frota tu polla contra el culo de {ganador} en al aire libre 1 minuto Repetid el reto el doble de tiempo si os apetece..",
-        "Flash mutuo en al aire libre: enseñad las pollas 5 segundos cada uno Repetid el reto el doble de tiempo si os apetece..",
-        "Masturbación mutua en al aire libre 2 minutos bajo chaquetas Repetid el reto el doble de tiempo si os apetece..",
-        "En al aire libre, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila Repetid el reto el doble de tiempo si os apetece..",
-        "Confesad fantasía de follaros en al aire libre sin que os vean Repetid el reto el doble de tiempo si os apetece.."
+        "Flash mutuo en al aire libre: enseñad las pollas 5 segundos cada uno Repetid el reto el doble de tiempo si os apetece.."
       ]
     },
     "chico_chico": [
@@ -482,7 +469,13 @@ const OUTDOOR_GENERAL_EXTRA = {
       "Frota tu polla contra el culo de {ganador} en al aire libre 1 minuto Repite con los ojos cerrados..",
       "Flash mutuo en al aire libre: enseñad las pollas 5 segundos cada uno Repite con los ojos cerrados..",
       "Masturbación mutua en al aire libre 2 minutos bajo chaquetas Repite con los ojos cerrados..",
-      "En al aire libre, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila Repite con los ojos cerrados.."
+      "En al aire libre, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila Repite con los ojos cerrados..",
+      "Confesad fantasía de follaros en al aire libre sin que os vean Repite con los ojos cerrados..",
+      "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en al aire libre Repite con los ojos cerrados..",
+      "En al aire libre, chúpale la polla 2 minutos en un rincón Repite con los ojos cerrados..",
+      "Masturbación mutua al aire libre 3 minutos al unísono Repite con los ojos cerrados..",
+      "Frota tu polla contra su culo — ropa apartada — 90 segundos en al aire libre Repite con los ojos cerrados..",
+      "69 al aire libre 2 minutos si cabéis Repite con los ojos cerrados.."
     ],
     "chica_chica": [
       "En al aire libre, bajaos bragas y tocaos mutuamente 2 minutos mirando si viene alguien.",
@@ -547,7 +540,14 @@ const OUTDOOR_GENERAL_EXTRA = {
       "Descríbele cómo te masturbas — demuéstralo 45 segundos en al aire libre Esta vez sin hablar..",
       "En al aire libre, bajaos bragas y tocaos mutuamente 2 minutos mirando si viene alguien Repite con los ojos cerrados..",
       "Lame el coño de {ganador} en un rincón de al aire libre 90 segundos Repite con los ojos cerrados..",
-      "Besad y meted mano bajo la ropa 90 segundos en al aire libre Repite con los ojos cerrados.."
+      "Besad y meted mano bajo la ropa 90 segundos en al aire libre Repite con los ojos cerrados..",
+      "Tribbing en al aire libre 2 minutos con ropa apartada lo justo Repite con los ojos cerrados..",
+      "Flash: enseñad tetas o coño 5 segundos bajo la chaqueta en al aire libre Repite con los ojos cerrados..",
+      "En al aire libre, quitad bragas y guardadla la una la otra Repite con los ojos cerrados..",
+      "Dedos bajo falda en al aire libre 2 minutos mientras alguien pasa lejos Repite con los ojos cerrados..",
+      "Confesad dónde os correrte en al aire libre si os atrevierais Repite con los ojos cerrados..",
+      "En al aire libre, bajaos bragas y tocaos mutuamente 2 minutos Repite con los ojos cerrados..",
+      "Lame el coño de {ganador} en al aire libre 2 minutos Repite con los ojos cerrados.."
     ]
   },
   "extremo": {
@@ -612,10 +612,7 @@ const OUTDOOR_GENERAL_EXTRA = {
         "Follad en al aire libre 3 minutos. Ventanas o cobertura si hace falta Repetid el reto el doble de tiempo si os apetece..",
         "Oral en al aire libre hasta que acabe o 4 minutos Repetid el reto el doble de tiempo si os apetece..",
         "69 en al aire libre 3 minutos hasta que uno se corra Repetid el reto el doble de tiempo si os apetece..",
-        "Masturbad mutuamente hasta correros en al aire libre Repetid el reto el doble de tiempo si os apetece..",
-        "Riesgo acordado: pollas fuera 10 segundos en al aire libre. Parar si hay gente Repetid el reto el doble de tiempo si os apetece..",
-        "Desnúdate en al aire libre y deja que {ganador} te folle o chupe 3 minutos Repetid el reto el doble de tiempo si os apetece..",
-        "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en al aire libre Repetid el reto el doble de tiempo si os apetece.."
+        "Masturbad mutuamente hasta correros en al aire libre Repetid el reto el doble de tiempo si os apetece.."
       ],
       "chico": [
         "Follad en al aire libre 3 minutos. Ventanas o cobertura si hace falta.",
@@ -678,9 +675,7 @@ const OUTDOOR_GENERAL_EXTRA = {
         "Oral en al aire libre hasta que acabe o 4 minutos Repetid el reto el doble de tiempo si os apetece..",
         "69 en al aire libre 3 minutos hasta que uno se corra Repetid el reto el doble de tiempo si os apetece..",
         "Masturbad mutuamente hasta correros en al aire libre Repetid el reto el doble de tiempo si os apetece..",
-        "Riesgo acordado: pollas fuera 10 segundos en al aire libre. Parar si hay gente Repetid el reto el doble de tiempo si os apetece..",
-        "Desnúdate en al aire libre y deja que {ganador} te folle o chupe 3 minutos Repetid el reto el doble de tiempo si os apetece..",
-        "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en al aire libre Repetid el reto el doble de tiempo si os apetece.."
+        "Riesgo acordado: pollas fuera 10 segundos en al aire libre. Parar si hay gente Repetid el reto el doble de tiempo si os apetece.."
       ]
     },
     "chico_chico": [
@@ -746,7 +741,10 @@ const OUTDOOR_GENERAL_EXTRA = {
       "Exhibicionismo acordado en al aire libre: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo..",
       "Exhibicionismo acordado en al aire libre: pollas erectas 20 segundos {ganador} elige el ritmo..",
       "En al aire libre, anal con lubricante si lo acordáis — 3 minutos {ganador} elige el ritmo..",
-      "Correrte en boca o culo de {ganador} en al aire libre {ganador} elige el ritmo.."
+      "Correrte en boca o culo de {ganador} en al aire libre {ganador} elige el ritmo..",
+      "Chupad mutuamente hasta correros — 4 minutos máximo en al aire libre {ganador} elige el ritmo..",
+      "Si pierdes otra ronda, {ganador} elige cómo acabas en al aire libre {ganador} elige el ritmo..",
+      "Follad en al aire libre 3 minutos. Ventanas o cobertura si hace falta Cambiad de sitio antes de empezar.."
     ],
     "chica_chica": [
       "Dedos, lengua o tribbing hasta orgasmo — 3 minutos en al aire libre.",
@@ -811,7 +809,9 @@ const OUTDOOR_GENERAL_EXTRA = {
       "Si pierdes otra ronda, {ganador} elige cómo acabas en al aire libre {ganador} elige el ritmo..",
       "Dedos, lengua o tribbing hasta orgasmo — 3 minutos en al aire libre Cambiad de sitio antes de empezar..",
       "{ganador} te lame el coño hasta correrte o 4 minutos en al aire libre Cambiad de sitio antes de empezar..",
-      "69 o dedos profundos 3 minutos en al aire libre Cambiad de sitio antes de empezar.."
+      "69 o dedos profundos 3 minutos en al aire libre Cambiad de sitio antes de empezar..",
+      "Una masturba a la otra hasta correrte mirando si viene alguien en al aire libre Cambiad de sitio antes de empezar..",
+      "Riesgo acordado: flash de coño o tetas 10 segundos en al aire libre Cambiad de sitio antes de empezar.."
     ]
   }
 };
@@ -893,8 +893,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Besad donde podáis ser vistos de lejos en el coche 20 segundos Mirad a los ojos todo el rato..",
           "Frota tu polla contra la suya en el coche 35 segundos Mirad a los ojos todo el rato..",
           "Quita la ropa interior en un baño y dásela a {ganador} Mirad a los ojos todo el rato..",
-          "En el coche, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis..",
-          "Mano de {ganador} sobre tu polla en el coche 20 segundos bajo la chaqueta Susurrad lo que sentís mientras lo hacéis.."
+          "En el coche, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis.."
         ],
         "chico": [
           "En el coche, besad 25 segundos y frota pollas — ropa puesta — 30 segundos.",
@@ -1123,7 +1122,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Tribbing en el coche 2 minutos con ropa apartada lo justo Repite con los ojos cerrados..",
         "Flash: enseñad tetas o coño 5 segundos bajo la chaqueta en el coche Repite con los ojos cerrados..",
         "En el coche, quitad bragas y guardadla la una la otra Repite con los ojos cerrados..",
-        "Dedos bajo falda en el coche 2 minutos mientras alguien pasa lejos Repite con los ojos cerrados.."
+        "Dedos bajo falda en el coche 2 minutos mientras alguien pasa lejos Repite con los ojos cerrados..",
+        "Confesad dónde os correrte en el coche si os atrevierais Repite con los ojos cerrados.."
       ]
     },
     "picante": {
@@ -1197,11 +1197,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "En el baño de el coche, chúpale la polla 90 segundos en silencio {ganador} elige el ritmo..",
           "Frota tu polla contra el culo de {ganador} en el coche 1 minuto {ganador} elige el ritmo..",
           "Flash mutuo en el coche: enseñad las pollas 5 segundos cada uno {ganador} elige el ritmo..",
-          "Masturbación mutua en el coche 2 minutos bajo chaquetas {ganador} elige el ritmo..",
-          "En el coche, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo..",
-          "Confesad fantasía de follaros en el coche sin que os vean {ganador} elige el ritmo..",
-          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el coche {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Masturbación mutua en el coche 2 minutos bajo chaquetas {ganador} elige el ritmo.."
         ],
         "chico": [
           "En el coche, sacad las pollas y masturbad mutuamente 2 minutos mirando si viene alguien.",
@@ -1275,8 +1271,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Masturbación mutua en el coche 2 minutos bajo chaquetas {ganador} elige el ritmo..",
           "En el coche, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo..",
           "Confesad fantasía de follaros en el coche sin que os vean {ganador} elige el ritmo..",
-          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el coche {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el coche {ganador} elige el ritmo.."
         ]
       },
       "chico_chico": [
@@ -1352,7 +1347,10 @@ const OUTDOOR_LOCATION_EXTRA = {
         "En el coche, frotad pollas piel con piel 1 minuto Esta vez sin hablar..",
         "Roleplay sumiso el coche 2 minutos. {ganador} manda Esta vez sin hablar..",
         "En el coche, guía su dedo hacia tu culo mientras le susurras Esta vez sin hablar..",
-        "Descríbele cómo te masturbas — demuéstralo 45 segundos en el coche Esta vez sin hablar.."
+        "Descríbele cómo te masturbas — demuéstralo 45 segundos en el coche Esta vez sin hablar..",
+        "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos Esta vez sin hablar..",
+        "Flash rápido: {ganador} elige el momento — enseña lo justo 5 segundos y tapa al instante si alguien se acerca Esta vez sin hablar..",
+        "Caminad pegados como pareja que no disimula: deja que {ganador} te pase la mano por el culo cuando crucéis con alguien Esta vez sin hablar.."
       ],
       "chica_chica": [
         "En el coche, bajaos bragas y tocaos mutuamente 2 minutos mirando si viene alguien.",
@@ -1427,7 +1425,9 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Azotes: 6 nalgadas en el coche. Pide más si quieres Esta vez sin hablar..",
         "Quítate el sujetador. {ganador} te ordena cómo tocarte 2 minutos en el coche Esta vez sin hablar..",
         "Frotad clítoris mutuamente el coche 2 minutos Esta vez sin hablar..",
-        "En el coche, besad y meted mano bajo ropa 90 segundos Esta vez sin hablar.."
+        "En el coche, besad y meted mano bajo ropa 90 segundos Esta vez sin hablar..",
+        "Confesad fantasía de correrte en su boca en el coche Esta vez sin hablar..",
+        "En el coche, pide que te ate las muñecas — suave — y te toque 2 minutos Esta vez sin hablar.."
       ]
     },
     "extremo": {
@@ -1504,8 +1504,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Riesgo acordado: pollas fuera 10 segundos en el coche. Parar si hay gente {ganador} elige el ritmo..",
           "Desnúdate en el coche y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo..",
           "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el coche {ganador} elige el ritmo..",
-          "Exhibicionismo acordado en el coche: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Exhibicionismo acordado en el coche: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo.."
         ],
         "chico": [
           "Follad en el coche 3 minutos. Ventanas o cobertura si hace falta.",
@@ -1577,10 +1576,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "69 en el coche 3 minutos hasta que uno se corra {ganador} elige el ritmo..",
           "Masturbad mutuamente hasta correros en el coche {ganador} elige el ritmo..",
           "Riesgo acordado: pollas fuera 10 segundos en el coche. Parar si hay gente {ganador} elige el ritmo..",
-          "Desnúdate en el coche y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo..",
-          "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el coche {ganador} elige el ritmo..",
-          "Exhibicionismo acordado en el coche: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Desnúdate en el coche y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo.."
         ]
       },
       "chico_chico": [
@@ -1656,10 +1652,13 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el coche Repite con los ojos cerrados..",
         "Exhibicionismo acordado en el coche: pollas erectas 20 segundos mirando hacia posibles mirones Repite con los ojos cerrados..",
         "Exhibicionismo acordado en el coche: pollas erectas 20 segundos Repite con los ojos cerrados..",
-        "En el coche, anal con lubricante si lo acordáis — 3 minutos Repite con los ojos cerrados.."
+        "En el coche, anal con lubricante si lo acordáis — 3 minutos Repite con los ojos cerrados..",
+        "Correrte en boca o culo de {ganador} en el coche Repite con los ojos cerrados..",
+        "Chupad mutuamente hasta correros — 4 minutos máximo en el coche Repite con los ojos cerrados.."
       ],
       "chica_chica": [
         "Dedos, lengua o tribbing hasta orgasmo — 3 minutos en el coche.",
+        "{ganador} te lame el coño hasta correrte o 4 minutos en el coche.",
         "69 o dedos profundos 3 minutos en el coche.",
         "Una masturba a la otra hasta correrte mirando si viene alguien en el coche.",
         "Riesgo acordado: flash de coño o tetas 10 segundos en el coche.",
@@ -1731,7 +1730,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Si pierdes otra ronda, {ganador} elige cómo acabas en el coche Repite con los ojos cerrados..",
         "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos Repite con los ojos cerrados..",
         "Flash rápido: {ganador} elige el momento — enseña lo justo 5 segundos y tapa al instante si alguien se acerca Repite con los ojos cerrados..",
-        "Caminad pegados como pareja que no disimula: deja que {ganador} te pase la mano por el culo cuando crucéis con alguien Repite con los ojos cerrados.."
+        "Caminad pegados como pareja que no disimula: deja que {ganador} te pase la mano por el culo cuando crucéis con alguien Repite con los ojos cerrados..",
+        "Confiesa la fantasía de que un desconocido os pillara mirando y quedad abrazados íntimos 30 segundos en un sitio visible Repite con los ojos cerrados.."
       ]
     }
   },
@@ -1810,9 +1810,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "En el parque, abre las piernas dejando ver el bulto. {ganador} avisa si alguien mira Mirad a los ojos todo el rato..",
           "Besad donde podáis ser vistos de lejos en el parque 20 segundos Mirad a los ojos todo el rato..",
           "Frota tu polla contra la suya en el parque 35 segundos Mirad a los ojos todo el rato..",
-          "Quita la ropa interior en un baño y dásela a {ganador} Mirad a los ojos todo el rato..",
-          "En el parque, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis..",
-          "Mano de {ganador} sobre tu polla en el parque 20 segundos bajo la chaqueta Susurrad lo que sentís mientras lo hacéis.."
+          "Quita la ropa interior en un baño y dásela a {ganador} Mirad a los ojos todo el rato.."
         ],
         "chico": [
           "En el parque, besad 25 segundos y frota pollas — ropa puesta — 30 segundos.",
@@ -1965,7 +1963,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Frota tu polla contra el culo de {ganador} en el parque 1 minuto Repite con los ojos cerrados..",
         "Flash mutuo en el parque: enseñad las pollas 5 segundos cada uno Repite con los ojos cerrados..",
         "Masturbación mutua en el parque 2 minutos bajo chaquetas Repite con los ojos cerrados..",
-        "En el parque, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila Repite con los ojos cerrados.."
+        "En el parque, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila Repite con los ojos cerrados..",
+        "Confesad fantasía de follaros en el parque sin que os vean Repite con los ojos cerrados.."
       ],
       "chica_chica": [
         "En el parque, guía su mano bajo tu ropa hacia el muslo 30 segundos.",
@@ -2041,7 +2040,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Tribbing en el parque 2 minutos con ropa apartada lo justo Repite con los ojos cerrados..",
         "Flash: enseñad tetas o coño 5 segundos bajo la chaqueta en el parque Repite con los ojos cerrados..",
         "En el parque, quitad bragas y guardadla la una la otra Repite con los ojos cerrados..",
-        "Dedos bajo falda en el parque 2 minutos mientras alguien pasa lejos Repite con los ojos cerrados.."
+        "Dedos bajo falda en el parque 2 minutos mientras alguien pasa lejos Repite con los ojos cerrados..",
+        "Confesad dónde os correrte en el parque si os atrevierais Repite con los ojos cerrados.."
       ]
     },
     "picante": {
@@ -2114,12 +2114,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "En el parque, sacad las pollas y masturbad mutuamente 2 minutos mirando si viene alguien {ganador} elige el ritmo..",
           "En el baño de el parque, chúpale la polla 90 segundos en silencio {ganador} elige el ritmo..",
           "Frota tu polla contra el culo de {ganador} en el parque 1 minuto {ganador} elige el ritmo..",
-          "Flash mutuo en el parque: enseñad las pollas 5 segundos cada uno {ganador} elige el ritmo..",
-          "Masturbación mutua en el parque 2 minutos bajo chaquetas {ganador} elige el ritmo..",
-          "En el parque, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo..",
-          "Confesad fantasía de follaros en el parque sin que os vean {ganador} elige el ritmo..",
-          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el parque {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Flash mutuo en el parque: enseñad las pollas 5 segundos cada uno {ganador} elige el ritmo.."
         ],
         "chico": [
           "En el parque, sacad las pollas y masturbad mutuamente 2 minutos mirando si viene alguien.",
@@ -2193,8 +2188,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Masturbación mutua en el parque 2 minutos bajo chaquetas {ganador} elige el ritmo..",
           "En el parque, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo..",
           "Confesad fantasía de follaros en el parque sin que os vean {ganador} elige el ritmo..",
-          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el parque {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el parque {ganador} elige el ritmo.."
         ]
       },
       "chico_chico": [
@@ -2270,7 +2264,9 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Roleplay sumiso el parque 2 minutos. {ganador} manda Esta vez sin hablar..",
         "En el parque, guía su dedo hacia tu culo mientras le susurras Esta vez sin hablar..",
         "Descríbele cómo te masturbas — demuéstralo 45 segundos en el parque Esta vez sin hablar..",
-        "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos Esta vez sin hablar.."
+        "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos Esta vez sin hablar..",
+        "Flash rápido: {ganador} elige el momento — enseña lo justo 5 segundos y tapa al instante si alguien se acerca Esta vez sin hablar..",
+        "Caminad pegados como pareja que no disimula: deja que {ganador} te pase la mano por el culo cuando crucéis con alguien Esta vez sin hablar.."
       ],
       "chica_chica": [
         "En el parque, bajaos bragas y tocaos mutuamente 2 minutos mirando si viene alguien.",
@@ -2345,7 +2341,11 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Azotes: 6 nalgadas en el parque. Pide más si quieres Esta vez sin hablar..",
         "Quítate el sujetador. {ganador} te ordena cómo tocarte 2 minutos en el parque Esta vez sin hablar..",
         "Frotad clítoris mutuamente el parque 2 minutos Esta vez sin hablar..",
-        "En el parque, besad y meted mano bajo ropa 90 segundos Esta vez sin hablar.."
+        "En el parque, besad y meted mano bajo ropa 90 segundos Esta vez sin hablar..",
+        "Confesad fantasía de correrte en su boca en el parque Esta vez sin hablar..",
+        "En el parque, pide que te ate las muñecas — suave — y te toque 2 minutos Esta vez sin hablar..",
+        "Descríbele cómo te masturbas — demuéstralo 45 segundos en el parque Esta vez sin hablar..",
+        "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos Esta vez sin hablar.."
       ]
     },
     "extremo": {
@@ -2423,7 +2423,8 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Desnúdate en el parque y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo..",
           "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el parque {ganador} elige el ritmo..",
           "Exhibicionismo acordado en el parque: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo..",
+          "Flash rápido: {ganador} elige el momento — enseña lo justo 5 segundos y tapa al instante si alguien se acerca {ganador} elige el ritmo.."
         ],
         "chico": [
           "Follad en el parque 3 minutos. Ventanas o cobertura si hace falta.",
@@ -2497,8 +2498,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Riesgo acordado: pollas fuera 10 segundos en el parque. Parar si hay gente {ganador} elige el ritmo..",
           "Desnúdate en el parque y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo..",
           "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el parque {ganador} elige el ritmo..",
-          "Exhibicionismo acordado en el parque: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Exhibicionismo acordado en el parque: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo.."
         ]
       },
       "chico_chico": [
@@ -2729,8 +2729,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Besad donde podáis ser vistos de lejos en el cine 20 segundos Mirad a los ojos todo el rato..",
           "Frota tu polla contra la suya en el cine 35 segundos Mirad a los ojos todo el rato..",
           "Quita la ropa interior en un baño y dásela a {ganador} Mirad a los ojos todo el rato..",
-          "En el cine, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis..",
-          "Mano de {ganador} sobre tu polla en el cine 20 segundos bajo la chaqueta Susurrad lo que sentís mientras lo hacéis.."
+          "En el cine, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis.."
         ],
         "chico": [
           "En el cine, besad 25 segundos y frota pollas — ropa puesta — 30 segundos.",
@@ -2805,8 +2804,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Besad donde podáis ser vistos de lejos en el cine 20 segundos Mirad a los ojos todo el rato..",
           "Frota tu polla contra la suya en el cine 35 segundos Mirad a los ojos todo el rato..",
           "Quita la ropa interior en un baño y dásela a {ganador} Mirad a los ojos todo el rato..",
-          "En el cine, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis..",
-          "Mano de {ganador} sobre tu polla en el cine 20 segundos bajo la chaqueta Susurrad lo que sentís mientras lo hacéis.."
+          "En el cine, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis.."
         ]
       },
       "chico_chico": [
@@ -2883,7 +2881,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Frota tu polla contra el culo de {ganador} en el cine 1 minuto Repite con los ojos cerrados..",
         "Flash mutuo en el cine: enseñad las pollas 5 segundos cada uno Repite con los ojos cerrados..",
         "Masturbación mutua en el cine 2 minutos bajo chaquetas Repite con los ojos cerrados..",
-        "En el cine, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila Repite con los ojos cerrados.."
+        "En el cine, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila Repite con los ojos cerrados..",
+        "Confesad fantasía de follaros en el cine sin que os vean Repite con los ojos cerrados.."
       ],
       "chica_chica": [
         "En el cine, guía su mano bajo tu ropa hacia el muslo 30 segundos.",
@@ -2959,7 +2958,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Besad y meted mano bajo la ropa 90 segundos en el cine Repite con los ojos cerrados..",
         "Tribbing en el cine 2 minutos con ropa apartada lo justo Repite con los ojos cerrados..",
         "Flash: enseñad tetas o coño 5 segundos bajo la chaqueta en el cine Repite con los ojos cerrados..",
-        "En el cine, quitad bragas y guardadla la una la otra Repite con los ojos cerrados.."
+        "En el cine, quitad bragas y guardadla la una la otra Repite con los ojos cerrados..",
+        "Dedos bajo falda en el cine 2 minutos mientras alguien pasa lejos Repite con los ojos cerrados.."
       ]
     },
     "picante": {
@@ -3036,8 +3036,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Masturbación mutua en el cine 2 minutos bajo chaquetas {ganador} elige el ritmo..",
           "En el cine, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo..",
           "Confesad fantasía de follaros en el cine sin que os vean {ganador} elige el ritmo..",
-          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el cine {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el cine {ganador} elige el ritmo.."
         ],
         "chico": [
           "En el cine, sacad las pollas y masturbad mutuamente 2 minutos mirando si viene alguien.",
@@ -3110,9 +3109,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Flash mutuo en el cine: enseñad las pollas 5 segundos cada uno {ganador} elige el ritmo..",
           "Masturbación mutua en el cine 2 minutos bajo chaquetas {ganador} elige el ritmo..",
           "En el cine, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo..",
-          "Confesad fantasía de follaros en el cine sin que os vean {ganador} elige el ritmo..",
-          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el cine {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Confesad fantasía de follaros en el cine sin que os vean {ganador} elige el ritmo.."
         ]
       },
       "chico_chico": [
@@ -3188,7 +3185,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "En el cine, frotad pollas piel con piel 1 minuto Esta vez sin hablar..",
         "Roleplay sumiso el cine 2 minutos. {ganador} manda Esta vez sin hablar..",
         "En el cine, guía su dedo hacia tu culo mientras le susurras Esta vez sin hablar..",
-        "Descríbele cómo te masturbas — demuéstralo 45 segundos en el cine Esta vez sin hablar.."
+        "Descríbele cómo te masturbas — demuéstralo 45 segundos en el cine Esta vez sin hablar..",
+        "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos Esta vez sin hablar.."
       ],
       "chica_chica": [
         "En el cine, bajaos bragas y tocaos mutuamente 2 minutos mirando si viene alguien.",
@@ -3263,7 +3261,9 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Azotes: 6 nalgadas en el cine. Pide más si quieres Esta vez sin hablar..",
         "Quítate el sujetador. {ganador} te ordena cómo tocarte 2 minutos en el cine Esta vez sin hablar..",
         "Frotad clítoris mutuamente el cine 2 minutos Esta vez sin hablar..",
-        "En el cine, besad y meted mano bajo ropa 90 segundos Esta vez sin hablar.."
+        "En el cine, besad y meted mano bajo ropa 90 segundos Esta vez sin hablar..",
+        "Confesad fantasía de correrte en su boca en el cine Esta vez sin hablar..",
+        "En el cine, pide que te ate las muñecas — suave — y te toque 2 minutos Esta vez sin hablar.."
       ]
     },
     "extremo": {
@@ -3341,7 +3341,9 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Desnúdate en el cine y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo..",
           "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el cine {ganador} elige el ritmo..",
           "Exhibicionismo acordado en el cine: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo..",
+          "Flash rápido: {ganador} elige el momento — enseña lo justo 5 segundos y tapa al instante si alguien se acerca {ganador} elige el ritmo..",
+          "Caminad pegados como pareja que no disimula: deja que {ganador} te pase la mano por el culo cuando crucéis con alguien {ganador} elige el ritmo.."
         ],
         "chico": [
           "Follad en el cine 3 minutos. Ventanas o cobertura si hace falta.",
@@ -3413,10 +3415,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "69 en el cine 3 minutos hasta que uno se corra {ganador} elige el ritmo..",
           "Masturbad mutuamente hasta correros en el cine {ganador} elige el ritmo..",
           "Riesgo acordado: pollas fuera 10 segundos en el cine. Parar si hay gente {ganador} elige el ritmo..",
-          "Desnúdate en el cine y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo..",
-          "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el cine {ganador} elige el ritmo..",
-          "Exhibicionismo acordado en el cine: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Desnúdate en el cine y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo.."
         ]
       },
       "chico_chico": [
@@ -3492,7 +3491,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el cine Repite con los ojos cerrados..",
         "Exhibicionismo acordado en el cine: pollas erectas 20 segundos mirando hacia posibles mirones Repite con los ojos cerrados..",
         "Exhibicionismo acordado en el cine: pollas erectas 20 segundos Repite con los ojos cerrados..",
-        "En el cine, anal con lubricante si lo acordáis — 3 minutos Repite con los ojos cerrados.."
+        "En el cine, anal con lubricante si lo acordáis — 3 minutos Repite con los ojos cerrados..",
+        "Correrte en boca o culo de {ganador} en el cine Repite con los ojos cerrados.."
       ],
       "chica_chica": [
         "Dedos, lengua o tribbing hasta orgasmo — 3 minutos en el cine.",
@@ -3647,8 +3647,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Besad donde podáis ser vistos de lejos en la playa 20 segundos Mirad a los ojos todo el rato..",
           "Frota tu polla contra la suya en la playa 35 segundos Mirad a los ojos todo el rato..",
           "Quita la ropa interior en un baño y dásela a {ganador} Mirad a los ojos todo el rato..",
-          "En la playa, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis..",
-          "Mano de {ganador} sobre tu polla en la playa 20 segundos bajo la chaqueta Susurrad lo que sentís mientras lo hacéis.."
+          "En la playa, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis.."
         ],
         "chico": [
           "En la playa, besad 25 segundos y frota pollas — ropa puesta — 30 segundos.",
@@ -3877,7 +3876,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Besad y meted mano bajo la ropa 90 segundos en la playa Repite con los ojos cerrados..",
         "Tribbing en la playa 2 minutos con ropa apartada lo justo Repite con los ojos cerrados..",
         "Flash: enseñad tetas o coño 5 segundos bajo la chaqueta en la playa Repite con los ojos cerrados..",
-        "En la playa, quitad bragas y guardadla la una la otra Repite con los ojos cerrados.."
+        "En la playa, quitad bragas y guardadla la una la otra Repite con los ojos cerrados..",
+        "Dedos bajo falda en la playa 2 minutos mientras alguien pasa lejos Repite con los ojos cerrados.."
       ]
     },
     "picante": {
@@ -3952,10 +3952,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Frota tu polla contra el culo de {ganador} en la playa 1 minuto {ganador} elige el ritmo..",
           "Flash mutuo en la playa: enseñad las pollas 5 segundos cada uno {ganador} elige el ritmo..",
           "Masturbación mutua en la playa 2 minutos bajo chaquetas {ganador} elige el ritmo..",
-          "En la playa, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo..",
-          "Confesad fantasía de follaros en la playa sin que os vean {ganador} elige el ritmo..",
-          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en la playa {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "En la playa, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo.."
         ],
         "chico": [
           "En la playa, sacad las pollas y masturbad mutuamente 2 minutos mirando si viene alguien.",
@@ -4029,8 +4026,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Masturbación mutua en la playa 2 minutos bajo chaquetas {ganador} elige el ritmo..",
           "En la playa, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo..",
           "Confesad fantasía de follaros en la playa sin que os vean {ganador} elige el ritmo..",
-          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en la playa {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en la playa {ganador} elige el ritmo.."
         ]
       },
       "chico_chico": [
@@ -4106,7 +4102,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "En la playa, frotad pollas piel con piel 1 minuto Esta vez sin hablar..",
         "Roleplay sumiso la playa 2 minutos. {ganador} manda Esta vez sin hablar..",
         "En la playa, guía su dedo hacia tu culo mientras le susurras Esta vez sin hablar..",
-        "Descríbele cómo te masturbas — demuéstralo 45 segundos en la playa Esta vez sin hablar.."
+        "Descríbele cómo te masturbas — demuéstralo 45 segundos en la playa Esta vez sin hablar..",
+        "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos Esta vez sin hablar.."
       ],
       "chica_chica": [
         "En la playa, bajaos bragas y tocaos mutuamente 2 minutos mirando si viene alguien.",
@@ -4181,7 +4178,10 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Azotes: 6 nalgadas en la playa. Pide más si quieres Esta vez sin hablar..",
         "Quítate el sujetador. {ganador} te ordena cómo tocarte 2 minutos en la playa Esta vez sin hablar..",
         "Frotad clítoris mutuamente la playa 2 minutos Esta vez sin hablar..",
-        "En la playa, besad y meted mano bajo ropa 90 segundos Esta vez sin hablar.."
+        "En la playa, besad y meted mano bajo ropa 90 segundos Esta vez sin hablar..",
+        "Confesad fantasía de correrte en su boca en la playa Esta vez sin hablar..",
+        "En la playa, pide que te ate las muñecas — suave — y te toque 2 minutos Esta vez sin hablar..",
+        "Descríbele cómo te masturbas — demuéstralo 45 segundos en la playa Esta vez sin hablar.."
       ]
     },
     "extremo": {
@@ -4259,7 +4259,8 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Desnúdate en la playa y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo..",
           "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en la playa {ganador} elige el ritmo..",
           "Exhibicionismo acordado en la playa: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo..",
+          "Flash rápido: {ganador} elige el momento — enseña lo justo 5 segundos y tapa al instante si alguien se acerca {ganador} elige el ritmo.."
         ],
         "chico": [
           "Follad en la playa 3 minutos. Ventanas o cobertura si hace falta.",
@@ -4333,8 +4334,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Riesgo acordado: pollas fuera 10 segundos en la playa. Parar si hay gente {ganador} elige el ritmo..",
           "Desnúdate en la playa y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo..",
           "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en la playa {ganador} elige el ritmo..",
-          "Exhibicionismo acordado en la playa: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Exhibicionismo acordado en la playa: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo.."
         ]
       },
       "chico_chico": [
@@ -4641,8 +4641,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Besad donde podáis ser vistos de lejos en el restaurante 20 segundos Mirad a los ojos todo el rato..",
           "Frota tu polla contra la suya en el restaurante 35 segundos Mirad a los ojos todo el rato..",
           "Quita la ropa interior en un baño y dásela a {ganador} Mirad a los ojos todo el rato..",
-          "En el restaurante, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis..",
-          "Mano de {ganador} sobre tu polla en el restaurante 20 segundos bajo la chaqueta Susurrad lo que sentís mientras lo hacéis.."
+          "En el restaurante, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis.."
         ]
       },
       "chico_chico": [
@@ -4719,7 +4718,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Frota tu polla contra el culo de {ganador} en el restaurante 1 minuto Repite con los ojos cerrados..",
         "Flash mutuo en el restaurante: enseñad las pollas 5 segundos cada uno Repite con los ojos cerrados..",
         "Masturbación mutua en el restaurante 2 minutos bajo chaquetas Repite con los ojos cerrados..",
-        "En el restaurante, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila Repite con los ojos cerrados.."
+        "En el restaurante, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila Repite con los ojos cerrados..",
+        "Confesad fantasía de follaros en el restaurante sin que os vean Repite con los ojos cerrados.."
       ],
       "chica_chica": [
         "En el restaurante, guía su mano bajo tu ropa hacia el muslo 30 segundos.",
@@ -4871,9 +4871,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Flash mutuo en el restaurante: enseñad las pollas 5 segundos cada uno {ganador} elige el ritmo..",
           "Masturbación mutua en el restaurante 2 minutos bajo chaquetas {ganador} elige el ritmo..",
           "En el restaurante, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo..",
-          "Confesad fantasía de follaros en el restaurante sin que os vean {ganador} elige el ritmo..",
-          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el restaurante {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Confesad fantasía de follaros en el restaurante sin que os vean {ganador} elige el ritmo.."
         ],
         "chico": [
           "En el restaurante, sacad las pollas y masturbad mutuamente 2 minutos mirando si viene alguien.",
@@ -4946,9 +4944,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Flash mutuo en el restaurante: enseñad las pollas 5 segundos cada uno {ganador} elige el ritmo..",
           "Masturbación mutua en el restaurante 2 minutos bajo chaquetas {ganador} elige el ritmo..",
           "En el restaurante, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo..",
-          "Confesad fantasía de follaros en el restaurante sin que os vean {ganador} elige el ritmo..",
-          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el restaurante {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Confesad fantasía de follaros en el restaurante sin que os vean {ganador} elige el ritmo.."
         ]
       },
       "chico_chico": [
@@ -5024,7 +5020,9 @@ const OUTDOOR_LOCATION_EXTRA = {
         "En el restaurante, frotad pollas piel con piel 1 minuto Esta vez sin hablar..",
         "Roleplay sumiso el restaurante 2 minutos. {ganador} manda Esta vez sin hablar..",
         "En el restaurante, guía su dedo hacia tu culo mientras le susurras Esta vez sin hablar..",
-        "Descríbele cómo te masturbas — demuéstralo 45 segundos en el restaurante Esta vez sin hablar.."
+        "Descríbele cómo te masturbas — demuéstralo 45 segundos en el restaurante Esta vez sin hablar..",
+        "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos Esta vez sin hablar..",
+        "Flash rápido: {ganador} elige el momento — enseña lo justo 5 segundos y tapa al instante si alguien se acerca Esta vez sin hablar.."
       ],
       "chica_chica": [
         "En el restaurante, bajaos bragas y tocaos mutuamente 2 minutos mirando si viene alguien.",
@@ -5099,7 +5097,9 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Azotes: 6 nalgadas en el restaurante. Pide más si quieres Esta vez sin hablar..",
         "Quítate el sujetador. {ganador} te ordena cómo tocarte 2 minutos en el restaurante Esta vez sin hablar..",
         "Frotad clítoris mutuamente el restaurante 2 minutos Esta vez sin hablar..",
-        "En el restaurante, besad y meted mano bajo ropa 90 segundos Esta vez sin hablar.."
+        "En el restaurante, besad y meted mano bajo ropa 90 segundos Esta vez sin hablar..",
+        "Confesad fantasía de correrte en su boca en el restaurante Esta vez sin hablar..",
+        "En el restaurante, pide que te ate las muñecas — suave — y te toque 2 minutos Esta vez sin hablar.."
       ]
     },
     "extremo": {
@@ -5177,7 +5177,8 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Desnúdate en el restaurante y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo..",
           "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el restaurante {ganador} elige el ritmo..",
           "Exhibicionismo acordado en el restaurante: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo..",
+          "Flash rápido: {ganador} elige el momento — enseña lo justo 5 segundos y tapa al instante si alguien se acerca {ganador} elige el ritmo.."
         ],
         "chico": [
           "Follad en el restaurante 3 minutos. Ventanas o cobertura si hace falta.",
@@ -5250,9 +5251,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Masturbad mutuamente hasta correros en el restaurante {ganador} elige el ritmo..",
           "Riesgo acordado: pollas fuera 10 segundos en el restaurante. Parar si hay gente {ganador} elige el ritmo..",
           "Desnúdate en el restaurante y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo..",
-          "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el restaurante {ganador} elige el ritmo..",
-          "Exhibicionismo acordado en el restaurante: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el restaurante {ganador} elige el ritmo.."
         ]
       },
       "chico_chico": [
@@ -5328,7 +5327,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el restaurante Repite con los ojos cerrados..",
         "Exhibicionismo acordado en el restaurante: pollas erectas 20 segundos mirando hacia posibles mirones Repite con los ojos cerrados..",
         "Exhibicionismo acordado en el restaurante: pollas erectas 20 segundos Repite con los ojos cerrados..",
-        "En el restaurante, anal con lubricante si lo acordáis — 3 minutos Repite con los ojos cerrados.."
+        "En el restaurante, anal con lubricante si lo acordáis — 3 minutos Repite con los ojos cerrados..",
+        "Correrte en boca o culo de {ganador} en el restaurante Repite con los ojos cerrados.."
       ],
       "chica_chica": [
         "Dedos, lengua o tribbing hasta orgasmo — 3 minutos en el restaurante.",
@@ -5483,8 +5483,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Besad donde podáis ser vistos de lejos en el parking 20 segundos Mirad a los ojos todo el rato..",
           "Frota tu polla contra la suya en el parking 35 segundos Mirad a los ojos todo el rato..",
           "Quita la ropa interior en un baño y dásela a {ganador} Mirad a los ojos todo el rato..",
-          "En el parking, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis..",
-          "Mano de {ganador} sobre tu polla en el parking 20 segundos bajo la chaqueta Susurrad lo que sentís mientras lo hacéis.."
+          "En el parking, besad 25 segundos y frota pollas — ropa puesta — 30 segundos Susurrad lo que sentís mientras lo hacéis.."
         ],
         "chico": [
           "En el parking, besad 25 segundos y frota pollas — ropa puesta — 30 segundos.",
@@ -5713,7 +5712,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Besad y meted mano bajo la ropa 90 segundos en el parking Repite con los ojos cerrados..",
         "Tribbing en el parking 2 minutos con ropa apartada lo justo Repite con los ojos cerrados..",
         "Flash: enseñad tetas o coño 5 segundos bajo la chaqueta en el parking Repite con los ojos cerrados..",
-        "En el parking, quitad bragas y guardadla la una la otra Repite con los ojos cerrados.."
+        "En el parking, quitad bragas y guardadla la una la otra Repite con los ojos cerrados..",
+        "Dedos bajo falda en el parking 2 minutos mientras alguien pasa lejos Repite con los ojos cerrados.."
       ]
     },
     "picante": {
@@ -5788,10 +5788,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Frota tu polla contra el culo de {ganador} en el parking 1 minuto {ganador} elige el ritmo..",
           "Flash mutuo en el parking: enseñad las pollas 5 segundos cada uno {ganador} elige el ritmo..",
           "Masturbación mutua en el parking 2 minutos bajo chaquetas {ganador} elige el ritmo..",
-          "En el parking, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo..",
-          "Confesad fantasía de follaros en el parking sin que os vean {ganador} elige el ritmo..",
-          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el parking {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "En el parking, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo.."
         ],
         "chico": [
           "En el parking, sacad las pollas y masturbad mutuamente 2 minutos mirando si viene alguien.",
@@ -5865,8 +5862,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Masturbación mutua en el parking 2 minutos bajo chaquetas {ganador} elige el ritmo..",
           "En el parking, bajad pantalones 10 segundos de espaldas al tráfico. {ganador} vigila {ganador} elige el ritmo..",
           "Confesad fantasía de follaros en el parking sin que os vean {ganador} elige el ritmo..",
-          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el parking {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "69 o Masturbación mutua 90 segundos cuando pase alguien lejos en el parking {ganador} elige el ritmo.."
         ]
       },
       "chico_chico": [
@@ -5942,7 +5938,9 @@ const OUTDOOR_LOCATION_EXTRA = {
         "En el parking, frotad pollas piel con piel 1 minuto Esta vez sin hablar..",
         "Roleplay sumiso el parking 2 minutos. {ganador} manda Esta vez sin hablar..",
         "En el parking, guía su dedo hacia tu culo mientras le susurras Esta vez sin hablar..",
-        "Descríbele cómo te masturbas — demuéstralo 45 segundos en el parking Esta vez sin hablar.."
+        "Descríbele cómo te masturbas — demuéstralo 45 segundos en el parking Esta vez sin hablar..",
+        "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos Esta vez sin hablar..",
+        "Flash rápido: {ganador} elige el momento — enseña lo justo 5 segundos y tapa al instante si alguien se acerca Esta vez sin hablar.."
       ],
       "chica_chica": [
         "En el parking, bajaos bragas y tocaos mutuamente 2 minutos mirando si viene alguien.",
@@ -6017,7 +6015,9 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Azotes: 6 nalgadas en el parking. Pide más si quieres Esta vez sin hablar..",
         "Quítate el sujetador. {ganador} te ordena cómo tocarte 2 minutos en el parking Esta vez sin hablar..",
         "Frotad clítoris mutuamente el parking 2 minutos Esta vez sin hablar..",
-        "En el parking, besad y meted mano bajo ropa 90 segundos Esta vez sin hablar.."
+        "En el parking, besad y meted mano bajo ropa 90 segundos Esta vez sin hablar..",
+        "Confesad fantasía de correrte en su boca en el parking Esta vez sin hablar..",
+        "En el parking, pide que te ate las muñecas — suave — y te toque 2 minutos Esta vez sin hablar.."
       ]
     },
     "extremo": {
@@ -6169,8 +6169,7 @@ const OUTDOOR_LOCATION_EXTRA = {
           "Riesgo acordado: pollas fuera 10 segundos en el parking. Parar si hay gente {ganador} elige el ritmo..",
           "Desnúdate en el parking y deja que {ganador} te folle o chupe 3 minutos {ganador} elige el ritmo..",
           "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el parking {ganador} elige el ritmo..",
-          "Exhibicionismo acordado en el parking: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo..",
-          "Exhibicionismo acordado: deja que {ganador} te mire mientras te tocas por encima de la ropa 45 segundos donde podría haber gente lejos {ganador} elige el ritmo.."
+          "Exhibicionismo acordado en el parking: pollas erectas 20 segundos mirando hacia posibles mirones {ganador} elige el ritmo.."
         ]
       },
       "chico_chico": [
@@ -6246,7 +6245,8 @@ const OUTDOOR_LOCATION_EXTRA = {
         "Prohibido correrte hasta la siguiente ronda. Si pierdes otra ronda, acabas en el parking Repite con los ojos cerrados..",
         "Exhibicionismo acordado en el parking: pollas erectas 20 segundos mirando hacia posibles mirones Repite con los ojos cerrados..",
         "Exhibicionismo acordado en el parking: pollas erectas 20 segundos Repite con los ojos cerrados..",
-        "En el parking, anal con lubricante si lo acordáis — 3 minutos Repite con los ojos cerrados.."
+        "En el parking, anal con lubricante si lo acordáis — 3 minutos Repite con los ojos cerrados..",
+        "Correrte en boca o culo de {ganador} en el parking Repite con los ojos cerrados.."
       ],
       "chica_chica": [
         "Dedos, lengua o tribbing hasta orgasmo — 3 minutos en el parking.",
